@@ -1,0 +1,78 @@
+html {
+  margin: 0;
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+  padding: 0;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.BrandLogo {
+  width: 12.5em;
+}
+.NavigationBar {
+  background-image: #0b190e;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 2px;
+}
+.menu {
+  font-size: 1.3em;
+  margin: 0.5em;
+  text-shadow: 1px 1px 3px rgba(164, 164, 234, 0.5);
+  color: #0d2d1b;
+}
+.DropdownSpan {
+  text-shadow: 1px 1px 3px rgba(126, 126, 206, 0.5);
+  color: #0d2d1b;
+}
+
+@media (max-width: 750px) {
+  .navbar a {
+    text-align: center;
+    width: 40vh;
+    margin: 13px auto auto auto;
+    transform: translateY(50px);
+    filter: blur(50px);
+    opacity: 0;
+    animation: showTextHero 0.5s 0.3s linear 1 forwards;
+  }
+  .dropdown-menu {
+    background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+    width: 100%;
+    border: none;
+  }
+  .dropdown-menu a {
+    font-size: 2vh;
+  }
+
+  .navbar a:hover,
+  .DropdownSpan:hover {
+    color: #df0f0f;
+    background: hsl(330, 12%, 90%);
+    border-radius: 13px;
+  }
+  .DropdownSpan {
+    font-size: 2vh;
+  }
+  * {
+    font-size: 1.4vh;
+  }
+  table {
+    font-size: 1.5em;
+  }
+  .BrandLogo {
+    width: 14.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  h4 {
+    font-size: 1.2;
+  }
+}

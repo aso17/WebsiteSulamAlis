@@ -1,0 +1,39 @@
+.SectionKeunggulan {
+  margin: 1em;
+  padding-top: 1em;
+}
+.SectionKeunggulan .HeadKeunggulan,
+.HeadBrand {
+  margin: auto;
+  text-align: center;
+}
+
+.HeadKeunggulan {
+  font-style: italic;
+  font-size: 2em;
+  text-shadow: 1px 1px 3px rgba(176, 176, 210, 0.5);
+  color: #cb2b2e;
+}
+.HeadBrand {
+  font-size: 1.5em;
+  padding: 20px;
+  text-shadow: 1px 1px 3px rgba(185, 185, 201, 0.5);
+  color: #161313;
+}
+.DetailKeunggulan {
+  background-color: #fff;
+  border: 0.5px solid #cb2b2e;
+  height: 20em;
+  border-radius: 2em;
+  text-align: center;
+  margin-top: 2em;
+}
+.DetailKeunggulan p {
+  text-align: center;
+  margin: 2px;
+}
+@media (max-width: 750px) {
+  .iconImage {
+    width: 15%;
+  }
+}

@@ -1,0 +1,143 @@
+.Service {
+  background-image: linear-gradient(rgb(235, 220, 246), #fff);
+  text-align: center;
+  padding: 4em;
+}
+.Service h2 {
+  /* margin: 1em; */
+  text-shadow: 1px 1px 3px rgba(119, 119, 209, 0.5);
+  color: #238adf;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(169, 99, 235);
+  width: 6em;
+  margin: auto;
+}
+.Service h2 span {
+  color: rgb(169, 99, 235);
+}
+.SectionService {
+  /* border: 1px solid; */
+  margin-top: 3em;
+}
+
+.Service h3 {
+  text-shadow: 1px 1px 3px rgba(119, 119, 209, 0.5);
+  color: #238adf;
+  font-weight: bold;
+  text-align: center;
+  /* border-radius: 2em; */
+  /* padding: 10px; */
+}
+.Service h4 {
+  color: rgb(169, 99, 235);
+  text-align: start;
+  font-weight: bold;
+  font-style: italic;
+}
+.Service p {
+  color: #238adf;
+  text-align: start;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+.ImgSulamAlis1 {
+  border-radius: 0.5rem;
+  width: 39em;
+}
+.SectionExampleSulamAlis {
+  padding-top: 2rem;
+}
+.ImgExampleSulamAlis {
+  width: 25em;
+  height: 20em;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-top: 5em;
+}
+
+.SectionSulamEyeliner {
+  margin-top: 5em;
+}
+
+.ImgSulamEyeliner {
+  width: 39em;
+  border-radius: 0.5rem;
+}
+.SectionExampleEyeliner {
+  padding-top: 2rem;
+}
+.ImgExampleSulamEyeliner {
+  width: 25em;
+  height: 20em;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-top: 5em;
+}
+
+.SectionSulamBibir {
+  margin-top: 5em;
+}
+
+.ImgSulamBibir {
+  width: 39em;
+  border-radius: 0.5rem;
+}
+.SectionExampleSulamBibir {
+  padding-top: 2rem;
+}
+.ImgExampleSulamBibir {
+  width: 25em;
+  height: 20em;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-top: 5em;
+}
+.SectionLaserRemoval {
+  margin-top: 5em;
+}
+
+.ImgLaserRemoval {
+  width: 39em;
+  border-radius: 0.5rem;
+}
+.SectionExampleLaserRemoval {
+  padding-top: 2rem;
+}
+.ImgExampleLaserRemoval {
+  width: 25em;
+  height: 20em;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-top: 5em;
+}
+
+.CamptionImg {
+  border: 1px solid;
+  width: 18rem;
+  text-align: center;
+  padding: 2px;
+  position: relative;
+  /* z-index: 2; */
+  top: -2.5em;
+  left: 5.8em;
+  right: auto;
+  border-radius: 4px;
+  color: #fff !important;
+}
+/* Style mobile */
+
+@media (max-width: 750px) {
+  .ImgSulamAlis1 {
+    width: 100%;
+  }
+  .ImgExampleSulamAlis,
+  .ImgSulamEyeliner,
+  .ImgExampleSulamEyeliner,
+  .SectionExampleEyeliner,
+  .ImgSulamBibir,
+  .ImgExampleSulamBibir,
+  .ImgLaserRemoval,
+  .ImgExampleLaserRemoval {
+    width: 100%;
+  }
+}

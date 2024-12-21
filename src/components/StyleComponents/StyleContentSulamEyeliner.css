@@ -1,0 +1,39 @@
+.ContentSulamEyeliner {
+  margin: 1em;
+}
+.RowDescSulamEyeliner {
+  margin-top: 1em;
+}
+.ColDescSulamEyeliner {
+  margin: auto;
+  padding: 2em;
+}
+
+.ImagesSulamEleyener1 {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.ColDescSulamEyeliner2 {
+  margin-top: 1em;
+}
+
+.ColDescSulamEyeliner2 .Caption {
+  text-align: center;
+  border-radius: 1em;
+  /* background-color: rgb(205, 226, 244); */
+  font-size: 1.5em;
+  width: 40%;
+  position: relative;
+  right: -40%;
+  top: -90%;
+  color: #f8f2f2;
+  text-shadow: 1px 1px 3px rgba(112, 112, 122, 0.5);
+}
+@media (max-width: 750px) {
+  .ColDescSulamEyeliner {
+    margin: 0;
+    padding: 1em;
+    text-align: justify;
+  }
+}
