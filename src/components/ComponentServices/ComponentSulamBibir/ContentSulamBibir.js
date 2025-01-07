@@ -1,50 +1,58 @@
 import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
-import "../../StyleComponents/StyleComponentContentSulamBibir.css";
+import ModalComponent from "../../ModalComponent";
+import "../../StyleComponents/StyleContentSulamBibir.css";
 import {
   ImagesBeforeSulamBibir,
   ImagesAfterSulamBibir,
 } from "../../../assets/images";
 const ContentSulamBibir = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
-    <div>
-      <div className="ContentSulamBibir">
-        <Row className="RowDescSulamBibir">
-          <Col md={8} className="ColDescSulamBibir">
-            <p>
-              <b>Sulam Bibir</b> Memberikan efek pada bibir agar menjadi lebih
-              cerah, natural dan lebih terlihat sehat .
-            </p>
-          </Col>
-        </Row>
-        <Row className="RowDescSulamEyeliner2">
-          <Col md={6} className="ColDescSulamBibir2">
-            <Row>
-              <Col className="ColDescSulamBibir3">
-                <Image
-                  className="ImagesSulamBibir1"
-                  src={ImagesBeforeSulamBibir}
-                  alt="imgSulamBibir"
-                />
-                <p className="Caption">Before</p>
-              </Col>
-              <Col className="ColDescSulamBibir3">
-                <Image
-                  className="ImagesSulamBibir1"
-                  src={ImagesAfterSulamBibir}
-                  alt="imgSulamBibir"
-                />
-                <p className="Caption">After</p>
-              </Col>
-            </Row>
-          </Col>
-          <Col md={6} className="ColDescSulamBibir2">
-            <h3>Sulam Bibir</h3>
+    <div className="ContentSulamBibir">
+      <h4>Membuat Bentuk Bibir Menjadi Sempurna.</h4>
+      <p>Memberikan Efek Pada Bibir Menjadi Lebih Cerah & Natural</p>
+      <Row className="RowDescSulamBibir">
+        <Col md={6} className="ColDescSulamBibir">
+          <p>
             Sulam bibir dapat menyesuaikan garis bibir agar simetris dengan
             pemilihan warna sesuai keinginan.
-          </Col>
-        </Row>
-      </div>
+          </p>
+
+          <p className="ProcedureSulamBibir" onClick={() => setModalShow(true)}>
+            Lihat Procedure
+          </p>
+
+          <ModalComponent
+            show={modalShow}
+            id={`2`}
+            onHide={() => setModalShow(false)}
+          />
+        </Col>
+        <Col md={6} className="ColDescSulamBibir">
+          <div className="RowImgSulamBibir">
+            <Image
+              className="ImagesSulamBibir"
+              src={ImagesBeforeSulamBibir}
+              alt="imgSulamBibir"
+            />
+            <Image
+              className="ImagesSulamBibir"
+              src={ImagesAfterSulamBibir}
+              alt="imgSulamBibir"
+            />
+          </div>
+          <div className="RowCaption">
+            <div className="Caption">
+              <p>Before</p>
+            </div>
+            <div className="Caption">
+              <p>After</p>
+            </div>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };

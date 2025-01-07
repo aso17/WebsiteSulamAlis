@@ -1,21 +1,36 @@
+.SectionFascility {
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+  text-align: center;
+  padding: 1em;
+}
 .RowFacility {
   margin: auto;
   padding-top: 1em;
   justify-content: center;
   text-align: center;
 }
-.RowFacility h2 {
-  color: #d8101d;
-  padding: 10px;
-  text-shadow: 1px 1px 3px rgba(119, 119, 209, 0.5);
+
+.SectionFascility .TitleFacility {
+  color: #030101;
+  text-align: center;
+  font-style: normal;
+  margin: auto;
+}
+.SectionFascility h2 {
+  font-family: "Schibsted Grotesk", serif;
 }
 .ImgFacility {
   width: 100%;
-  height: 34em;
+  height: 25em;
   object-fit: cover;
-  border-radius: 2em;
+  border-radius: 5px;
 }
 .captionFacility {
   color: #fff;
   text-shadow: 1px 1px 3px rgba(10, 10, 11, 0.5);
+}
+@media (max-width: 750px) {
+  .SectionFascility .TitleFacility {
+    width: 72%;
+  }
 }

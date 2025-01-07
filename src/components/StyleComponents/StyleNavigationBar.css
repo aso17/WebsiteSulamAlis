@@ -1,7 +1,6 @@
-html {
-  margin: 0;
-  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
-  padding: 0;
+html body {
+  margin: 0px !important;
+  padding: 0px !important;
 }
 
 p {
@@ -12,49 +11,63 @@ p {
   width: 12.5em;
 }
 .NavigationBar {
-  background-image: #0b190e;
-  padding-left: 2em;
-  padding-right: 2em;
-  border-radius: 2px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  background-color: #fff;
 }
+
 .menu {
-  font-size: 1.3em;
+  font-family: "Schibsted Grotesk", serif;
+  font-size: 1.2em;
   margin: 0.5em;
   text-shadow: 1px 1px 3px rgba(164, 164, 234, 0.5);
-  color: #0d2d1b;
+  color: #030101;
 }
 .DropdownSpan {
   text-shadow: 1px 1px 3px rgba(126, 126, 206, 0.5);
-  color: #0d2d1b;
+  color: #030101;
+  font-family: "Schibsted Grotesk", serif;
 }
 
 @media (max-width: 750px) {
+  .navbar-collapse {
+    background-color: #fff;
+    margin: 1em;
+  }
   .navbar a {
     text-align: center;
-    width: 40vh;
-    margin: 13px auto auto auto;
+    width: 50%;
+    margin: auto;
     transform: translateY(50px);
     filter: blur(50px);
     opacity: 0;
-    animation: showTextHero 0.5s 0.3s linear 1 forwards;
+    animation: showNavbarLink 0.5s 0.1s linear 1 forwards;
+  }
+  @keyframes showNavbarLink {
+    to {
+      transform: translateY(0);
+      filter: blur(0);
+      opacity: 1;
+    }
   }
   .dropdown-menu {
     background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
     width: 100%;
     border: none;
+    /* border: 1px solid; */
   }
   .dropdown-menu a {
-    font-size: 2vh;
+    font-size: 1.2em;
   }
 
   .navbar a:hover,
   .DropdownSpan:hover {
-    color: #df0f0f;
+    color: #0523ad;
     background: hsl(330, 12%, 90%);
-    border-radius: 13px;
   }
   .DropdownSpan {
-    font-size: 2vh;
+    font-size: 1.6vh;
   }
   * {
     font-size: 1.4vh;

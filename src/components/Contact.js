@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import FramerMotion from "./FramerMotion";
 import { Row, Col, Image } from "react-bootstrap";
 import "./StyleComponents/StyleContact.css";
 import {
@@ -8,13 +10,23 @@ import {
   iconinstagram,
   iconfacebook,
   icontiktok,
-  iconLinkedIn,
+  icontwitter,
 } from "../assets/icons";
 const Contact = () => {
   return (
     <div className="SectionContact">
+      <motion.div
+        variants={FramerMotion("right", 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+      >
+        <div className="TitleContact">
+          <h2>Hubungi Kami</h2>
+          <p>Bisa Konsultasi & Kunjungi Media Sosial Kami</p>
+        </div>
+      </motion.div>
       <Row className="RowContact">
-        <h3>Hubungi Kami</h3>
         <Col md={4} className="ColContact">
           <h5>Telp & Whatsapp</h5>
           <p>
@@ -76,12 +88,12 @@ const Contact = () => {
           <p>
             <a href="#">
               <Image
-                src={iconLinkedIn}
+                src={icontwitter}
                 alt="iconLinkedIn"
                 className="imgIconContact"
               />
             </a>
-            LinkedIn
+            Twiter
           </p>
         </Col>
         <Col md={4} className="ColContact">

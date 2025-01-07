@@ -1,6 +1,6 @@
 import { Row, Col, Image } from "react-bootstrap";
-import "../components/StyleComponents/StyleFooter.css";
 import { iconwhatsapp } from "../assets/icons";
+import "../components/StyleComponents/StyleFooter.css";
 const Footer = () => {
   return (
     <div>

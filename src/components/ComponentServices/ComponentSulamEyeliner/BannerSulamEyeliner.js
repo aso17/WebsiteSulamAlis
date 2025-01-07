@@ -3,16 +3,13 @@ import { Row, Col } from "react-bootstrap";
 import "../../StyleComponents/StyleBannerSulamEyeliner.css";
 const BannerSulamEyeliner = () => {
   return (
-    <div className="BannerSulamEyeliner">
-      <Row className="RowBannerSulamEyeliner">
-        <Col md={12}>
-          <h2>Sulam Eyeliner</h2>
-          <p>
-            Sulam Eyeliner membuat mata menjadi lebih besar namun tetap
-            kelihatan indah dan natural.
-          </p>
-        </Col>
-      </Row>
+    <div className="HeroSulamEyeLiner">
+      <div className="TitleSulamEyeLiner">
+        <h2>Sulam Eyeliner</h2>
+      </div>
+      <div className="TitleDesSulamEyeLiner">
+        <h5>Mata menjadi Terlihat Indah & natural.</h5>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import ServiceSulamAlis from "./ServiceSulamAlis";
 import ServiceSulamBibir from "./ServiceSulamBibir";
 import ServiceSulamEyeliner from "./ServiceSulamEyeliner";
 import ServiceLaserRemoval from "./ServiceLaserRemoval";
+import Galery from "./Galery";
 
 export {
   Home,
@@ -12,4 +13,5 @@ export {
   ServiceSulamBibir,
   ServiceSulamEyeliner,
   ServiceLaserRemoval,
+  Galery,
 };

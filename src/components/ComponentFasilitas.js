@@ -1,5 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import { Row, Col, Image } from "react-bootstrap";
+import { motion } from "framer-motion";
+import FramerMotion from "./FramerMotion";
 import {
   AssistantRoom,
   WaitingRoom,
@@ -11,8 +13,19 @@ import "./StyleComponents/StyleFasilitas.css";
 const ComponentFasilitas = () => {
   return (
     <div className="SectionFascility">
+      <motion.div
+        variants={FramerMotion("right", 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+      >
+        <div className="TitleFacility">
+          <h2>Facility Rooms</h2>
+          <p>Kenyamanan Pelanggan Paling Utama</p>
+        </div>
+      </motion.div>
+
       <Row className="RowFacility">
-        <h2>Facility Rooms</h2>
         <Col md={8}>
           <Carousel>
             <Carousel.Item>

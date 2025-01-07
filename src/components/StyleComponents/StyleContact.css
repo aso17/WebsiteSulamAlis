@@ -1,26 +1,27 @@
 .SectionContact {
+  margin-top: 2em;
   background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
   text-align: center;
-  padding: 1.5em;
+  padding: 1em;
 }
-.SectionContact h3 {
-  padding: 10px;
-  text-shadow: 1px 1px 3px rgba(176, 176, 210, 0.5);
-  color: #cb2b2e;
+.SectionContact .TitleContact {
+  color: #030101;
+  text-align: center;
+  font-style: normal;
+  margin: auto;
+}
+.SectionContact h2 {
+  font-family: "Schibsted Grotesk", serif;
 }
 .RowContact {
-  margin-top: 2em;
-  border-radius: 2em;
-  padding: 1em;
+  margin: 1em;
   background-image: linear-gradient(rgb(240, 244, 247), #fff);
-  border: 0.9px solid #cb2b2e;
 }
 .ColContact {
+  box-shadow: 3px 3px 3px 4px rgba(209, 198, 198, 0.4);
   height: 50vh;
-  border-radius: 2em;
   padding: 3em;
   width: 26em;
-  border: 0.9px solid #cb2b2e;
   background-color: #fff;
   margin: auto;
   text-align: start;
@@ -31,6 +32,10 @@
 }
 
 @media (max-width: 750px) {
+  .SectionContact .TitleContact {
+    width: 72%;
+    margin-bottom: 0em;
+  }
   .ColContact {
     height: 30%;
     width: 100%;

@@ -1,41 +1,90 @@
-.RowBannerSulamEyeliner {
+.HeroSulamEyeLiner {
   background-image: url("../../assets/images/Services/BannerSulamEyeliner.webp");
-  height: 40em;
-  margin: 1em;
+  height: 43em;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
-.RowBannerSulamEyeliner h2 {
+.HeroSulamEyeLiner .TitleSulamEyeLiner {
+  background: rgba(47, 47, 54, 0.5);
+  position: relative;
+  top: 35%;
+  width: 30%;
+  left: -2.2em;
+  color: #fff;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.5s linear 1 forwards;
+}
+
+.HeroSulamEyeLiner .TitleSulamEyeLiner h2 {
+  font-family: "Schibsted Grotesk", serif;
+  margin: auto;
   width: 50%;
-  font-size: 3em;
-  letter-spacing: 2px;
-  margin-top: 4em;
-  padding: 10px;
-  color: #d8101d;
-  text-shadow: 1px 1px 3px rgba(119, 119, 209, 0.5);
+  color: #fff;
+  padding: 0.2em;
+  font-style: normal;
+  transform: skew(-20deg);
 }
-.RowBannerSulamEyeliner p {
-  width: 65%;
-  text-align: justify;
+
+.HeroSulamEyeLiner .TitleDesSulamEyeLiner {
+  font-family: "Merriweather", serif;
+  background: rgba(47, 47, 54, 0.5);
+  position: relative;
   padding: 10px;
+  left: -5%;
+  top: 40%;
+  width: 50%;
+  color: #fff;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.9s linear 1 forwards;
+}
+.HeroSulamEyeLiner .TitleDesSulamEyeLiner h5 {
+  margin: auto;
   letter-spacing: 1px;
-  font-size: 1.7em;
-  color: #000;
-  text-shadow: 1px 1px 3px #847e7e;
+  text-align: center;
+  /* padding: 0.4em; */
+  color: #fff;
+  font-style: normal;
+  transform: skew(-20deg);
 }
+@keyframes showTextHero {
+  to {
+    margin-left: 3em;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 750px) {
-  .RowBannerSulamEyeliner {
-    height: 20em;
+  .HeroSulamEyeLiner {
+    height: 17em;
   }
-  .RowBannerSulamEyeliner h2 {
-    width: 70%;
-    font-size: 2em;
+  .HeroSulamEyeLiner .TitleSulamEyeLiner {
+    width: 50%;
+    /* left: -10%; */
+    font-size: 1.5em;
+    text-align: center;
   }
-  .RowBannerSulamEyeliner p {
-    /* border: 1px solid; */
+  .HeroSulamEyeLiner .TitleSulamEyeLiner h2 {
+    width: 100%;
     font-size: 1em;
-    width: 85%;
-    text-align: start;
+  }
+
+  .HeroSulamEyeLiner .TitleDesSulamEyeLiner {
+    /* position: relative; */
+    text-align: center;
+    width: 90%;
+    /* left: -15%; */
+  }
+  .HeroSulamEyeLiner .TitleDesSulamEyeLiner h5 {
+    /* font-family: "Schibsted Grotesk", serif; */
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
   }
 }

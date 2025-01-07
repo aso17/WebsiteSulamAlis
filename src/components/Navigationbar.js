@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar, Nav, NavDropdown, Image } from "react-bootstrap";
 import BrandLogo from "../assets/images/logo.png";
 import "./StyleComponents/StyleNavigationBar.css";
-import "./StyleComponents/StyleMobile.css";
 
 const Navigationbar = () => {
   return (
@@ -13,50 +12,38 @@ const Navigationbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-primary">
             <Nav.Link className="menu" href="/">
-              Home
+              HOME
             </Nav.Link>
             <Nav.Link className="menu" href="/aboutme">
-              About
+              ABOUT
             </Nav.Link>
             <NavDropdown
               className="menu"
-              title={<span className="DropdownSpan">Services</span>}
+              title={<span className="DropdownSpan">SERVICES</span>}
               id="basic-nav-dropdown"
             >
               <NavDropdown.Item className="menuDropdown" href="/sulam-alis">
-                Sulam Alis
+                SULAM ALIS
               </NavDropdown.Item>
               <NavDropdown.Item className="menuDropdown" href="/sulam-bibir">
-                Sulam Bibir
+                SULAM BIBIR
               </NavDropdown.Item>
               <NavDropdown.Item className="menuDropdown" href="/sulam-eyeliner">
-                Sulam Eyeliner
+                SULAM EYELINER
               </NavDropdown.Item>
               <NavDropdown.Item className="menuDropdown" href="/laser-removal">
-                Laser Removal
+                LASER REMOVAL
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link className="menu" href="#Academy">
-              Academy
+              ACADEMY
             </Nav.Link>
-            <Nav.Link className="menu" href="#galery">
-              Galery
+            <Nav.Link className="menu" href="/galery">
+              GALERY
             </Nav.Link>
             <Nav.Link className="menu" href="#Contact">
-              Contact
+              CONTACT
             </Nav.Link>
-            {/* <NavDropdown
-              className="menu"
-              title={<span className="DropdownSpan">Lainnya</span>}
-              id="basic-nav-dropdown"
-            >
-              <NavDropdown.Item className="menuDropdown" href="#Galery">
-                Galery
-              </NavDropdown.Item>
-              <NavDropdown.Item className="menuDropdown" href="#Videos">
-                Videos
-              </NavDropdown.Item>
-            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

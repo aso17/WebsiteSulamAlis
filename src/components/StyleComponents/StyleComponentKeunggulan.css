@@ -1,4 +1,5 @@
 .SectionKeunggulan {
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
   margin: 1em;
   padding-top: 1em;
 }
@@ -10,26 +11,28 @@
 
 .HeadKeunggulan {
   font-style: italic;
+  font-family: "Schibsted Grotesk", serif;
   font-size: 2em;
   text-shadow: 1px 1px 3px rgba(176, 176, 210, 0.5);
-  color: #cb2b2e;
+  color: #161313;
 }
 .HeadBrand {
   font-size: 1.5em;
+  font-family: "Schibsted Grotesk", serif;
   padding: 20px;
   text-shadow: 1px 1px 3px rgba(185, 185, 201, 0.5);
   color: #161313;
 }
 .DetailKeunggulan {
   background-color: #fff;
-  border: 0.5px solid #cb2b2e;
+  box-shadow: 3px 3px 3px 4px rgba(209, 198, 198, 0.4);
   height: 20em;
-  border-radius: 2em;
   text-align: center;
-  margin-top: 2em;
+  margin: 1em;
 }
 .DetailKeunggulan p {
   text-align: center;
+  padding: 1em;
   margin: 2px;
 }
 @media (max-width: 750px) {

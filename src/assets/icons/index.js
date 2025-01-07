@@ -10,6 +10,7 @@ import iconinstagram from "./iconinstagram.png";
 import iconfacebook from "./iconfacebook.png";
 import icontiktok from "./icontiktok.png";
 import iconLinkedIn from "./iconlinkedin.png";
+import icontwitter from "./icontwitter.png";
 import iconwhatsapp from "./iconwhatsapp.gif";
 export {
   iconDocument,
@@ -24,5 +25,6 @@ export {
   iconfacebook,
   icontiktok,
   iconLinkedIn,
+  icontwitter,
   iconwhatsapp,
 };

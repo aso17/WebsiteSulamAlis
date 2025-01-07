@@ -1,0 +1,113 @@
+.ContentSulamBibir {
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+  margin: 1em;
+  padding-top: 3em;
+}
+
+.ContentSulamBibir h4 {
+  text-align: center;
+  font-family: "Schibsted Grotesk", serif;
+  padding: 0.2em;
+  margin: auto;
+  width: 50%;
+}
+
+.ContentSulamBibir p {
+  text-align: center;
+}
+
+.ColDescSulamBibir {
+  background-color: #fff;
+}
+.ColDescSulamBibir p {
+  text-align: start;
+}
+.RowImgSulamBibir {
+  display: flex;
+}
+.ColDescSulamBibir .ProcedureSulamBibir {
+  width: 8em;
+  padding: 7px;
+  text-align: justify;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Schibsted Grotesk", serif;
+}
+.ContentSulamBibir .RowDescSulamBibir {
+  margin-top: 2em;
+}
+
+.ImagesSulamBibir {
+  width: 48%;
+  flex: 1;
+  margin: 2px;
+  object-fit: cover;
+  height: 22em;
+}
+.RowCaption {
+  display: flex;
+  position: relative;
+  top: -81.4%;
+}
+.Caption {
+  align-items: baseline;
+  position: relative;
+  align-items: start;
+  margin: auto;
+  width: 110px;
+  flex: 1;
+
+  color: #fff;
+  letter-spacing: 2px;
+}
+.Caption p {
+  font-family: "Schibsted Grotesk", serif;
+  padding: 1em;
+  width: 8em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Procedure {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: "Schibsted Grotesk", serif;
+  padding: 0.8em;
+  top: 20%;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+
+@media (max-width: 750px) {
+  .ColImgSulamBibir {
+    width: 100%;
+    margin-top: 2em;
+  }
+  .ContentSulamBibir h4 {
+    width: 80%;
+    font-size: 1.5em;
+  }
+
+  .RowImgSulamBibir {
+    margin: auto;
+  }
+  .ImagesSulamBibir {
+    width: 100%;
+    height: 17em;
+  }
+  .RowCaption {
+    display: flex;
+    position: relative;
+    top: -81%;
+  }
+  .Caption p {
+    padding: 0.5em;
+    margin-left: 1px;
+    width: 6em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

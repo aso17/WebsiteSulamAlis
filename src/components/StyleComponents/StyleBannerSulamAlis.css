@@ -1,47 +1,91 @@
 .HeroSulamAlis {
   background-image: url("../../assets/images/Services/BannerSulamAlis.webp");
   height: 43em;
-  margin: 1em;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.ImgSulamAlis {
   width: 100%;
-  height: 50%;
-  object-fit: cover;
 }
 
-.HeroSulamAlis h2 {
-  width: 50%;
-  font-size: 3em;
-  letter-spacing: 2px;
-  margin-top: 4em;
-  padding: 10px;
-  color: #d8101d;
-  text-shadow: 1px 1px 3px rgba(119, 119, 209, 0.5);
+.HeroSulamAlis .TitleSulamAlis {
+  background: rgba(47, 47, 54, 0.5);
+  position: relative;
+  top: 35%;
+  width: 30%;
+  left: -2.2em;
+  color: #fff;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.5s linear 1 forwards;
 }
-.HeroSulamAlis p {
-  width: 65%;
-  text-align: justify;
-  padding: 10px;
+
+.HeroSulamAlis .TitleSulamAlis h2 {
+  /* text-align: end; */
+  font-family: "Schibsted Grotesk", serif;
+  margin: auto;
+  width: 50%;
+  color: #fff;
+  padding: 0.2em;
+  font-style: normal;
+  transform: skew(-20deg);
+}
+
+.HeroSulamAlis .TitleDesSulamAlis {
+  /* font-family: "Merriweather", serif; */
+  background: rgba(47, 47, 54, 0.5);
+  position: relative;
+  left: -5%;
+  top: 40%;
+  width: 60%;
+  color: #fff;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.9s linear 1 forwards;
+}
+.HeroSulamAlis .TitleDesSulamAlis h5 {
+  margin: auto;
+  /* font-family: "Schibsted Grotesk", serif; */
   letter-spacing: 1px;
-  font-size: 1.7em;
-  color: #000;
-  text-shadow: 1px 1px 3px #847e7e;
+  text-align: center;
+  padding: 0.4em;
+  color: #fff;
+  font-style: normal;
+  transform: skew(-20deg);
+}
+@keyframes showTextHero {
+  to {
+    margin-left: 3em;
+    filter: blur(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 750px) {
   .HeroSulamAlis {
-    height: 20em;
+    height: 17em;
   }
-  .HeroSulamAlis h2 {
-    width: 70%;
-    font-size: 2em;
+  .HeroSulamAlis .TitleSulamAlis {
+    width: 50%;
+    /* left: -10%; */
+    font-size: 1.5em;
+    text-align: center;
   }
-  .HeroSulamAlis p {
-    /* border: 1px solid; */
+  .HeroSulamAlis .TitleSulamAlis h2 {
+    width: 100%;
     font-size: 1em;
-    width: 85%;
-    text-align: start;
+  }
+
+  .HeroSulamAlis .TitleDesSulamAlis {
+    /* position: relative; */
+    text-align: center;
+    width: 90%;
+    /* left: -15%; */
+  }
+  .HeroSulamAlis .TitleDesSulamAlis h5 {
+    /* font-family: "Schibsted Grotesk", serif; */
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
   }
 }

@@ -1,0 +1,86 @@
+.HeroAboutMe {
+  background-image: url("../../assets/images/AboutMe/Teams1.webp");
+  height: 45em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.HeroAboutMe .TitleAboutMe {
+  background: rgba(47, 47, 54, 0.5);
+  position: relative;
+  top: 50%;
+  width: 30%;
+  left: 5%;
+  color: #fff;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.5s linear 1 forwards;
+}
+
+.HeroAboutMe .TitleAboutMe h2 {
+  /* text-align: end; */
+  font-family: "Schibsted Grotesk", serif;
+  margin: auto;
+  width: 50%;
+  color: #fff;
+  padding: 0.2em;
+  font-style: normal;
+  transform: skew(-20deg);
+}
+
+.HeroAboutMe .TitleDesAboutMe {
+  font-family: "Merriweather", serif;
+  background: rgba(47, 47, 54, 0.5);
+  position: relative;
+  left: -5%;
+  top: 53%;
+  width: 60%;
+  color: #fff;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.9s linear 1 forwards;
+}
+.HeroAboutMe .TitleDesAboutMe h5 {
+  margin: auto;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0.4em;
+  color: #fff;
+  font-style: normal;
+  transform: skew(-20deg);
+}
+@keyframes showTextHero {
+  to {
+    margin-left: 3em;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .HeroAboutMe {
+    height: 20em;
+  }
+  .HeroAboutMe .TitleAboutMe {
+    width: 50%;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .HeroAboutMe .TitleAboutMe h2 {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .HeroAboutMe .TitleDesAboutMe {
+    text-align: center;
+    width: 90%;
+  }
+  .HeroAboutMe .TitleDesAboutMe h5 {
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+  }
+}

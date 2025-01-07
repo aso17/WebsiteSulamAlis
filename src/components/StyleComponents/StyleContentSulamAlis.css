@@ -1,23 +1,108 @@
 .ContentSulamAlis {
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+  padding-top: 3em;
   margin: 1em;
-  /* padding: 2em; */
 }
-.ColDescContent {
+.ContentSulamAlis h4 {
+  text-align: center;
+  font-family: "Schibsted Grotesk", serif;
+  padding: 0.2em;
   margin: auto;
+  width: 50%;
 }
-.ImgSulamAlis1Content {
+.ContentSulamAlis .DescContentSulamAlis {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.RowDescContentSulamAlis {
+  width: fit-content;
+}
+.ColDescContentSulamAlis {
+  background-color: #fff;
+  width: 50%;
+}
+
+.RowDescContentSulamAlis .ColDescContentSulamAlis p {
+  text-align: justify;
+  margin-top: 1em;
+}
+.ColDescContentSulamAlis .ProcedureSulamAlis {
+  width: 8em;
+  padding: 7px;
+  text-align: justify;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Schibsted Grotesk", serif;
+}
+.RowImagesSulamAlis .ImgSulamAlis1Content0 {
   width: 100%;
-  height: 30em;
-  border-radius: 2em;
+  height: 32em;
   margin-top: 1em;
   object-fit: cover;
-  /* aspect-ratio: 4/3; */
-  /* mix-blend-mode: color; */
+}
+.RowImagesSulamAlis .ImgSulamAlis1Content1,
+.ImgSulamAlis1Content2 {
+  width: 100%;
+  height: 15.5em;
+  object-fit: cover;
+  margin-top: 1em;
+}
+
+.RowModelSulamAlis h5 {
+  font-family: "Schibsted Grotesk", serif;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
+}
+.RowModelSulamAlis .Model0,
+.Model1,
+.Model2,
+.Model3 {
+  width: 100%;
+  height: 25em;
+  object-fit: cover;
 }
 
 @media (max-width: 750px) {
-  .ImgSulamAlis1Content {
+  .RowImagesSulamAlis .ImgSulamAlis1Content0 {
+    width: 100%;
+    height: 19em;
+    /* padding-left: 1em; */
+  }
+  .RowImagesSulamAlis .ImgSulamAlis1Content1,
+  .ImgSulamAlis1Content2 {
     object-fit: cover;
-    height: 25em;
+    width: 100%;
+    height: 9em;
+  }
+  .ColDescContentSulamAlis {
+    width: 100%;
+  }
+  .RowImagesSulamAlis .ColImagesSulamAlis {
+    width: 50%;
+  }
+
+  .RowModelSulamAlis .ColModelSulamAlis {
+    width: 50%;
+  }
+
+  .ContentSulamAlis h4 {
+    width: 80%;
+    font-size: 1.5em;
+  }
+  .ContentSulamAlis .DescContentSulamAlis {
+    width: 80%;
+  }
+  .RowModelSulamAlis .Model0,
+  .Model1,
+  .Model2,
+  .Model3 {
+    width: 100%;
+    height: 12em;
+    object-fit: cover;
+    margin-top: 10px;
   }
 }

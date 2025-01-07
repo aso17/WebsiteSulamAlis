@@ -2,7 +2,6 @@ import React from "react";
 import Navigationbar from "../../components/Navigationbar";
 import BannerSulamAlis from "../../components/ComponentServices/ComponentSulamAlis/BannerSulamAlis";
 import ContentSulamAlis from "../../components/ComponentServices/ComponentSulamAlis/ContentSulamAlis";
-import ComponentKeunggulan from "../../components/ComponentKeunggulan";
 import ComponentFasilitas from "../../components/ComponentFasilitas";
 
 import Contact from "../../components/Contact";
@@ -13,7 +12,6 @@ const index = () => {
       <Navigationbar />
       <BannerSulamAlis />
       <ContentSulamAlis />
-      <ComponentKeunggulan />
       <ComponentFasilitas />
       <Contact />
       <Footer />

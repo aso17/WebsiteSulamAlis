@@ -7,6 +7,7 @@ import {
   ServiceSulamBibir,
   ServiceSulamEyeliner,
   ServiceLaserRemoval,
+  Galery,
 } from "../../pages";
 
 const Routers = () => {
@@ -23,6 +24,7 @@ const Routers = () => {
           element={<ServiceSulamEyeliner />}
         />
         <Route path="/laser-removal" exact element={<ServiceLaserRemoval />} />
+        <Route path="/galery" exact element={<Galery />} />
       </Routes>
     </Router>
   );

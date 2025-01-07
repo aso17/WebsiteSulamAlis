@@ -1,18 +1,16 @@
 import React from "react";
-import "../../StyleComponents/StyleBannerSulamAlis.css";
 import { Row, Col } from "react-bootstrap";
+import "../../StyleComponents/StyleBannerSulamAlis.css";
+
 const BannerSulamAlis = () => {
   return (
-    <div>
-      <Row className="HeroSulamAlis">
-        <Col md={12}>
-          <h2 className="DescHeroSulamAlis">Sulam Alis</h2>
-          <p className="DescHeroSulamAlis">
-            Sulam Alis dengan Teknik yang membuat seluruh alis terlihat lebih
-            natural dengan menggunakan mesin.
-          </p>
-        </Col>
-      </Row>
+    <div className="HeroSulamAlis">
+      <div className="TitleSulamAlis">
+        <h2>SULAM ALIS</h2>
+      </div>
+      <div className="TitleDesSulamAlis">
+        <h5>Dapatkan Sulam Alis Terbaik Susuai Dengan Keinginan</h5>
+      </div>
     </div>
   );
 };

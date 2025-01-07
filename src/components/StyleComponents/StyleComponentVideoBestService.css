@@ -1,0 +1,13 @@
+.VideoArtis video {
+  width: 70%;
+  height: 40em;
+  /* border-radius: 2em; */
+  object-fit: cover;
+}
+
+@media (max-width: 750px) {
+  .VideoArtis video {
+    width: 100%;
+    height: 25em;
+  }
+}
