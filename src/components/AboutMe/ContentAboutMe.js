@@ -4,11 +4,11 @@ import "../StyleComponents/StyleAboutMe.css";
 const ContentAboutMe = () => {
   return (
     <div className="AboutMe">
+      <h3>
+        Rosidi Sulam Alis & <span>Academy</span>
+      </h3>
       <Row className="SectionAboutMe">
         <Col md={6} className="RowSectionAbout">
-          <h3>
-            Rosidi Sulam Alis & <span>Academy</span>
-          </h3>
           <p>
             Terpercaya di Indonesia sejak tahun 2015 khusus bidang kecantikan
             sulam. Rosidi Sulam Alis & Academy telah banyak memiliki alumni

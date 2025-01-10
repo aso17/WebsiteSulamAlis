@@ -9,9 +9,9 @@
 .HeroAboutMe .TitleAboutMe {
   background: rgba(47, 47, 54, 0.5);
   position: relative;
-  top: 50%;
+  top: 30%;
   width: 30%;
-  left: 5%;
+  left: -2em;
   color: #fff;
   transform: skew(20deg);
   filter: blur(50px);
@@ -20,7 +20,6 @@
 }
 
 .HeroAboutMe .TitleAboutMe h2 {
-  /* text-align: end; */
   font-family: "Schibsted Grotesk", serif;
   margin: auto;
   width: 50%;
@@ -35,15 +34,15 @@
   background: rgba(47, 47, 54, 0.5);
   position: relative;
   left: -5%;
-  top: 53%;
-  width: 60%;
+  top: 35%;
+  width: 50%;
   color: #fff;
   transform: skew(20deg);
   filter: blur(50px);
   opacity: 0;
   animation: showTextHero 0.5s 0.9s linear 1 forwards;
 }
-.HeroAboutMe .TitleDesAboutMe h5 {
+.HeroAboutMe .TitleDesAboutMe p {
   margin: auto;
   letter-spacing: 1px;
   text-align: center;

@@ -1,5 +1,7 @@
 import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
+import { motion } from "framer-motion";
+import FramerMotion from "..//../FramerMotion";
 import ModalComponent from "../../ModalComponent";
 import "../../StyleComponents/StyleContentSulamAlis.css";
 import {
@@ -15,7 +17,14 @@ const ContentSulamAlis = () => {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="ContentSulamAlis">
-      <h4>Alis Terlihat Lebih Natural Dengan Teknik & Alat Modern</h4>
+      <motion.div
+        variants={FramerMotion("right", 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+      >
+        <h4>Alis Terlihat Lebih Natural Dengan Teknik & Alat Modern</h4>
+      </motion.div>
       <p className="DescContentSulamAlis">
         Dikerjakan Oleh Ahli, Menggunakan Kosmetik Berkualitas & Alami
       </p>
@@ -30,10 +39,19 @@ const ContentSulamAlis = () => {
             dapat disesuaikan dengan kondisi dan sesuai keinginan pasien
             masing–masing.
           </p>
-
-          <p className="ProcedureSulamAlis" onClick={() => setModalShow(true)}>
-            Lihat Procedure
-          </p>
+          <motion.div
+            variants={FramerMotion("right", 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <p
+              className="ProcedureSulamAlis"
+              onClick={() => setModalShow(true)}
+            >
+              Lihat Procedure
+            </p>
+          </motion.div>
 
           <ModalComponent
             show={modalShow}

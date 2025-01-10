@@ -1,4 +1,3 @@
-import React from "react";
 import "../StyleComponents/StyleBannerAboutMe.css";
 const BannerAboutMe = () => {
   return (
@@ -7,7 +6,7 @@ const BannerAboutMe = () => {
         <h2>ABOUT ME</h2>
       </div>
       <div className="TitleDesAboutMe">
-        <h5>Sulam Alis Terpecaya Oleh Banyak Kalangan Artis Di Indonesia</h5>
+        <p>Sulam Alis Terpecaya Oleh Banyak Kalangan Artis Di Indonesia</p>
       </div>
     </div>
   );

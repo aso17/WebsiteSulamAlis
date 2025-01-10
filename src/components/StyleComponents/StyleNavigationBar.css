@@ -1,6 +1,6 @@
 html body {
-  margin: 0px !important;
-  padding: 0px !important;
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -55,17 +55,16 @@ p {
     background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
     width: 100%;
     border: none;
-    /* border: 1px solid; */
   }
   .dropdown-menu a {
     font-size: 1.2em;
   }
 
-  .navbar a:hover,
+  /* .navbar a:hover,
   .DropdownSpan:hover {
     color: #0523ad;
-    background: hsl(330, 12%, 90%);
-  }
+    background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+  } */
   .DropdownSpan {
     font-size: 1.6vh;
   }

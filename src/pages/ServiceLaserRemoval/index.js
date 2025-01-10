@@ -1,6 +1,6 @@
 import Navigationbar from "../../components/Navigationbar";
 import BannerLaserRemoval from "../../components/ComponentServices/ComponentLaserRemoval/BannerLaserRemoval";
-import ComponentLaserRemoval from "../../components/ComponentServices/ComponentLaserRemoval/ComponentLaserRemoval";
+import ContentLaserRemoval from "../../components/ComponentServices/ComponentLaserRemoval/ContentLaserRemoval";
 import ComponentKeunggulan from "../../components/ComponentKeunggulan";
 import ComponentFasilitas from "../../components/ComponentFasilitas";
 import Contact from "../../components/Contact";
@@ -11,7 +11,7 @@ const index = () => {
     <div>
       <Navigationbar />
       <BannerLaserRemoval />
-      <ComponentLaserRemoval />
+      <ContentLaserRemoval />
       <ComponentKeunggulan />
       <ComponentFasilitas />
       <Contact />

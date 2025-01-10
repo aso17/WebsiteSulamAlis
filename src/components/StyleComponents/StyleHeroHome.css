@@ -4,18 +4,17 @@
 
 .SectionHeroHome .Brand span {
   color: #d8101d;
-  font-family: "Merriweather", serif;
+  font-family: "Schibsted Grotesk", serif;
 }
 .CarouselImg .Caption0,
 .Caption1,
 .Caption2 {
-  background: rgba(47, 47, 54, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 0.5em;
-  font-family: "Merriweather", serif;
+  font-family: "Schibsted Grotesk", serif;
   font-weight: 300;
   font-style: normal;
   margin: 1em;
-  border-radius: 0.5em;
 }
 
 .CarouselImg .Caption0 {
@@ -54,7 +53,7 @@
   text-shadow: 1px 1px 3px rgba(129, 129, 136, 0.5);
   line-height: 1.2;
   color: #1e0e0e;
-  font-family: "Merriweather", serif;
+  font-family: "Schibsted Grotesk", serif;
   font-size: 2em;
 }
 .CarouselImg .Caption-AnimationHero0 {
@@ -141,7 +140,7 @@
   }
 
   .CarouselImg .CaptionText0 {
-    font-size: 100%;
+    font-size: 70%;
   }
 
   .CarouselImg .Caption1 {

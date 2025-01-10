@@ -4,16 +4,16 @@ import { Row, Col } from "react-bootstrap";
 
 const BannerLaserRemoval = () => {
   return (
-    <div>
-      <Row className="HeroLaserRemoval">
-        <Col md={12}>
-          <h2 className="DescLaserRemoval">Laser Removal</h2>
-          <p className="DescLaserRemoval">
-            Menghapus tattoo permanent, mengencangkan kulit, mengecilkan pori
-            dan garis kerutan halus
-          </p>
-        </Col>
-      </Row>
+    <div className="HeroLaserRemoval">
+      <div className="TitleHeroLaserRemoval">
+        <h2>LASER REMOVAL</h2>
+      </div>
+      <div className="DescHeroLaserRemoval">
+        <p>
+          Menghapus Tattoo Permanent, Mengencangkan Kulit, Mengecilkan Pori &
+          Garis Kerutan Halus
+        </p>
+      </div>
     </div>
   );
 };

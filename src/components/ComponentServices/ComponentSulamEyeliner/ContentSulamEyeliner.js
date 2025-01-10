@@ -1,21 +1,31 @@
 import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import ModalComponent from "../../ModalComponent";
+import { motion } from "framer-motion";
+import FramerMotion from "../../FramerMotion";
 import "../../StyleComponents/StyleContentSulamEyeliner.css";
 import {
   ImagesBeforeSulamEyeliner,
   ImagesSulamEleyener1,
 } from "../../../assets/images";
+
 const ContentSulamEyeliner = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <div className="ContentSulamEyeliner">
-      <h4>Membuat Bentuk Mata Menjadi Sempurna.</h4>
-      <p>
-        Combination Sulam Eyeliner Sulam Alis membuat lebih terlihat soft dan
-        natural.
-      </p>
+      <motion.div
+        variants={FramerMotion("right", 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+      >
+        <h4>Membuat Bentuk Mata Menjadi Sempurna.</h4>
+        <p>
+          Combination Sulam Eyeliner Sulam Alis membuat lebih terlihat soft &
+          natural.
+        </p>
+      </motion.div>
       <Row className="RowDescSulamEyeliner">
         <Col md={6} className="ColDescSulamEyeliner">
           <p>
@@ -23,9 +33,12 @@ const ContentSulamEyeliner = () => {
             eyeliner bermanfaat agar mata terlihat selalu segar, bersinar, dan
             memberikan efek percaya diri sepanjang hari.
           </p>
-          <h5 className="Procedure" onClick={() => setModalShow(true)}>
+          <p
+            className="ProcedureSulamEyeliner"
+            onClick={() => setModalShow(true)}
+          >
             Lihat Procedure
-          </h5>
+          </p>
 
           <ModalComponent
             show={modalShow}
@@ -40,13 +53,20 @@ const ContentSulamEyeliner = () => {
               src={ImagesBeforeSulamEyeliner}
               alt="imgSulamEyeliner"
             />
-            {/* <p className="Caption">Before</p> */}
+
             <Image
               className="ImagesSulamEyeliner"
               src={ImagesSulamEleyener1}
               alt="imgSulamEyeliner"
             />
-            {/* <p className="Caption">After</p> */}
+          </div>
+          <div className="RowCaptionSulamEyeliner">
+            <div className="CaptionSulamEyeliner">
+              <p>Before</p>
+            </div>
+            <div className="CaptionSulamEyeliner">
+              <p>After</p>
+            </div>
           </div>
         </Col>
       </Row>

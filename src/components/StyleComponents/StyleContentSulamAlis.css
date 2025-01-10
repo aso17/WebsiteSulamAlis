@@ -1,6 +1,6 @@
 .ContentSulamAlis {
-  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
   padding-top: 3em;
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
   margin: 1em;
 }
 .ContentSulamAlis h4 {
@@ -8,16 +8,18 @@
   font-family: "Schibsted Grotesk", serif;
   padding: 0.2em;
   margin: auto;
-  width: 50%;
+  width: 100%;
 }
 .ContentSulamAlis .DescContentSulamAlis {
-  width: 70%;
+  padding: 0.2em;
+  width: 100%;
   margin: auto;
   text-align: center;
   padding-bottom: 1em;
 }
 .RowDescContentSulamAlis {
   width: fit-content;
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
 }
 .ColDescContentSulamAlis {
   background-color: #fff;
@@ -70,7 +72,6 @@
   .RowImagesSulamAlis .ImgSulamAlis1Content0 {
     width: 100%;
     height: 19em;
-    /* padding-left: 1em; */
   }
   .RowImagesSulamAlis .ImgSulamAlis1Content1,
   .ImgSulamAlis1Content2 {
@@ -90,11 +91,11 @@
   }
 
   .ContentSulamAlis h4 {
-    width: 80%;
+    width: 70%;
     font-size: 1.5em;
   }
   .ContentSulamAlis .DescContentSulamAlis {
-    width: 80%;
+    width: 99%;
   }
   .RowModelSulamAlis .Model0,
   .Model1,

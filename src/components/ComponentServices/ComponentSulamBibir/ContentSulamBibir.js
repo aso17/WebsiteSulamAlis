@@ -43,11 +43,11 @@ const ContentSulamBibir = () => {
               alt="imgSulamBibir"
             />
           </div>
-          <div className="RowCaption">
-            <div className="Caption">
+          <div className="RowCaptionSulamBibir">
+            <div className="CaptionSulamBibir">
               <p>Before</p>
             </div>
-            <div className="Caption">
+            <div className="CaptionSulamBibir">
               <p>After</p>
             </div>
           </div>

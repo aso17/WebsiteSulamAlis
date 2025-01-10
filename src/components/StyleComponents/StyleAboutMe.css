@@ -4,7 +4,9 @@
   padding: 1em;
 }
 .SectionAboutMe {
+  /* border: 1px solid; */
   margin-top: 2em;
+  background-color: #fff;
 }
 
 .AboutMe h3 {
@@ -25,10 +27,9 @@
 }
 .SectionOwner {
   padding: 1em;
-  width: 70%;
-  box-shadow: 3px 3px 3px 4px rgba(209, 198, 198, 0.4);
+  /* width: fit-content; */
+  box-shadow: 3px 3px 3px 4px rgba(223, 219, 219, 0.4);
   margin: auto;
-  /* border: 1px solid; */
   height: 50%;
 }
 .SectionOwner .TitleOwner {
@@ -71,6 +72,7 @@
   .ImgOwner {
     width: 100%;
     margin-top: 1em;
+    height: 40em;
   }
   .SectionOwner .NameOwner {
     width: 60%;

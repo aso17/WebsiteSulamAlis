@@ -41,7 +41,7 @@ const HeroHome = () => {
           />
           <Carousel.Caption>
             <div className="Caption0" id="Captionid">
-              <h2 className="CaptionText0">Pastikan Anda</h2>
+              <h2 className="CaptionText0">PASTIKAN ANDA</h2>
             </div>
             <div className="Caption1" id="Captionid">
               <h2 className="CaptionText1">MERASAKAN LAYANAN TERBAIK KAMI</h2>
