@@ -1,15 +1,15 @@
-import React from "react";
 import Navigationbar from "../../Components/Navigationbar";
-import BannerGalery from "../../Components/Galery/BannerGalery";
-import ContentGalery from "../../Components/Galery/ContentGalery";
+import BannerContact from "../../Components/Contact/BannerContact";
+import ContentContact from "../../Components/Contact/ContentContact";
 import FooterContact from "../../Components/Contact/FooterContact";
 import FooterComponent from "../../Components/FooterComponent";
+
 const index = () => {
   return (
     <div>
       <Navigationbar />
-      <BannerGalery />
-      <ContentGalery />
+      <BannerContact />
+      <ContentContact />
       <FooterContact />
       <FooterComponent />
     </div>

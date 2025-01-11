@@ -1,10 +1,10 @@
-import Navigationbar from "../../components/Navigationbar";
-import BannerSulamBibir from "../../components/ComponentServices/ComponentSulamBibir/BannerSulamBibir";
-import ContentSulamBibir from "../../components/ComponentServices/ComponentSulamBibir/ContentSulamBibir";
-import ComponentKeunggulan from "../../components/ComponentKeunggulan";
-import ComponentFasilitas from "../../components/ComponentFasilitas";
-import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
+import Navigationbar from "../../Components/Navigationbar";
+import BannerSulamBibir from "../../Components/ComponentServices/ComponentSulamBibir/BannerSulamBibir";
+import ContentSulamBibir from "../../Components/ComponentServices/ComponentSulamBibir/ContentSulamBibir";
+import ComponentKeunggulan from "../../Components/ComponentKeunggulan";
+import ComponentFasilitas from "../../Components/ComponentFasilitas";
+import FooterContact from "../../Components/Contact/FooterContact";
+import FooterComponent from "../../Components/FooterComponent";
 
 const index = () => {
   return (
@@ -14,8 +14,8 @@ const index = () => {
       <ContentSulamBibir />
       <ComponentKeunggulan />
       <ComponentFasilitas />
-      <Contact />
-      <Footer />
+      <FooterContact />
+      <FooterComponent />
     </div>
   );
 };

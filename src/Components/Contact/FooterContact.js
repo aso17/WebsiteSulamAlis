@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import FramerMotion from "./FramerMotion";
+import FramerMotion from "../FramerMotion";
 import { Row, Col, Image } from "react-bootstrap";
-import "./StyleComponents/StyleContact.css";
+import "../StyleComponents/StyleContact.css";
 import {
   iconPhone,
   iconEmail,
@@ -11,8 +11,8 @@ import {
   iconfacebook,
   icontiktok,
   icontwitter,
-} from "../assets/icons";
-const Contact = () => {
+} from "../../assets/icons";
+const FooterContactContact = () => {
   return (
     <div className="SectionContact">
       <motion.div
@@ -151,4 +151,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default FooterContactContact;

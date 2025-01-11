@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Row, Col, Image } from "react-bootstrap";
-import { BannerHome, BannerHome2 } from "../assets/images";
-import "./StyleComponents/StyleHeroHome.css";
-const HeroHome = () => {
+import { ImgBannerHome, ImgBannerHome2 } from "../../assets/images";
+import "../StyleComponents/StyleHeroHome.css";
+const BannerHome = () => {
   const [index, setIndex] = useState(0);
 
   if (index == 1) {
@@ -26,7 +26,7 @@ const HeroHome = () => {
       >
         <Carousel.Item>
           <Image
-            src={BannerHome2}
+            src={ImgBannerHome2}
             layout="responsive"
             alt="Teams"
             className="ImgTeams"
@@ -34,7 +34,7 @@ const HeroHome = () => {
         </Carousel.Item>
         <Carousel.Item>
           <Image
-            src={BannerHome}
+            src={ImgBannerHome}
             layout="responsive"
             alt="Teams"
             className="ImgTeams"
@@ -71,4 +71,4 @@ const HeroHome = () => {
   );
 };
 
-export default HeroHome;
+export default BannerHome;

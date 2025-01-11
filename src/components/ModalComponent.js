@@ -1,5 +1,5 @@
 import { Modal, Image } from "react-bootstrap";
-import "../components/StyleComponents/StyleModalComponent.css";
+import "../Components/StyleComponents/StyleModalComponent.css";
 import ProcedureSulamAlis from "../assets/images/Services/ProcedureSulamAlis.webp";
 import ProcedureSulamBibir from "../assets/images/Services/ProcedureSulamBibir.webp";
 const ModalComponent = (props) => {

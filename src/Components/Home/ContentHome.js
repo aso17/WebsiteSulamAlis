@@ -1,17 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import FramerMotion from "./FramerMotion";
+import FramerMotion from "../FramerMotion";
 import { Row, Col, Image } from "react-bootstrap";
-import "./StyleComponents/StyleHome.css";
+import "../StyleComponents/StyleHome.css";
 
 import {
   ImgSulamAlis1,
   ImagesSulamEleyenier,
   ImagesSulamBibir1,
   ImagesLaser0,
-} from "../assets/images";
+} from "../../assets/images";
 
-const Home = () => {
+const ContentHome = () => {
   return (
     <div className="SectionHome">
       <motion.div
@@ -132,4 +132,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ContentHome;

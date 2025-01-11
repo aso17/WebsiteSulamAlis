@@ -1,6 +1,6 @@
 // Images About
-import BannerHome from "./AboutMe/BannerHome.webp";
-import BannerHome2 from "./AboutMe/BannerHome2.jpeg";
+import ImgBannerHome from "./AboutMe/BannerHome.webp";
+import ImgBannerHome2 from "./AboutMe/BannerHome2.jpeg";
 import Receptionist from "./AboutMe/Receptionist.webp";
 import Teams1 from "./AboutMe/Teams1.webp";
 import Teams2 from "./AboutMe/Teams2.webp";
@@ -41,10 +41,11 @@ import ImagesLaser0 from "./Services/ImagesLaser0.webp";
 import ImagesLaser1 from "./Services/ImagesLaser1.webp";
 import ImagesLaser2 from "./Services/ImagesLaser2.webp";
 import ImagesLaser3 from "./Services/ImagesLaser3.webp";
+//Galery
 
 export {
-  BannerHome,
-  BannerHome2,
+  ImgBannerHome,
+  ImgBannerHome2,
   Receptionist,
   Teams1,
   Teams2,

@@ -1,7 +1,7 @@
 import { Row, Col, Image } from "react-bootstrap";
 import { iconwhatsapp } from "../assets/icons";
-import "../components/StyleComponents/StyleFooter.css";
-const Footer = () => {
+import "./StyleComponents/StyleFooter.css";
+const FooterComponent = () => {
   return (
     <div>
       <Row className="Footer">
@@ -24,4 +24,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterComponent;

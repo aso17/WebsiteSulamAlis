@@ -1,11 +1,11 @@
 import React from "react";
-import Navigationbar from "../../components/Navigationbar";
-import BannerSulamAlis from "../../components/ComponentServices/ComponentSulamAlis/BannerSulamAlis";
-import ContentSulamAlis from "../../components/ComponentServices/ComponentSulamAlis/ContentSulamAlis";
-import ComponentFasilitas from "../../components/ComponentFasilitas";
+import Navigationbar from "../../Components/Navigationbar";
+import BannerSulamAlis from "../../Components/ComponentServices/ComponentSulamAlis/BannerSulamAlis";
+import ContentSulamAlis from "../../Components/ComponentServices/ComponentSulamAlis/ContentSulamAlis";
+import ComponentFasilitas from "../../Components/ComponentFasilitas";
 
-import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
+import FooterContact from "../../Components/Contact/FooterContact";
+import FooterComponent from "../../Components/FooterComponent";
 const index = () => {
   return (
     <div>
@@ -13,8 +13,8 @@ const index = () => {
       <BannerSulamAlis />
       <ContentSulamAlis />
       <ComponentFasilitas />
-      <Contact />
-      <Footer />
+      <FooterContact />
+      <FooterComponent />
     </div>
   );
 };

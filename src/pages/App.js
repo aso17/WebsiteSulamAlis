@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import { Routers } from "../config";
+import { Routers } from "../Config";
 
 function App() {
   return <Routers></Routers>;

@@ -1,10 +1,10 @@
-.HeroGalery {
-  background-image: url("../../assets/images/BannerGalery.webp");
+.HeroContact {
+  background-image: url("../../assets/images/BannerContact.webp");
   height: 43em;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.TitleHeroGalery {
+.TitleHeroContact {
   background: rgba(47, 47, 54, 0.5);
   position: relative;
   top: 35%;
@@ -16,7 +16,7 @@
   opacity: 0;
   animation: showTextHero 0.5s 0.5s linear 1 forwards;
 }
-.TitleHeroGalery h2 {
+.TitleHeroContact h2 {
   font-family: "Schibsted Grotesk", serif;
   margin: auto;
   width: 50%;
@@ -25,7 +25,7 @@
   font-style: normal;
   transform: skew(-20deg);
 }
-.DescHeroGalery {
+.DescHeroContact {
   font-family: "Merriweather", serif;
   background: rgba(47, 47, 54, 0.5);
   position: relative;
@@ -38,7 +38,7 @@
   opacity: 0;
   animation: showTextHero 0.5s 0.9s linear 1 forwards;
 }
-.DescHeroGalery p {
+.DescHeroContact p {
   margin: auto;
   letter-spacing: 1px;
   text-align: center;
@@ -48,24 +48,24 @@
   transform: skew(-20deg);
 }
 @media (max-width: 750px) {
-  .HeroGalery {
+  .HeroContact {
     height: 17em;
   }
-  .HeroGalery .TitleHeroGalery {
+  .HeroContact .TitleHeroContact {
     width: 50%;
     font-size: 1.5em;
     text-align: center;
   }
-  .HeroGalery .TitleHeroGalery h2 {
+  .HeroContact .TitleHeroContact h2 {
     width: 100%;
     font-size: 1em;
   }
 
-  .HeroGalery .DescHeroGalery {
+  .HeroContact .DescHeroContact {
     text-align: center;
     width: 90%;
   }
-  .HeroGalery .DescHeroGalery h5 {
+  .HeroContact .DescHeroContact h5 {
     text-align: center;
     width: 100%;
     font-size: 1em;

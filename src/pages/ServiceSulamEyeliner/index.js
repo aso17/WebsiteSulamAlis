@@ -1,11 +1,11 @@
 import React from "react";
-import Navigationbar from "../../components/Navigationbar";
-import ComponentKeunggulan from "../../components/ComponentKeunggulan";
-import ComponentFasilitas from "../../components/ComponentFasilitas";
-import BannerSulamEyeliner from "../../components/ComponentServices/ComponentSulamEyeliner/BannerSulamEyeliner";
-import ContentSulamEyeliner from "../../components/ComponentServices/ComponentSulamEyeliner/ContentSulamEyeliner";
-import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
+import Navigationbar from "../../Components/Navigationbar";
+import ComponentKeunggulan from "../../Components/ComponentKeunggulan";
+import ComponentFasilitas from "../../Components/ComponentFasilitas";
+import BannerSulamEyeliner from "../../Components/ComponentServices/ComponentSulamEyeliner/BannerSulamEyeliner";
+import ContentSulamEyeliner from "../../Components/ComponentServices/ComponentSulamEyeliner/ContentSulamEyeliner";
+import FooterContact from "../../Components/Contact/FooterContact";
+import FooterComponent from "../../Components/FooterComponent";
 const index = () => {
   return (
     <div>
@@ -14,8 +14,8 @@ const index = () => {
       <ContentSulamEyeliner />
       <ComponentKeunggulan />
       <ComponentFasilitas />
-      <Contact />
-      <Footer />
+      <FooterContact />
+      <FooterComponent />
     </div>
   );
 };

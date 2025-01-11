@@ -1,10 +1,10 @@
-.HeroGalery {
-  background-image: url("../../assets/images/BannerGalery.webp");
+.HeroAcademy {
+  /* background-image: url("../../assets/images/BannerAcademy.webp"); */
   height: 43em;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.TitleHeroGalery {
+.TitleHeroAcademy {
   background: rgba(47, 47, 54, 0.5);
   position: relative;
   top: 35%;
@@ -16,7 +16,7 @@
   opacity: 0;
   animation: showTextHero 0.5s 0.5s linear 1 forwards;
 }
-.TitleHeroGalery h2 {
+.TitleHeroAcademy h2 {
   font-family: "Schibsted Grotesk", serif;
   margin: auto;
   width: 50%;
@@ -25,7 +25,7 @@
   font-style: normal;
   transform: skew(-20deg);
 }
-.DescHeroGalery {
+.DescHeroAcademy {
   font-family: "Merriweather", serif;
   background: rgba(47, 47, 54, 0.5);
   position: relative;
@@ -38,7 +38,7 @@
   opacity: 0;
   animation: showTextHero 0.5s 0.9s linear 1 forwards;
 }
-.DescHeroGalery p {
+.DescHeroAcademy p {
   margin: auto;
   letter-spacing: 1px;
   text-align: center;
@@ -48,24 +48,24 @@
   transform: skew(-20deg);
 }
 @media (max-width: 750px) {
-  .HeroGalery {
+  .HeroAcademy {
     height: 17em;
   }
-  .HeroGalery .TitleHeroGalery {
+  .HeroAcademy .TitleHeroAcademy {
     width: 50%;
     font-size: 1.5em;
     text-align: center;
   }
-  .HeroGalery .TitleHeroGalery h2 {
+  .HeroAcademy .TitleHeroAcademy h2 {
     width: 100%;
     font-size: 1em;
   }
 
-  .HeroGalery .DescHeroGalery {
+  .HeroAcademy .DescHeroAcademy {
     text-align: center;
     width: 90%;
   }
-  .HeroGalery .DescHeroGalery h5 {
+  .HeroAcademy .DescHeroAcademy h5 {
     text-align: center;
     width: 100%;
     font-size: 1em;
