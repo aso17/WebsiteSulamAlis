@@ -19,19 +19,19 @@
 .TitleHeroSulamBibir h2 {
   font-family: "Schibsted Grotesk", serif;
   margin: auto;
-  width: 50%;
+  width: 60%;
   color: #fff;
   padding: 0.2em;
   font-style: normal;
   transform: skew(-20deg);
 }
 .DescHeroSulamBibir {
-  font-family: "Merriweather", serif;
   background: rgba(47, 47, 54, 0.5);
   position: relative;
-  left: -5%;
+  left: -8%;
+  font-size: 1.5em;
   top: 40%;
-  width: 50%;
+  width: 60%;
   color: #fff;
   transform: skew(20deg);
   filter: blur(50px);
@@ -39,6 +39,7 @@
   animation: showTextHero 0.5s 0.9s linear 1 forwards;
 }
 .DescHeroSulamBibir p {
+  font-family: "Schibsted Grotesk", serif;
   margin: auto;
   letter-spacing: 1px;
   text-align: center;
@@ -65,9 +66,9 @@
     text-align: center;
     width: 90%;
   }
-  .HeroSulamBibir .DescHeroSulamBibir h5 {
+  .HeroSulamBibir .DescHeroSulamBibir p {
     text-align: center;
     width: 100%;
-    font-size: 1em;
+    font-size: 13px;
   }
 }

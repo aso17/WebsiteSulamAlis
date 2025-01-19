@@ -3,10 +3,10 @@ const BannerSulamEyeliner = () => {
   return (
     <div className="HeroSulamEyeLiner">
       <div className="TitleSulamEyeLiner">
-        <h2>Sulam Eyeliner</h2>
+        <h2>SULAM EYELINER</h2>
       </div>
       <div className="TitleDesSulamEyeLiner">
-        <h5>Mata menjadi Terlihat Indah & natural.</h5>
+        <p>Mata menjadi Terlihat Indah & Natural</p>
       </div>
     </div>
   );

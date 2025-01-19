@@ -26,12 +26,12 @@
   transform: skew(-20deg);
 }
 .DescHeroLaserRemoval {
-  font-family: "Merriweather", serif;
   background: rgba(47, 47, 54, 0.5);
   position: relative;
-  left: -5%;
+  left: -6%;
+  font-size: 1.5em;
   top: 40%;
-  width: 70%;
+  width: 80%;
   color: #fff;
   transform: skew(20deg);
   filter: blur(50px);
@@ -40,6 +40,7 @@
 }
 .DescHeroLaserRemoval p {
   margin: auto;
+  font-family: "Schibsted Grotesk", serif;
   letter-spacing: 1px;
   text-align: center;
   padding: 0.4em;
@@ -65,9 +66,9 @@
     text-align: center;
     width: 90%;
   }
-  .HeroLaserRemoval .DescHeroLaserRemoval h5 {
+  .HeroLaserRemoval .DescHeroLaserRemoval p {
     text-align: center;
     width: 100%;
-    font-size: 1em;
+    font-size: 13px;
   }
 }

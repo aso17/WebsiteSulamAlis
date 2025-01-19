@@ -15,7 +15,7 @@ const ContentSulamEyeliner = () => {
   return (
     <div className="ContentSulamEyeliner">
       <motion.div
-        variants={FramerMotion("right", 0.1)}
+        variants={FramerMotion("up", 0.1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
@@ -33,13 +33,19 @@ const ContentSulamEyeliner = () => {
             eyeliner bermanfaat agar mata terlihat selalu segar, bersinar, dan
             memberikan efek percaya diri sepanjang hari.
           </p>
-          <p
-            className="ProcedureSulamEyeliner"
-            onClick={() => setModalShow(true)}
+          <motion.div
+            variants={FramerMotion("right", 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
           >
-            Lihat Procedure
-          </p>
-
+            <p
+              className="ProcedureSulamEyeliner"
+              onClick={() => setModalShow(true)}
+            >
+              Lihat Procedure
+            </p>
+          </motion.div>
           <ModalComponent
             show={modalShow}
             id={`2`}
@@ -62,10 +68,24 @@ const ContentSulamEyeliner = () => {
           </div>
           <div className="RowCaptionSulamEyeliner">
             <div className="CaptionSulamEyeliner">
-              <p>Before</p>
+              <motion.div
+                variants={FramerMotion("right", 0.1)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                <p>Before</p>
+              </motion.div>
             </div>
             <div className="CaptionSulamEyeliner">
-              <p>After</p>
+              <motion.div
+                variants={FramerMotion("right", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                <p>After</p>
+              </motion.div>
             </div>
           </div>
         </Col>

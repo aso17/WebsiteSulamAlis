@@ -42,11 +42,18 @@ const ContentHome = () => {
           </p>
         </Col>
         <Col className="ColServiceDescHome">
-          <Image
-            className="ImgSulamAlis1Home"
-            src={ImgSulamAlis1}
-            alt="imgSulamAlis"
-          />
+          <motion.div
+            variants={FramerMotion("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image
+              className="ImgSulamAlis1Home"
+              src={ImgSulamAlis1}
+              alt="imgSulamAlis"
+            />
+          </motion.div>
         </Col>
       </Row>
 
@@ -67,11 +74,18 @@ const ContentHome = () => {
           </p>
         </Col>
         <Col md={6} className="ColServiceDescHome">
-          <Image
-            className="ImgSulamEyelinerHome"
-            src={ImagesSulamEleyenier}
-            alt="ImgSulamEyeliner"
-          />
+          <motion.div
+            variants={FramerMotion("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image
+              className="ImgSulamEyelinerHome"
+              src={ImagesSulamEleyenier}
+              alt="ImgSulamEyeliner"
+            />
+          </motion.div>
         </Col>
       </Row>
 
@@ -95,11 +109,18 @@ const ContentHome = () => {
           </p>
         </Col>
         <Col md={6} className="ColServiceDescHome">
-          <Image
-            className="ImgSulamBibirHome"
-            src={ImagesSulamBibir1}
-            alt="ImgSulamBibir"
-          />
+          <motion.div
+            variants={FramerMotion("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image
+              className="ImgSulamBibirHome"
+              src={ImagesSulamBibir1}
+              alt="ImgSulamBibir"
+            />
+          </motion.div>
         </Col>
       </Row>
 
@@ -121,11 +142,18 @@ const ContentHome = () => {
           </p>
         </Col>
         <Col md={6} className="ColServiceDescHome">
-          <Image
-            className="ImgLaserRemovalHome"
-            src={ImagesLaser0}
-            alt="ImgLaserRemoval"
-          />
+          <motion.div
+            variants={FramerMotion("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image
+              className="ImgLaserRemovalHome"
+              src={ImagesLaser0}
+              alt="ImgLaserRemoval"
+            />
+          </motion.div>
         </Col>
       </Row>
     </div>

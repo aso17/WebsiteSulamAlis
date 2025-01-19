@@ -21,11 +21,11 @@ p {
   font-family: "Schibsted Grotesk", serif;
   font-size: 1.2em;
   margin: 0.5em;
-  text-shadow: 1px 1px 3px rgba(164, 164, 234, 0.5);
+  /* text-shadow: 1px 1px 3px rgba(164, 164, 234, 0.5); */
   color: #030101;
 }
 .DropdownSpan {
-  text-shadow: 1px 1px 3px rgba(126, 126, 206, 0.5);
+  /* text-shadow: 1px 1px 3px rgba(126, 126, 206, 0.5); */
   color: #030101;
   font-family: "Schibsted Grotesk", serif;
 }
@@ -60,11 +60,6 @@ p {
     font-size: 1.2em;
   }
 
-  /* .navbar a:hover,
-  .DropdownSpan:hover {
-    color: #0523ad;
-    background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
-  } */
   .DropdownSpan {
     font-size: 1.6vh;
   }

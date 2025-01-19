@@ -1,5 +1,7 @@
 import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
+import { motion } from "framer-motion";
+import FramerMotion from "../../FramerMotion";
 import ModalComponent from "../../ModalComponent";
 import "../../StyleComponents/StyleContentLaserRemoval.css";
 import { ImagesLaser1, ImagesLaser2 } from "../../../assets/images";
@@ -7,8 +9,15 @@ const ContentLaserRemoval = () => {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="ContentLaserRemoval">
-      <h4>Membuat Kulit Menjadi Sempurna.</h4>
-      <p>Perawatan Kulit dengan Teknologi terkini</p>
+      <motion.div
+        variants={FramerMotion("up", 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+      >
+        <h4>Membuat Kulit Menjadi Sempurna.</h4>
+        <p>Perawatan Kulit dengan Teknologi terkini</p>
+      </motion.div>
       <Row className="RowDescLaserRemoval">
         <Col md={6} className="ColDescLaserRemoval">
           <p>
@@ -18,12 +27,19 @@ const ContentLaserRemoval = () => {
             lahir. Laser menghilangkan lapisan kulit mati menggunakan sinar.
           </p>
 
-          <p
-            className="ProcedureLaserRemoval"
-            onClick={() => setModalShow(true)}
+          <motion.div
+            variants={FramerMotion("right", 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
           >
-            Lihat Procedure
-          </p>
+            <p
+              className="ProcedureLaserRemoval"
+              onClick={() => setModalShow(true)}
+            >
+              Lihat Procedure
+            </p>
+          </motion.div>
 
           <ModalComponent
             show={modalShow}

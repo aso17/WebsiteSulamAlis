@@ -20,7 +20,7 @@ const ComponentFasilitas = () => {
         viewport={{ once: false, amount: 0.7 }}
       >
         <div className="TitleFacility">
-          <h2>Facility Rooms</h2>
+          <h2>Studio Rooms</h2>
           <p>Kenyamanan Pelanggan Paling Utama</p>
         </div>
       </motion.div>

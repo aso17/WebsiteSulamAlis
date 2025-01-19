@@ -8,7 +8,7 @@ const BannerSulamBibir = () => {
         <h2>SULAM BIBIR</h2>
       </div>
       <div className="DescHeroSulamBibir">
-        <p>Bibir Indah Dengan Warna Yang Diinginkan.</p>
+        <p>Bibir Indah Dengan Warna Yang Diinginkan</p>
       </div>
     </div>
   );

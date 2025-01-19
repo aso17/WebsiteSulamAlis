@@ -41,9 +41,9 @@ const Navigationbar = () => {
                 LASER REMOVAL
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link className="menu" href={"/academy"}>
+            {/* <Nav.Link className="menu" href={"/academy"}>
               ACADEMY
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="menu" href={"/galery"}>
               GALERY
             </Nav.Link>

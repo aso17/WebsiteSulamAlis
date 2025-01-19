@@ -9,7 +9,7 @@ const BannerSulamAlis = () => {
         <h2>SULAM ALIS</h2>
       </div>
       <div className="TitleDesSulamAlis">
-        <h5>Dapatkan Sulam Alis Terbaik Susuai Dengan Keinginan</h5>
+        <p>Sulam Alis Terbaik Susuai Dengan Keinginan</p>
       </div>
     </div>
   );

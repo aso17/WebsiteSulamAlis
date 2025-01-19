@@ -33,7 +33,7 @@
   font-family: "Merriweather", serif;
   background: rgba(47, 47, 54, 0.5);
   position: relative;
-  font-size: 1.4em;
+  font-size: 1.5em;
   left: -5%;
   top: 35%;
   width: 60%;
@@ -76,11 +76,12 @@
 
   .HeroAboutMe .TitleDesAboutMe {
     text-align: center;
-    width: 90%;
-    font-size: 1em;
+    width: 87%;
   }
   .HeroAboutMe .TitleDesAboutMe p {
+    font-family: "Open Sans Condensed";
     text-align: center;
+    font-size: 1em;
     width: 100%;
   }
 }

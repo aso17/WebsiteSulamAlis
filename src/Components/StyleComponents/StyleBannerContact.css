@@ -26,12 +26,13 @@
   transform: skew(-20deg);
 }
 .DescHeroContact {
-  font-family: "Merriweather", serif;
+  font-family: "Schibsted Grotesk", serif;
   background: rgba(47, 47, 54, 0.5);
   position: relative;
   left: -5%;
   top: 40%;
-  width: 50%;
+  font-size: 1.5em;
+  width: 60%;
   color: #fff;
   transform: skew(20deg);
   filter: blur(50px);
@@ -40,6 +41,7 @@
 }
 .DescHeroContact p {
   margin: auto;
+  font-family: "Schibsted Grotesk", serif;
   letter-spacing: 1px;
   text-align: center;
   padding: 0.4em;
@@ -63,9 +65,11 @@
 
   .HeroContact .DescHeroContact {
     text-align: center;
-    width: 90%;
+    width: 87%;
+    /* border: 0.5px solid; */
+    /* right: -9%; */
   }
-  .HeroContact .DescHeroContact h5 {
+  .HeroContact .DescHeroContact p {
     text-align: center;
     width: 100%;
     font-size: 1em;

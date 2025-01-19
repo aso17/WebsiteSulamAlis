@@ -30,10 +30,10 @@
   text-align: justify;
   margin-top: 1em;
 }
-.ColDescContentSulamAlis .ProcedureSulamAlis {
-  width: 8em;
+.RowDescContentSulamAlis .ColDescContentSulamAlis .ProcedureSulamAlis {
+  width: 9em;
   padding: 7px;
-  text-align: justify;
+  text-align: center;
   font-size: 1.5em;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
@@ -105,5 +105,8 @@
     height: 12em;
     object-fit: cover;
     margin-top: 10px;
+  }
+  .ColDescContentSulamAlis .ProcedureSulamAlis {
+    font-size: 1.3em;
   }
 }

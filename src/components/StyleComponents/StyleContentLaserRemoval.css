@@ -26,9 +26,9 @@
   display: flex;
 }
 .ColDescLaserRemoval .ProcedureLaserRemoval {
-  width: 8em;
+  width: 9em;
   padding: 7px;
-  text-align: justify;
+  text-align: center;
   font-size: 1.5em;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
@@ -84,5 +84,8 @@
   .ImagesLaserRemoval {
     width: 50%;
     height: 15em;
+  }
+  .ColDescLaserRemoval .ProcedureLaserRemoval {
+    font-size: 1.3em;
   }
 }

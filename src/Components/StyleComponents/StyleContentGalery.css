@@ -1,0 +1,40 @@
+.ContentGalery {
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+  margin: 1em;
+  padding-top: 3em;
+}
+
+.ContentGalery h4 {
+  text-align: center;
+  font-family: "Schibsted Grotesk", serif;
+  padding: 0.2em;
+  margin: auto;
+  width: 50%;
+}
+
+.ContentGalery p {
+  text-align: center;
+}
+
+.ColDescGalery {
+  background-color: #fff;
+  text-align: center;
+  justify-content: center;
+}
+
+.ContentGalery .RowDescGalery {
+  margin-top: 2em;
+}
+.VideoModel {
+  object-fit: cover;
+  width: 100%;
+  margin-top: 1em;
+  height: 25em;
+}
+
+@media (max-width: 750px) {
+  .VideoModel {
+    object-fit: cover;
+    width: 100%;
+  }
+}

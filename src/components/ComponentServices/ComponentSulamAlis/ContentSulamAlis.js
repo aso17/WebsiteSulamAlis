@@ -62,41 +62,97 @@ const ContentSulamAlis = () => {
         <Col md={6} className="ColDescContentSulamAlis">
           <Row className="RowImagesSulamAlis">
             <Col md={6} className="ColImagesSulamAlis">
-              <Image
-                className="ImgSulamAlis1Content0"
-                src={ImgSulamAlis3}
-                alt="imgSulamAlis"
-              />
+              <motion.div
+                variants={FramerMotion("up", 0.1)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                <Image
+                  className="ImgSulamAlis1Content0"
+                  src={ImgSulamAlis3}
+                  alt="imgSulamAlis"
+                />
+              </motion.div>
             </Col>
             <Col md={6} className="ColImagesSulamAlis">
-              <Image
-                className="ImgSulamAlis1Content1"
-                src={ImgSulamAlis2}
-                alt="imgSulamAlis"
-              />
-              <Image
-                className="ImgSulamAlis1Content2"
-                src={ImgSulamAlis4}
-                alt="imgSulamAlis"
-              />
+              <motion.div
+                variants={FramerMotion("up", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                <Image
+                  className="ImgSulamAlis1Content1"
+                  src={ImgSulamAlis2}
+                  alt="imgSulamAlis"
+                />
+              </motion.div>
+              <motion.div
+                variants={FramerMotion("up", 0.3)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                <Image
+                  className="ImgSulamAlis1Content2"
+                  src={ImgSulamAlis4}
+                  alt="imgSulamAlis"
+                />
+              </motion.div>
             </Col>
           </Row>
         </Col>
       </Row>
 
       <Row className="RowModelSulamAlis">
-        <h5>Kepuasan Konsumen Paling Utama</h5>
+        <motion.div
+          variants={FramerMotion("right", 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.7 }}
+        >
+          <h5>Kepuasan Konsumen Paling Utama</h5>
+        </motion.div>
         <Col md={3} className="ColModelSulamAlis">
-          <Image className="Model0" src={Model0} alt="Model0" />
+          <motion.div
+            variants={FramerMotion("up", 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image className="Model0" src={Model0} alt="Model0" />
+          </motion.div>
         </Col>
         <Col md={3} className="ColModelSulamAlis">
-          <Image className="Model1" src={Model1} alt="Model1" />
+          <motion.div
+            variants={FramerMotion("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image className="Model1" src={Model1} alt="Model1" />
+          </motion.div>
         </Col>
         <Col md={3} className="ColModelSulamAlis">
-          <Image className="Model2" src={Model2} alt="Model1" />
+          <motion.div
+            variants={FramerMotion("up", 0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image className="Model2" src={Model2} alt="Model1" />
+          </motion.div>
         </Col>
         <Col md={3} className="ColModelSulamAlis">
-          <Image className="Model3" src={Model3} alt="Model3" />
+          <motion.div
+            variants={FramerMotion("up", 0.4)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image className="Model3" src={Model3} alt="Model3" />
+          </motion.div>
         </Col>
       </Row>
     </div>

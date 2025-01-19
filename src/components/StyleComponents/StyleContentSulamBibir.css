@@ -26,9 +26,9 @@
   display: flex;
 }
 .ColDescSulamBibir .ProcedureSulamBibir {
-  width: 8em;
+  width: 9em;
   padding: 7px;
-  text-align: justify;
+  text-align: center;
   font-size: 1.5em;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
@@ -97,5 +97,8 @@
     width: 6em;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+  .ColDescSulamBibir .ProcedureSulamBibir {
+    font-size: 1.3em;
   }
 }

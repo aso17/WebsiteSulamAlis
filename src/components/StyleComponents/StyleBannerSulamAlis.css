@@ -20,7 +20,6 @@
 }
 
 .HeroSulamAlis .TitleSulamAlis h2 {
-  /* text-align: end; */
   font-family: "Schibsted Grotesk", serif;
   margin: auto;
   width: 50%;
@@ -31,10 +30,10 @@
 }
 
 .HeroSulamAlis .TitleDesSulamAlis {
-  /* font-family: "Merriweather", serif; */
   background: rgba(47, 47, 54, 0.5);
   position: relative;
-  left: -5%;
+  left: -6%;
+  font-size: 1.2em;
   top: 40%;
   width: 60%;
   color: #fff;
@@ -43,9 +42,10 @@
   opacity: 0;
   animation: showTextHero 0.5s 0.9s linear 1 forwards;
 }
-.HeroSulamAlis .TitleDesSulamAlis h5 {
+.HeroSulamAlis .TitleDesSulamAlis p {
+  font-family: "Schibsted Grotesk", serif;
+  font-size: 1.5em;
   margin: auto;
-  /* font-family: "Schibsted Grotesk", serif; */
   letter-spacing: 1px;
   text-align: center;
   padding: 0.4em;
@@ -67,25 +67,19 @@
   }
   .HeroSulamAlis .TitleSulamAlis {
     width: 50%;
-    /* left: -10%; */
-    font-size: 1.5em;
     text-align: center;
   }
   .HeroSulamAlis .TitleSulamAlis h2 {
     width: 100%;
-    font-size: 1em;
   }
 
   .HeroSulamAlis .TitleDesSulamAlis {
-    /* position: relative; */
     text-align: center;
     width: 90%;
-    /* left: -15%; */
   }
-  .HeroSulamAlis .TitleDesSulamAlis h5 {
-    /* font-family: "Schibsted Grotesk", serif; */
+  .HeroSulamAlis .TitleDesSulamAlis p {
     text-align: center;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
