@@ -6,12 +6,7 @@ class VideosBestService extends Component {
   render() {
     return (
       <div className="VideoArtis">
-        <video
-          controls={true}
-          src={VideoArtisGaby}
-          preload={true}
-          poster={Poster}
-        ></video>
+        <video controls={true} src={VideoArtisGaby} poster={Poster}></video>
       </div>
     );
   }

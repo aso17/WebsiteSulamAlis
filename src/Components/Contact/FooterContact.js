@@ -1,5 +1,5 @@
 import React from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import FramerMotion from "../FramerMotion";
 import { Row, Col, Image } from "react-bootstrap";
 import "../StyleComponents/StyleContact.css";

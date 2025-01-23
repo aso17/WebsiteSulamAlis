@@ -48,7 +48,7 @@ const ContentSulamEyeliner = () => {
           </motion.div>
           <ModalComponent
             show={modalShow}
-            id={`2`}
+            id={`3`}
             onHide={() => setModalShow(false)}
           />
         </Col>

@@ -18,9 +18,7 @@ const ComponentKeunggulan = () => {
             >
               <h4 className="HeadKeunggulan">Why Us?</h4>
             </motion.div>
-            <h5 className="HeadBrand">
-              Keunggulan Rosidi Sulam Alis & Academy
-            </h5>
+            <h5 className="HeadBrand">Keunggulan Rosidi Sulam Alis</h5>
           </Col>
         </Row>
 

@@ -2,6 +2,7 @@ import { Modal, Image } from "react-bootstrap";
 import "../Components/StyleComponents/StyleModalComponent.css";
 import ProcedureSulamAlis from "../assets/images/Services/ProcedureSulamAlis.webp";
 import ProcedureSulamBibir from "../assets/images/Services/ProcedureSulamBibir.webp";
+import ProcedureSulamEyeliner from "../assets/images/Services/ProcedureSulamEyeliner.webp";
 const ModalComponent = (props) => {
   let modalHeading;
   let modalParagraf;
@@ -18,7 +19,9 @@ const ModalComponent = (props) => {
       modalParagraf = ProcedureSulamBibir;
       break;
     default:
-    // code block
+      // code block
+      modalHeading = `Procedure Sulam Eyeliner`;
+      modalParagraf = ProcedureSulamEyeliner;
   }
 
   return (

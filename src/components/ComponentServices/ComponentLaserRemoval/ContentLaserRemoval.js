@@ -2,7 +2,6 @@ import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 import FramerMotion from "../../FramerMotion";
-import ModalComponent from "../../ModalComponent";
 import "../../StyleComponents/StyleContentLaserRemoval.css";
 import { ImagesLaser1, ImagesLaser2 } from "../../../assets/images";
 const ContentLaserRemoval = () => {
@@ -26,26 +25,6 @@ const ContentLaserRemoval = () => {
             menghilangkan flek/melasma, menghilangkan tato, atau mengatasi tanda
             lahir. Laser menghilangkan lapisan kulit mati menggunakan sinar.
           </p>
-
-          <motion.div
-            variants={FramerMotion("right", 0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <p
-              className="ProcedureLaserRemoval"
-              onClick={() => setModalShow(true)}
-            >
-              Lihat Procedure
-            </p>
-          </motion.div>
-
-          <ModalComponent
-            show={modalShow}
-            id={`2`}
-            onHide={() => setModalShow(false)}
-          />
         </Col>
         <Col md={6} className="ColDescLaserRemoval">
           <div className="RowImgLaserRemoval">

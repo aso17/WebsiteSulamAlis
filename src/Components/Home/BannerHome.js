@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Row, Col, Image } from "react-bootstrap";
+import { motion } from "framer-motion";
+import FramerMotion from "../FramerMotion";
 import { ImgBannerHome, ImgBannerHome2 } from "../../assets/images";
 import "../StyleComponents/StyleHeroHome.css";
 const BannerHome = () => {
@@ -60,10 +62,17 @@ const BannerHome = () => {
             Rosidi Sulam Alis & <span>Academy</span>
           </h2>
           <div className="DescBrand">
-            <h5>
-              Terpercaya Menjadi Langganan Sulam Para Artis dan Selebriti
-              Ibukota dan Sekitarnya.
-            </h5>
+            <motion.div
+              variants={FramerMotion("up", 0.1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.7 }}
+            >
+              <p>
+                Terpercaya Menjadi Langganan Sulam Para Artis dan Selebriti
+                Ibukota dan Sekitarnya.
+              </p>
+            </motion.div>
           </div>
         </Col>
       </Row>

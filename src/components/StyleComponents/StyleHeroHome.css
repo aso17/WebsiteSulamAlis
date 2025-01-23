@@ -81,6 +81,7 @@
   transform: translateY(50px);
   filter: blur(50px);
   opacity: 0;
+  font-size: 1.3em;
   animation: showTextBrand 0.5s 0.5s linear 1 forwards;
 }
 .ColHeroHome .CarouselImg {
@@ -128,6 +129,9 @@
 
 /* mode mobile */
 @media (max-width: 750px) {
+  .SectionBrand .DescBrand {
+    font-size: 1.2em;
+  }
   .CarouselImg .Caption0 {
     width: 55%;
   }
