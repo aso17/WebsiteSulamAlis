@@ -51,24 +51,25 @@ const FooterContactContact = () => {
               />
               +62-812-186-617-05
             </p>
-            <h5>Email</h5>
-            <p>
+
+            <h5>
               <Image
                 src={iconEmail}
                 alt="iconEmail"
                 className="imgIconContact"
               />
-              Rosidisulamalis@gmail.com
-            </p>
-            <h5>Address</h5>
-            <p>
+              Email
+            </h5>
+            <p>Rosidisulamalis@gmail.com</p>
+            <h5>
               <Image
                 src={iconaddress}
                 alt="iconaddress"
                 className="imgIconContact"
               />
-              Ruko Citypark No. 21 Blok J20 Cengkareng-Jakarta Barat
-            </p>
+              Address
+            </h5>
+            <p>Ruko Citypark No. 21 Blok J20 Cengkareng-Jakarta Barat</p>
           </motion.div>
         </Col>
         <Col md={4} className="ColContact">
@@ -81,14 +82,14 @@ const FooterContactContact = () => {
             <h5>Media Sosial</h5>
 
             <p>
-              <a href="#">
+              <a href="https://www.instagram.com/rosidisulamalisjakarta?igsh=cmNuZXY1MG9kOTQ=">
                 <Image
                   src={iconinstagram}
                   alt="iconInstagram"
                   className="imgIconContact"
                 />
               </a>
-              Instagram
+              rosidisulamalisjakarta
             </p>
             <p>
               <a href="#">
@@ -98,7 +99,7 @@ const FooterContactContact = () => {
                   className="imgIconContact"
                 />
               </a>
-              Facebook
+              rosidisulamalisjakarta
             </p>
             <p>
               <a href="#">
@@ -108,7 +109,7 @@ const FooterContactContact = () => {
                   className="imgIconContact"
                 />
               </a>
-              Tiktok
+              rosidisulamalisjakarta
             </p>
             <p>
               <a href="#">
@@ -118,7 +119,7 @@ const FooterContactContact = () => {
                   className="imgIconContact"
                 />
               </a>
-              Twiter
+              rosidisulamalisjakarta
             </p>
           </motion.div>
         </Col>

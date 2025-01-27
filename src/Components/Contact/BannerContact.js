@@ -7,7 +7,7 @@ const BannerContact = () => {
         <h2>CONTACT</h2>
       </div>
       <div className="DescHeroContact">
-        <p>Hubungi Kami Dapatkan Konsultasi Gratis</p>
+        <p>Dapatkan Konsultasi Gratis</p>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const index = () => {
       <Navigationbar />
       <BannerContact />
       <ContentContact />
-      <ComponentFasilitas />
+      {/* <ComponentFasilitas /> */}
       <FooterContact />
       <FooterComponent />
     </div>
