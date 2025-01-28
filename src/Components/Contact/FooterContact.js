@@ -10,7 +10,7 @@ import {
   iconinstagram,
   iconfacebook,
   icontiktok,
-  icontwitter,
+  iconYoutube,
 } from "../../assets/icons";
 const FooterContactContact = () => {
   return (
@@ -81,45 +81,45 @@ const FooterContactContact = () => {
           >
             <h5>Media Sosial</h5>
 
-            <p>
+            <p className="LinkMediaSosial">
               <a href="https://www.instagram.com/rosidisulamalisjakarta?igsh=cmNuZXY1MG9kOTQ=">
                 <Image
                   src={iconinstagram}
                   alt="iconInstagram"
                   className="imgIconContact"
                 />
+                rosidisulamalisjakarta
               </a>
-              rosidisulamalisjakarta
             </p>
-            <p>
+            <p className="LinkMediaSosial">
               <a href="#">
                 <Image
                   src={iconfacebook}
                   alt="iconFacebook"
                   className="imgIconContact"
                 />
+                rosidisulamalisjakarta
               </a>
-              rosidisulamalisjakarta
             </p>
-            <p>
+            <p className="LinkMediaSosial">
               <a href="#">
                 <Image
                   src={icontiktok}
                   alt="iconTiktok"
                   className="imgIconContact"
                 />
+                rosidisulamalisjakarta
               </a>
-              rosidisulamalisjakarta
             </p>
-            <p>
-              <a href="#">
+            <p className="LinkMediaSosial">
+              <a href="https://youtu.be/6x8iVx0UsIw?si=qApaTCBC5--eD28n">
                 <Image
-                  src={icontwitter}
-                  alt="iconLinkedIn"
+                  src={iconYoutube}
+                  alt="iconYoutube"
                   className="imgIconContact"
                 />
+                Rosidi Sulamalis Jakarta
               </a>
-              rosidisulamalisjakarta
             </p>
           </motion.div>
         </Col>

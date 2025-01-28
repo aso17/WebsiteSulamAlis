@@ -6,83 +6,8 @@
   width: 100%;
 }
 
-.HeroSulamEyeLiner .TitleSulamEyeLiner {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  top: 35%;
-  width: 40%;
-  left: -2.2em;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.5s linear 1 forwards;
-}
-
-.HeroSulamEyeLiner .TitleSulamEyeLiner h2 {
-  font-family: "Schibsted Grotesk", serif;
-  margin: auto;
-  width: 50%;
-  color: #fff;
-  padding: 0.2em;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-
-.HeroSulamEyeLiner .TitleDesSulamEyeLiner {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  padding: 0.4em;
-  left: -6%;
-  top: 40%;
-  font-size: 1.5em;
-  width: 50%;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.9s linear 1 forwards;
-}
-.HeroSulamEyeLiner .TitleDesSulamEyeLiner p {
-  margin: auto;
-  letter-spacing: 1px;
-  text-align: center;
-  font-family: "Schibsted Grotesk", serif;
-  color: #fff;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-@keyframes showTextHero {
-  to {
-    margin-left: 3em;
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
 @media (max-width: 750px) {
   .HeroSulamEyeLiner {
     height: 17em;
-  }
-  .HeroSulamEyeLiner .TitleSulamEyeLiner {
-    width: 50%;
-    /* left: -10%; */
-    font-size: 1.5em;
-    text-align: center;
-  }
-  .HeroSulamEyeLiner .TitleSulamEyeLiner h2 {
-    width: 100%;
-    font-size: 1em;
-  }
-
-  .HeroSulamEyeLiner .TitleDesSulamEyeLiner {
-    text-align: center;
-    width: 90%;
-  }
-  .HeroSulamEyeLiner .TitleDesSulamEyeLiner p {
-    /* font-family: "Schibsted Grotesk", serif; */
-    text-align: center;
-    width: 100%;
-    font-size: 1em;
   }
 }

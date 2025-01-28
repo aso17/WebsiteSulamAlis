@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Image } from "react-bootstrap";
+import { Row, Col, Image, Badge } from "react-bootstrap";
 import ModalComponent from "../../ModalComponent";
 import { motion } from "framer-motion";
 import FramerMotion from "..//../FramerMotion";
@@ -34,12 +34,13 @@ const ContentSulamBibir = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
           >
-            <p
+            <Badge
+              bg="secondary"
               className="ProcedureSulamBibir"
               onClick={() => setModalShow(true)}
             >
               Lihat Procedure
-            </p>
+            </Badge>
           </motion.div>
           <ModalComponent
             show={modalShow}

@@ -1,19 +1,21 @@
-import React from "react";
+import { motion } from "framer-motion";
+import TitleBanner from "../../TitleBanner";
+import HotlineBanner from "../../HotlineBanner";
+import FramerMotion from "..//../FramerMotion";
 import "../../StyleComponents/StyleBannerLaserRemoval.css";
-import { Row, Col } from "react-bootstrap";
 
 const BannerLaserRemoval = () => {
   return (
     <div className="HeroLaserRemoval">
-      <div className="TitleHeroLaserRemoval">
-        <h2>LASER REMOVAL</h2>
-      </div>
-      <div className="DescHeroLaserRemoval">
-        <p>
-          Menghapus Tattoo Permanent, Mengencangkan Kulit, Mengecilkan Pori &
-          Garis Kerutan Halus
-        </p>
-      </div>
+      <TitleBanner className={"LaserRemoval"} />
+      <motion.div
+        variants={FramerMotion("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.9 }}
+      >
+        <HotlineBanner />
+      </motion.div>
     </div>
   );
 };

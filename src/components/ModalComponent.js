@@ -31,7 +31,7 @@ const ModalComponent = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header closeButton className="ModalHeader">
         <Modal.Title id="contained-modal-title-vcenter">
           {modalHeading}
         </Modal.Title>

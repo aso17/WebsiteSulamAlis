@@ -4,71 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.TitleHeroLaserRemoval {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  top: 35%;
-  width: 35%;
-  left: -2.2em;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.5s linear 1 forwards;
-}
-.TitleHeroLaserRemoval h2 {
-  font-family: "Schibsted Grotesk", serif;
-  margin: auto;
-  width: 50%;
-  color: #fff;
-  padding: 0.2em;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-.DescHeroLaserRemoval {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  left: -6%;
-  font-size: 1.5em;
-  top: 40%;
-  width: 80%;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.9s linear 1 forwards;
-}
-.DescHeroLaserRemoval p {
-  margin: auto;
-  font-family: "Schibsted Grotesk", serif;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 0.4em;
-  color: #fff;
-  font-style: normal;
-  transform: skew(-20deg);
-}
+
 @media (max-width: 750px) {
   .HeroLaserRemoval {
     height: 17em;
-  }
-  .HeroLaserRemoval .TitleHeroLaserRemoval {
-    width: 50%;
-    font-size: 1.5em;
-    text-align: center;
-  }
-  .HeroLaserRemoval .TitleHeroLaserRemoval h2 {
-    width: 100%;
-    font-size: 1em;
-  }
-
-  .HeroLaserRemoval .DescHeroLaserRemoval {
-    text-align: center;
-    width: 90%;
-  }
-  .HeroLaserRemoval .DescHeroLaserRemoval p {
-    text-align: center;
-    width: 100%;
-    font-size: 13px;
   }
 }

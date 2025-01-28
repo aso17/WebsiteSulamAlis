@@ -1,0 +1,80 @@
+.TitleBanner {
+  background: rgba(47, 47, 54, 0.5);
+  position: relative;
+  top: 35%;
+  width: 38%;
+  left: -2.2em;
+  color: #fff;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.5s linear 1 forwards;
+}
+
+.TitleBanner h2 {
+  font-family: "Schibsted Grotesk", serif;
+  margin: auto;
+  width: 55%;
+  color: #fff;
+  letter-spacing: 2px;
+  padding: 0.4em;
+  font-style: normal;
+  transform: skew(-20deg);
+}
+
+.TitleBannerDesc {
+  background: rgba(243, 243, 244, 0.5);
+  position: relative;
+  left: -6%;
+  font-size: 1.2em;
+  top: 40%;
+  width: 60%;
+  transform: skew(20deg);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showTextHero 0.5s 0.9s linear 1 forwards;
+}
+.TitleBannerDesc p {
+  font-weight: 200;
+  font-size: 1.5em;
+  margin: auto;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0.4em;
+  color: #100707;
+  transform: skew(-20deg);
+}
+@keyframes showTextHero {
+  to {
+    margin-left: 3em;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* Style Mobile Devise */
+@media (max-width: 750px) {
+  .TitleBanner {
+    width: 50%;
+    text-align: center;
+  }
+  .TitleBanner h2 {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .TitleBannerDesc {
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    left: -4em;
+  }
+  .TitleBannerDesc p {
+    text-align: center;
+    color: #060202;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 300;
+    mix-blend-mode: color-burn;
+  }
+}

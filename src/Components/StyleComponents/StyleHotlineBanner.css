@@ -1,0 +1,33 @@
+.HotlineBanner {
+  position: relative;
+  height: 220px;
+  width: 220px;
+  background: rgba(243, 243, 244, 0.5);
+  text-align: center;
+  color: #080101;
+  display: flex;
+  border-radius: 100%;
+  left: 70%;
+  opacity: 0;
+  animation: showTextHero 0.7s 1.4s linear 1 forwards;
+}
+.HotlineBanner p {
+  margin: auto;
+  font-weight: 200;
+  padding: 20px;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+@media (max-width: 750px) {
+  .HotlineBanner {
+    height: 88px;
+    width: 88px;
+    left: 60%;
+    top: -4em;
+  }
+  .HotlineBanner p {
+    font-size: 10px;
+    font-weight: 400;
+    color: #020101;
+  }
+}

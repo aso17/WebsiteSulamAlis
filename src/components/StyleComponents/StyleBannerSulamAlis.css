@@ -1,85 +1,13 @@
 .HeroSulamAlis {
   background-image: url("../../assets/images/Services/BannerSulamAlis.webp");
   height: 43em;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-}
-
-.HeroSulamAlis .TitleSulamAlis {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  top: 35%;
-  width: 30%;
-  left: -2.2em;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.5s linear 1 forwards;
-}
-
-.HeroSulamAlis .TitleSulamAlis h2 {
-  font-family: "Schibsted Grotesk", serif;
-  margin: auto;
-  width: 50%;
-  color: #fff;
-  padding: 0.2em;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-
-.HeroSulamAlis .TitleDesSulamAlis {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  left: -6%;
-  font-size: 1.2em;
-  top: 40%;
-  width: 60%;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.9s linear 1 forwards;
-}
-.HeroSulamAlis .TitleDesSulamAlis p {
-  font-family: "Schibsted Grotesk", serif;
-  font-size: 1.5em;
-  margin: auto;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 0.4em;
-  color: #fff;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-@keyframes showTextHero {
-  to {
-    margin-left: 3em;
-    filter: blur(0);
-    opacity: 1;
-  }
 }
 
 @media (max-width: 750px) {
   .HeroSulamAlis {
     height: 17em;
-  }
-  .HeroSulamAlis .TitleSulamAlis {
-    width: 50%;
-    text-align: center;
-  }
-  .HeroSulamAlis .TitleSulamAlis h2 {
-    width: 100%;
-  }
-
-  .HeroSulamAlis .TitleDesSulamAlis {
-    text-align: center;
-    width: 90%;
-  }
-  .HeroSulamAlis .TitleDesSulamAlis p {
-    text-align: center;
-    width: 100%;
-    font-size: 1.1em;
   }
 }

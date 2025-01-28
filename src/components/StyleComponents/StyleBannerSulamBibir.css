@@ -4,71 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.TitleHeroSulamBibir {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  top: 35%;
-  width: 30%;
-  left: -2.2em;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.5s linear 1 forwards;
-}
-.TitleHeroSulamBibir h2 {
-  font-family: "Schibsted Grotesk", serif;
-  margin: auto;
-  width: 60%;
-  color: #fff;
-  padding: 0.2em;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-.DescHeroSulamBibir {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  left: -8%;
-  font-size: 1.5em;
-  top: 40%;
-  width: 60%;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.9s linear 1 forwards;
-}
-.DescHeroSulamBibir p {
-  font-family: "Schibsted Grotesk", serif;
-  margin: auto;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 0.4em;
-  color: #fff;
-  font-style: normal;
-  transform: skew(-20deg);
-}
+
 @media (max-width: 750px) {
   .HeroSulamBibir {
     height: 17em;
-  }
-  .HeroSulamBibir .TitleHeroSulamBibir {
-    width: 50%;
-    font-size: 1.5em;
-    text-align: center;
-  }
-  .HeroSulamBibir .TitleHeroSulamBibir h2 {
-    width: 100%;
-    font-size: 1em;
-  }
-
-  .HeroSulamBibir .DescHeroSulamBibir {
-    text-align: center;
-    width: 90%;
-  }
-  .HeroSulamBibir .DescHeroSulamBibir p {
-    text-align: center;
-    width: 100%;
-    font-size: 13px;
   }
 }
