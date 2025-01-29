@@ -21,6 +21,7 @@
 }
 .ColDescSulamBibir p {
   text-align: start;
+  padding-top: 8px;
 }
 .RowImgSulamBibir {
   display: flex;
@@ -61,11 +62,12 @@
   letter-spacing: 2px;
 }
 .CaptionSulamBibir p {
-  font-family: "Schibsted Grotesk", serif;
   padding: 1em;
+  font-weight: 250;
   width: 8em;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+  background-color: rgba(205, 201, 201, 0.5);
 }
 
 @media (max-width: 750px) {
@@ -79,8 +81,7 @@
   }
 
   .RowImgSulamBibir {
-    /* margin: auto; */
-    padding: 1em;
+    margin-top: 1em;
   }
   .ImagesSulamBibir {
     width: 100%;
@@ -89,14 +90,13 @@
   .RowCaptionSulamBibir {
     display: flex;
     position: relative;
-    top: -79%;
+    top: -78%;
   }
   .CaptionSulamBibir p {
     padding: 0.5em;
     margin-left: 1px;
     width: 6em;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
   }
   .ColDescSulamBibir .ProcedureSulamBibir {
     font-size: 1em;

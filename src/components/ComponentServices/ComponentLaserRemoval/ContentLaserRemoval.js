@@ -15,7 +15,7 @@ const ContentLaserRemoval = () => {
         viewport={{ once: false, amount: 0.7 }}
       >
         <h4>Membuat Kulit Menjadi Sempurna.</h4>
-        <p>Perawatan Kulit dengan Teknologi terkini</p>
+        <p>Dengan Menggunakan Teknologi Mesin Laser</p>
       </motion.div>
       <Row className="RowDescLaserRemoval">
         <Col md={6} className="ColDescLaserRemoval">

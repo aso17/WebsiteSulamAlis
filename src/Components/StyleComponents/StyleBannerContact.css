@@ -4,75 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.TitleHeroContact {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  top: 35%;
-  width: 30%;
-  left: -2.2em;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.5s linear 1 forwards;
-}
-.TitleHeroContact h2 {
-  font-family: "Schibsted Grotesk", serif;
-  margin: auto;
-  width: 50%;
-  color: #fff;
-  padding: 0.2em;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-.DescHeroContact {
-  font-family: "Schibsted Grotesk", serif;
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  left: -5%;
-  top: 40%;
-  font-size: 1.5em;
-  width: 60%;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.9s linear 1 forwards;
-}
-.DescHeroContact p {
-  margin: auto;
-  font-family: "Schibsted Grotesk", serif;
-  letter-spacing: 1px;
-  text-align: center;
-  font-size: 1.5em;
-  padding: 0.4em;
-  color: #fff;
-  font-style: normal;
-  transform: skew(-20deg);
-}
+
 @media (max-width: 750px) {
   .HeroContact {
     height: 17em;
-  }
-  .HeroContact .TitleHeroContact {
-    width: 50%;
-    font-size: 1.5em;
-    text-align: center;
-  }
-  .HeroContact .TitleHeroContact h2 {
-    width: 100%;
-    font-size: 1em;
-  }
-
-  .HeroContact .DescHeroContact {
-    text-align: center;
-    width: 87%;
-    /* border: 0.5px solid; */
-    /* right: -9%; */
-  }
-  .HeroContact .DescHeroContact p {
-    text-align: center;
-    width: 100%;
-    font-size: 1em;
   }
 }

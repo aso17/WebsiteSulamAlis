@@ -16,6 +16,7 @@
   margin: auto;
   width: 55%;
   color: #fff;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   letter-spacing: 2px;
   padding: 0.4em;
   font-style: normal;
@@ -23,7 +24,7 @@
 }
 
 .TitleBannerDesc {
-  background: rgba(243, 243, 244, 0.5);
+  background: rgba(241, 241, 243, 0.745);
   position: relative;
   left: -6%;
   font-size: 1.2em;
@@ -35,13 +36,13 @@
   animation: showTextHero 0.5s 0.9s linear 1 forwards;
 }
 .TitleBannerDesc p {
-  font-weight: 200;
+  font-weight: 250;
   font-size: 1.5em;
   margin: auto;
   letter-spacing: 1px;
   text-align: center;
   padding: 0.4em;
-  color: #100707;
+  color: rgb(0, 0, 8);
   transform: skew(-20deg);
 }
 @keyframes showTextHero {
@@ -66,14 +67,14 @@
   .TitleBannerDesc {
     text-align: center;
     top: 45%;
-    width: 100%;
+    width: 85%;
     left: -4em;
   }
   .TitleBannerDesc p {
     text-align: center;
     color: #060202;
     width: 100%;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     mix-blend-mode: color-burn;
   }

@@ -70,6 +70,12 @@
   font-family: "Schibsted Grotesk", serif;
 }
 @media (max-width: 750px) {
+  .AboutMe h3 {
+    font-size: 1.5em;
+  }
+  .AboutMe h3 span {
+    font-size: 1em;
+  }
   .ImgOwner {
     width: 100%;
     margin-top: 1em;

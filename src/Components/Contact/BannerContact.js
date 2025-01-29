@@ -1,14 +1,10 @@
 import React from "react";
+import TitleBanner from "../TitleBanner";
 import "../StyleComponents/StyleBannerContact.css";
 const BannerContact = () => {
   return (
     <div className="HeroContact">
-      <div className="TitleHeroContact">
-        <h2>CONTACT</h2>
-      </div>
-      <div className="DescHeroContact">
-        <p>Dapatkan Konsultasi Gratis</p>
-      </div>
+      <TitleBanner className="TitleBannerContact" />
     </div>
   );
 };

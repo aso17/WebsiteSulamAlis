@@ -16,10 +16,10 @@
 }
 .RowDescSulamEyeliner {
   background-color: #fff;
-  /* width: 100%; */
 }
 .ColDescSulamEyeliner p {
   text-align: justify;
+  padding-top: 8px;
 }
 .ContentSulamEyeliner .RowDescSulamEyeliner {
   margin-top: 2em;
@@ -65,12 +65,14 @@
   letter-spacing: 2px;
 }
 .CaptionSulamEyeliner p {
-  font-family: "Schibsted Grotesk", serif;
+  /* font-family: "Schibsted Grotesk", serif; */
+  font-weight: 250;
   padding: 1em;
   margin-left: 1.2px;
   width: 8em;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+  background-color: rgba(205, 201, 201, 0.5);
 }
 
 @media (max-width: 750px) {
@@ -99,7 +101,6 @@
     margin-left: 1px;
     width: 6em;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
   }
   .RowCaptionSulamEyeliner .ProcedureSulamEyeliner {
     font-size: 1em;

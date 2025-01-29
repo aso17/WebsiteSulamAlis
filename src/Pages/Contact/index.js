@@ -1,7 +1,7 @@
 import Navigationbar from "../../Components/Navigationbar";
 import BannerContact from "../../Components/Contact/BannerContact";
 import ContentContact from "../../Components/Contact/ContentContact";
-import ComponentFasilitas from "../../Components/ComponentFasilitas";
+import ComponentKeunggulan from "../../Components/ComponentKeunggulan";
 import FooterContact from "../../Components/Contact/FooterContact";
 import FooterComponent from "../../Components/FooterComponent";
 
@@ -11,7 +11,7 @@ const index = () => {
       <Navigationbar />
       <BannerContact />
       <ContentContact />
-      {/* <ComponentFasilitas /> */}
+      <ComponentKeunggulan />
       <FooterContact />
       <FooterComponent />
     </div>

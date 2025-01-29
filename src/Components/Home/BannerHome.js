@@ -43,14 +43,16 @@ const BannerHome = () => {
           />
           <Carousel.Caption>
             <div className="Caption0" id="Captionid">
-              <h2 className="CaptionText0">PASTIKAN ANDA</h2>
+              <h2 className="CaptionText0">ENSURE THAT YOU</h2>
             </div>
             <div className="Caption1" id="Captionid">
-              <h2 className="CaptionText1">MERASAKAN LAYANAN TERBAIK KAMI</h2>
+              <h2 className="CaptionText1">EXPERIENCE OUR BEST SERVICE</h2>
             </div>
 
             <div className="Caption2" id="Captionid">
-              <p className="CaptionText2">DENGAN FASILITAS & TREND TERKINI</p>
+              <p className="CaptionText2">
+                With Modern Facilities & Up-to-date Trends
+              </p>
             </div>
           </Carousel.Caption>
         </Carousel.Item>

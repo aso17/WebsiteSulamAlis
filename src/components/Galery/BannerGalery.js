@@ -1,14 +1,10 @@
 import React from "react";
+import TitleBanner from "../TitleBanner";
 import "../StyleComponents/StyleBannerGalery.css";
 const BannerGalery = () => {
   return (
     <div className="HeroGalery">
-      <div className="TitleHeroGalery">
-        <h2>GALERY</h2>
-      </div>
-      <div className="DescHeroGalery">
-        <p>Artis & Model Indonesia</p>
-      </div>
+      <TitleBanner className="TitleBannerGalery" />
     </div>
   );
 };

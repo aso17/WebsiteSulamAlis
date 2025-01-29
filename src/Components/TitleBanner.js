@@ -6,25 +6,40 @@ const TitleBanner = (props) => {
   let TitleBanner;
   let TitleBannerDesc;
   switch (props.className) {
+    case `TitleBannerAboutme`:
+      // code block
+      TitleBanner = `ABOUT ME`;
+      TitleBannerDesc = "Creative Industry In The Field Of Beauty";
+      break;
+    case `TitleBannerGalery`:
+      // code block
+      TitleBanner = `GALERY`;
+      TitleBannerDesc = "Featuring Artists And models Indonesia";
+      break;
+    case `TitleBannerContact`:
+      // code block
+      TitleBanner = `CONTACT`;
+      TitleBannerDesc = "Get a Free Consultation";
+      break;
     case `SulamAlis`:
       // code block
       TitleBanner = `SULAM ALIS`;
-      TitleBannerDesc = "Sulam Alis Terbaik Susuai Dengan Keinginan";
+      TitleBannerDesc = "The Best Match For Your Needs";
       break;
     case `SulamBibir`:
       // code block
       TitleBanner = `SULAM BIBIR`;
-      TitleBannerDesc = "Bibir Indah Dengan Warna Yang Diinginkan";
+      TitleBannerDesc = "Lips That Match Your Desired Shade";
       break;
     case `SulamEyeliner`:
       // code block
       TitleBanner = `SULAM EYELINER`;
-      TitleBannerDesc = "Mata menjadi Terlihat Indah & Natural";
+      TitleBannerDesc = "Eyes Enhanced To Look Naturaly Beautiful";
       break;
     default:
       // code block
       TitleBanner = `LASER REMOVAL`;
-      TitleBannerDesc = "Hapus Tattoo Permanent, Mengencangkan Kulit dll";
+      TitleBannerDesc = "Advanced Skin Care Treatments";
   }
   return (
     <>

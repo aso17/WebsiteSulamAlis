@@ -20,7 +20,7 @@ const ContentSulamEyeliner = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
       >
-        <h4>Membuat Bentuk Mata Menjadi Sempurna.</h4>
+        <h4>Membuat Bentuk Mata Menjadi Sempurna</h4>
         <p>
           Combination Sulam Eyeliner Sulam Alis membuat lebih terlihat soft &
           natural.

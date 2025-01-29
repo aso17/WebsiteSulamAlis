@@ -4,73 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.TitleHeroGalery {
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  top: 35%;
-  width: 30%;
-  left: -2.2em;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.5s linear 1 forwards;
-}
-.TitleHeroGalery h2 {
-  font-family: "Schibsted Grotesk", serif;
-  margin: auto;
-  width: 50%;
-  color: #fff;
-  padding: 0.2em;
-  font-style: normal;
-  transform: skew(-20deg);
-}
-.DescHeroGalery {
-  font-family: "Schibsted Grotesk", serif;
-  background: rgba(47, 47, 54, 0.5);
-  position: relative;
-  left: -6%;
-  padding: 0.4em;
-  top: 40%;
-  width: 50%;
-  font-size: 1.5em;
-  color: #fff;
-  transform: skew(20deg);
-  filter: blur(50px);
-  opacity: 0;
-  animation: showTextHero 0.5s 0.9s linear 1 forwards;
-}
-.DescHeroGalery p {
-  margin: auto;
-  font-family: "Schibsted Grotesk", serif;
-  letter-spacing: 1px;
-  text-align: center;
-  font-size: 1.5em;
-  color: #fff;
-  font-style: normal;
-  transform: skew(-20deg);
-}
+
 @media (max-width: 750px) {
   .HeroGalery {
     height: 17em;
-  }
-  .HeroGalery .TitleHeroGalery {
-    width: 50%;
-    font-size: 1.5em;
-    text-align: center;
-  }
-  .HeroGalery .TitleHeroGalery h2 {
-    width: 100%;
-    font-size: 1em;
-  }
-
-  .HeroGalery .DescHeroGalery {
-    text-align: center;
-    width: 90%;
-  }
-  .HeroGalery .DescHeroGalery p {
-    text-align: center;
-    width: 100%;
-    font-size: 1em;
   }
 }

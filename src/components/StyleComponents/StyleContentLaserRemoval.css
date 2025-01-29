@@ -20,7 +20,8 @@
   background-color: #fff;
 }
 .ColDescLaserRemoval p {
-  text-align: start;
+  text-align: justify;
+  padding-top: 8px;
 }
 .RowImgLaserRemoval {
   display: flex;

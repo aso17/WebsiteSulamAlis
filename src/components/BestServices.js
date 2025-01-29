@@ -16,7 +16,7 @@ const BestServices = () => {
       >
         <div className="TitleBestService">
           <h2 className="TitleBestServiceText">Best Service</h2>
-          <p>Kepuasan Pelanggan Itu Prioritas</p>
+          <p>Customer Satisfaction is Our Top Priority</p>
         </div>
       </motion.div>
       <Row className="RowBestServices">
