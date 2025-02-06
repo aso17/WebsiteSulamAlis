@@ -12,12 +12,15 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   padding: 0.5em;
-  margin: 1em;
+  /* margin-bottom: 1em; */
+  top: -5em;
+  margin: 2em;
 }
 
 .CarouselImg .Caption2 {
   padding: 0.5em;
-  margin: 1em;
+  margin: 2em;
+  top: -5em;
   background: rgba(241, 241, 243, 0.745);
   color: rgb(0, 0, 8);
   font-weight: 300;
@@ -140,11 +143,17 @@ p {
   }
   .CarouselImg .Caption0 {
     width: 55%;
+    top: 0;
+    margin: 1em;
   }
   .CarouselImg .Caption1 {
+    margin: 1em;
+    top: 0;
     width: 100%;
   }
   .CarouselImg .Caption2 {
+    margin: 1em;
+    top: 0;
     width: 120%;
     left: -5em;
   }

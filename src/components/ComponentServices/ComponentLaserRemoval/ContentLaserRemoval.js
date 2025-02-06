@@ -5,7 +5,6 @@ import FramerMotion from "../../FramerMotion";
 import "../../StyleComponents/StyleContentLaserRemoval.css";
 import { ImagesLaser1, ImagesLaser2 } from "../../../assets/images";
 const ContentLaserRemoval = () => {
-  const [modalShow, setModalShow] = React.useState(false);
   return (
     <div className="ContentLaserRemoval">
       <motion.div

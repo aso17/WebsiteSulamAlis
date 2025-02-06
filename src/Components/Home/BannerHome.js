@@ -8,7 +8,7 @@ import "../StyleComponents/StyleHeroHome.css";
 const BannerHome = () => {
   const [index, setIndex] = useState(0);
 
-  if (index == 1) {
+  if (index === 1) {
     let elemnetCaption = document.querySelectorAll("#Captionid");
     elemnetCaption.forEach((e, i) => {
       e.classList.add(`Caption-AnimationHero${i}`);

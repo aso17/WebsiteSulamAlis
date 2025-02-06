@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Ratio } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import FramerMotion from "../FramerMotion";
 import LiputanArtisFuzi from "../../assets/videos/LiputanArtisFuzi.mp4";

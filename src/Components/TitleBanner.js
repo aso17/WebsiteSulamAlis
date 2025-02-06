@@ -14,7 +14,7 @@ const TitleBanner = (props) => {
     case `TitleBannerGalery`:
       // code block
       TitleBanner = `GALERY`;
-      TitleBannerDesc = "Featuring Artists And models Indonesia";
+      TitleBannerDesc = "Featuring Artists And Indonesian Models";
       break;
     case `TitleBannerContact`:
       // code block

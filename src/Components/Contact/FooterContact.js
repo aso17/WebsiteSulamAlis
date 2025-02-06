@@ -23,6 +23,7 @@ const FooterContactContact = () => {
       >
         <div className="TitleContact">
           <h2>Hubungi Kami</h2>
+
           <p>Bisa Konsultasi & Kunjungi Media Sosial Kami</p>
         </div>
       </motion.div>
@@ -82,7 +83,9 @@ const FooterContactContact = () => {
             <h5>Media Sosial</h5>
 
             <p className="LinkMediaSosial">
-              <a href="https://www.instagram.com/rosidisulamalisjakarta?igsh=cmNuZXY1MG9kOTQ=">
+              <a
+                href={`https://www.instagram.com/rosidisulamalisjakarta?igsh=cmNuZXY1MG9kOTQ=`}
+              >
                 <Image
                   src={iconinstagram}
                   alt="iconInstagram"
@@ -92,7 +95,9 @@ const FooterContactContact = () => {
               </a>
             </p>
             <p className="LinkMediaSosial">
-              <a href="#">
+              <a
+                href={`https://www.instagram.com/rosidisulamalisjakarta?igsh=cmNuZXY1MG9kOTQ=`}
+              >
                 <Image
                   src={iconfacebook}
                   alt="iconFacebook"
@@ -102,7 +107,9 @@ const FooterContactContact = () => {
               </a>
             </p>
             <p className="LinkMediaSosial">
-              <a href="#">
+              <a
+                href={`https://www.instagram.com/rosidisulamalisjakarta?igsh=cmNuZXY1MG9kOTQ=`}
+              >
                 <Image
                   src={icontiktok}
                   alt="iconTiktok"
@@ -112,7 +119,7 @@ const FooterContactContact = () => {
               </a>
             </p>
             <p className="LinkMediaSosial">
-              <a href="https://youtu.be/6x8iVx0UsIw?si=qApaTCBC5--eD28n">
+              <a href={`https://youtu.be/6x8iVx0UsIw?si=qApaTCBC5--eD28n`}>
                 <Image
                   src={iconYoutube}
                   alt="iconYoutube"

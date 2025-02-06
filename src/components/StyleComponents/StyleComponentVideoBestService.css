@@ -1,7 +1,7 @@
 .VideoArtis video {
   width: 70%;
   height: 40em;
-  /* border-radius: 2em; */
+
   object-fit: cover;
 }
 

@@ -1,7 +1,12 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import FramerMotion from "../FramerMotion";
+import "../../Components/StyleComponents/StyleComponentContact.css";
+
 const ContentContact = () => {
-  var objToday = new Date(),
+  let today;
+  let objToday = new Date(),
     weekday = new Array(
       "Sunday",
       "Monday",
@@ -16,7 +21,7 @@ const ContentContact = () => {
       var a = objToday;
       if (/1/.test(parseInt((a + "").charAt(0)))) return "";
       a = parseInt((a + "").charAt(1));
-      return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "";
+      return 1 === a ? "st" : 2 === a ? "nd" : 3 === a ? "rd" : "";
     })(),
     dayOfMonth =
       today + (objToday.getDate() < 10)
@@ -53,7 +58,7 @@ const ContentContact = () => {
         ? "0" + objToday.getSeconds()
         : objToday.getSeconds(),
     curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
-  var today =
+  today =
     curHour +
     ":" +
     curMinute +
@@ -74,11 +79,21 @@ const ContentContact = () => {
       <Card className="text-center">
         <Card.Body>
           <Card.Title>Bisa Melakukan Reservasi Terlebih Dahulu</Card.Title>
-          <Card.Text>
-            Untuk Informasi Harga & Informasi Lebih Lanjut Bisa langsung Click
-            Tombol Di bawah
-          </Card.Text>
-          <Button variant="secondary">Hubungi Kami</Button>
+          <motion.div
+            variants={FramerMotion("up", 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Card.Text>
+              Untuk Informasi Harga & Informasi Lebih Lanjut Bisa langsung Click
+              Tombol Di bawah
+            </Card.Text>
+          </motion.div>
+
+          <Button className="BtnCta" variant="secondary">
+            Hubungi Kami
+          </Button>
         </Card.Body>
         <Card.Footer className="text-muted">{today}</Card.Footer>
       </Card>
