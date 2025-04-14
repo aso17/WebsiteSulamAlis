@@ -14,31 +14,29 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(242 242 242 /1);
 }
 
 .menu {
-  font-family: "Schibsted Grotesk", serif;
-  font-size: 1.2em;
+  font-family: sans !important;
+  font-size: 1.4em;
   margin: 0.5em;
-  /* text-shadow: 1px 1px 3px rgba(164, 164, 234, 0.5); */
-  color: #030101;
+  color: #000000;
 }
 .DropdownSpan {
-  /* text-shadow: 1px 1px 3px rgba(126, 126, 206, 0.5); */
-  color: #030101;
-  font-family: "Schibsted Grotesk", serif;
+  color: #000000;
+  font-family: sans !important;
 }
 
 @media (max-width: 750px) {
   .navbar-collapse {
-    background-color: #fff;
-    margin: 1em;
+    background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
+    text-align: justify;
   }
+
   .navbar a {
     text-align: center;
-    width: 50%;
-    margin: auto;
+    padding: 2px;
     transform: translateY(50px);
     filter: blur(50px);
     opacity: 0;
@@ -52,16 +50,18 @@ p {
     }
   }
   .dropdown-menu {
-    background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
-    width: 100%;
+    background-image: #fff;
     border: none;
   }
   .dropdown-menu a {
-    font-size: 1.2em;
+    font-size: 1.3em;
+
+    margin: auto;
   }
 
   .DropdownSpan {
-    font-size: 1.6vh;
+    /* border: 1px solid; */
+    font-size: 1.1em;
   }
   * {
     font-size: 1.4vh;

@@ -1,3 +1,6 @@
 .BtnCta {
   margin: 10px;
 }
+.ContentContact .card {
+  border: none;
+}

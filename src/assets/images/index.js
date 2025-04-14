@@ -1,7 +1,11 @@
 // Images About
-import ImgBannerHome from "./AboutMe/BannerHome.webp";
-import ImgBannerHome2 from "./AboutMe/BannerHome2.jpeg";
-import Receptionist from "./AboutMe/Receptionist.webp";
+import ImgBannerHome1 from "./Home/ImgBannerHome1.webp";
+import ImgBannerHome2 from "./Home/ImgBannerHome.webp";
+import ImgHomeHapusTato from "./Home/ImgHomeHapusTato.webp";
+import ImgHomeSulamBibir from "./Home/ImgHomeSulamBibir.webp";
+import ImgHomeSulamEyeliner from "./Home/ImgHomeSulamEyeliner.webp";
+import ImgHomeRemoveSulamAlis from "./Home/ImgHomeRemoveSulamAlis.webp";
+
 import Teams1 from "./AboutMe/Teams1.webp";
 import Teams2 from "./AboutMe/Teams2.webp";
 import Teams3 from "./AboutMe/Teams3.webp";
@@ -26,27 +30,30 @@ import Model2 from "./Services/ModelSulamAlis/Model2.webp";
 import Model3 from "./Services/ModelSulamAlis/Model3.webp";
 
 //Images Service Sulam Eyeliner
-import ImagesSulamEleyenier from "./Services/ImagesSulamEleyenier.webp";
+// import ImagesSulamEleyenier from "./Services/ImagesSulamEleyenier.webp";
 import ImagesSulamEleyener1 from "./Services/ImagesSulamEyeliner1.webp";
 import ImagesBeforeSulamEyeliner from "./Services/ImagesBeforeSulamEyeliner.webp";
 //Images Service Sulam Bibir
-import ImagesSulamBibir1 from "./Services/ImagesSulamBibir1.webp";
+// import ImagesSulamBibir1 from "./Services/ImagesSulamBibir1.webp";
 import ImagesBeforeSulamBibir from "./Services/ImagesBeforeSulamBibir.webp";
 import ImagesAfterSulamBibir from "./Services/ImagesAfterSulamBibir.webp";
 import procedurSulamAlis from "./Services/ProcedureSulamAlis.webp";
 import procedurSulamBibir from "./Services/ProcedureSulamBibir.webp";
 
 //Images Leser Removal
-import ImagesLaser0 from "./Services/ImagesLaser0.webp";
+// import ImagesLaser0 from "./Services/ImagesLaser0.webp";
 import ImagesLaser1 from "./Services/ImagesLaser1.webp";
 import ImagesLaser2 from "./Services/ImagesLaser2.webp";
 import ImagesLaser3 from "./Services/ImagesLaser3.webp";
 //Galery
 
 export {
-  ImgBannerHome,
+  ImgBannerHome1,
   ImgBannerHome2,
-  Receptionist,
+  ImgHomeHapusTato,
+  ImgHomeSulamBibir,
+  ImgHomeSulamEyeliner,
+  ImgHomeRemoveSulamAlis,
   Teams1,
   Teams2,
   Teams3,
@@ -64,15 +71,15 @@ export {
   Model1,
   Model2,
   Model3,
-  ImagesSulamEleyenier,
+  // ImagesSulamEleyenier,
   ImagesSulamEleyener1,
   ImagesBeforeSulamEyeliner,
-  ImagesSulamBibir1,
+  // ImagesSulamBibir1,
   ImagesAfterSulamBibir,
   ImagesBeforeSulamBibir,
   procedurSulamBibir,
   procedurSulamAlis,
-  ImagesLaser0,
+  // ImagesLaser0,
   ImagesLaser1,
   ImagesLaser2,
   ImagesLaser3,

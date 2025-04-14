@@ -12,43 +12,49 @@ const Navigationbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-primary">
             <Nav.Link className="menu" href={"/"}>
-              HOME
+              Home
             </Nav.Link>
             <Nav.Link className="menu" href={"/aboutme"}>
-              ABOUT
+              About
             </Nav.Link>
             <NavDropdown
               className="menu"
-              title={<span className="DropdownSpan">SERVICES</span>}
+              title={<span className="DropdownSpan">Services</span>}
               id="basic-nav-dropdown"
             >
               <NavDropdown.Item className="menuDropdown" href={"/sulam-alis"}>
-                SULAM ALIS
+                Sulam Alis
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                className="menuDropdown"
+                href={"/remove-sulamalis"}
+              >
+                Hapus Sulam Alis
               </NavDropdown.Item>
               <NavDropdown.Item className="menuDropdown" href={"/sulam-bibir"}>
-                SULAM BIBIR
+                Sulam Bibir
               </NavDropdown.Item>
               <NavDropdown.Item
                 className="menuDropdown"
                 href={"/sulam-eyeliner"}
               >
-                SULAM EYELINER
+                Sulam Eyeliner
               </NavDropdown.Item>
               <NavDropdown.Item
                 className="menuDropdown"
                 href={"/laser-removal"}
               >
-                LASER REMOVAL
+                Hapus Tato
               </NavDropdown.Item>
             </NavDropdown>
             {/* <Nav.Link className="menu" href={"/academy"}>
               ACADEMY
             </Nav.Link> */}
             <Nav.Link className="menu" href={"/galery"}>
-              GALERY
+              Galery
             </Nav.Link>
             <Nav.Link className="menu" href={"/contact"}>
-              CONTACT
+              Contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

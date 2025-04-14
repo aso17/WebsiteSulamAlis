@@ -1,7 +1,6 @@
 .ContentSulamAlis {
   padding-top: 3em;
-  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
-  margin: 1em;
+  padding: 1em;
 }
 .ContentSulamAlis h4 {
   text-align: center;
@@ -19,7 +18,6 @@
 }
 .RowDescContentSulamAlis {
   width: fit-content;
-  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
 }
 .ColDescContentSulamAlis {
   background-color: #fff;

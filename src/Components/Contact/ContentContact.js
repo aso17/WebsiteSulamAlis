@@ -75,7 +75,7 @@ const ContentContact = () => {
     curYear;
 
   return (
-    <div>
+    <div className="ContentContact">
       <Card className="text-center">
         <Card.Body>
           <Card.Title>Bisa Melakukan Reservasi Terlebih Dahulu</Card.Title>
@@ -95,7 +95,7 @@ const ContentContact = () => {
             Hubungi Kami
           </Button>
         </Card.Body>
-        <Card.Footer className="text-muted">{today}</Card.Footer>
+        {/* <Card.Footer className="text-muted">{today}</Card.Footer> */}
       </Card>
     </div>
   );

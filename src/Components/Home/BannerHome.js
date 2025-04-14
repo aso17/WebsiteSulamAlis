@@ -3,13 +3,12 @@ import Carousel from "react-bootstrap/Carousel";
 import { Row, Col, Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 import FramerMotion from "../FramerMotion";
-import { ImgBannerHome, ImgBannerHome2 } from "../../assets/images";
+import { ImgBannerHome1, ImgBannerHome2 } from "../../assets/images";
 import "../StyleComponents/StyleHeroHome.css";
 const BannerHome = () => {
   const [index, setIndex] = useState(0);
-
   if (index === 1) {
-    let elemnetCaption = document.querySelectorAll("#Captionid");
+    let elemnetCaption = document.querySelectorAll("#CaptionHomeid");
     elemnetCaption.forEach((e, i) => {
       e.classList.add(`Caption-AnimationHero${i}`);
     });
@@ -25,33 +24,53 @@ const BannerHome = () => {
         onSelect={handleSelect}
         fade
         interval={7000}
+        data-bs-theme="dark"
       >
         <Carousel.Item>
           <Image
-            src={ImgBannerHome2}
+            src={ImgBannerHome1}
             layout="responsive"
-            alt="Teams"
-            className="ImgTeams"
+            alt="BannerHome"
+            className="ImgBannerHome"
           />
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image
-            src={ImgBannerHome}
-            layout="responsive"
-            alt="Teams"
-            className="ImgTeams"
-          />
+
           <Carousel.Caption>
-            <div className="Caption0" id="Captionid">
+            <div className="Caption0 Caption-AnimationHero0" id="Captionid">
               <h2 className="CaptionText0">ENSURE THAT YOU</h2>
             </div>
-            <div className="Caption1" id="Captionid">
-              <h2 className="CaptionText1">EXPERIENCE OUR BEST SERVICE</h2>
+            <div className="Caption1 Caption-AnimationHero1" id="Captionid">
+              <h2 className="CaptionText1">Experience Our Best Service</h2>
             </div>
 
-            <div className="Caption2" id="Captionid">
+            <div className="Caption2 Caption-AnimationHero2" id="Captionid">
               <p className="CaptionText2">
-                With Modern Facilities & Up-to-date Trends
+                Modern Facilities & Up-to-date Trends
+              </p>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item className="BannerHome1">
+          <Image
+            src={ImgBannerHome2}
+            layout="responsive"
+            alt="BannerHome"
+            className="ImgBannerHome1"
+          />
+
+          <Carousel.Caption>
+            <div className="CaptionHome0" id="CaptionHomeid">
+              <h2 className="CaptionHomeText0">ENHANCE YOUR APPEARANCE</h2>
+            </div>
+            <div className="CaptionHome1" id="CaptionHomeid">
+              <h2 className="CaptionHomeText1">
+                With Professional Eyebrow Embroidery
+              </h2>
+            </div>
+
+            <div className="CaptionHome2" id="CaptionHomeid">
+              <p className="CaptionHomeText2">
+                Modern Facilities & Up-to-date Trends
               </p>
             </div>
           </Carousel.Caption>

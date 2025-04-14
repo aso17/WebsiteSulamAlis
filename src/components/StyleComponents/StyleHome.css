@@ -26,13 +26,7 @@
   margin-top: 2em;
   background-color: #fff;
 }
-/* .ColServiceDescHome:nth-child(1) {
-  background: conic-gradient(
-    from 10deg,
-    rgb(184, 181, 186),
-    rgb(240, 245, 240)
-  );
-} */
+
 .ColServiceDescHome {
   padding: 1em;
   text-align: justify;
@@ -62,7 +56,6 @@
   .ImgSulamBibirHome,
   .ImgLaserRemovalHome {
     width: 100%;
-    height: 20em;
     border-radius: 5px;
   }
 }

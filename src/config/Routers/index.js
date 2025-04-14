@@ -4,6 +4,7 @@ import {
   Home,
   AboutMe,
   ServiceSulamAlis,
+  ServiceRemoveSulamAlis,
   ServiceSulamBibir,
   ServiceSulamEyeliner,
   ServiceLaserRemoval,
@@ -19,6 +20,11 @@ const Routers = () => {
         <Route path="/" exact element={<Home />} />
         <Route path="/aboutme" exact element={<AboutMe />} />
         <Route path="/sulam-alis" exact element={<ServiceSulamAlis />} />
+        <Route
+          path="/remove-sulamalis"
+          exact
+          element={<ServiceRemoveSulamAlis />}
+        />
         <Route path="/sulam-bibir" exact element={<ServiceSulamBibir />} />
         <Route
           path="/sulam-eyeliner"

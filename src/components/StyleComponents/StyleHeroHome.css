@@ -1,29 +1,27 @@
 p {
   font-family: "poppins", sans-serif;
 }
+.SectionBrand {
+  background-color: rgb(242 242 242 /1);
+  font-family: sans;
+  padding: 5px;
+  border-radius: 10px;
+}
 
 .SectionHeroHome .Brand span {
-  color: #d8101d;
+  color: #d51229;
   font-family: "Schibsted Grotesk", serif;
-}
-.CarouselImg .Caption0,
-.Caption1 {
-  font-family: "Schibsted Grotesk", serif;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
-  padding: 0.5em;
-  /* margin-bottom: 1em; */
-  top: -5em;
-  margin: 2em;
 }
 
-.CarouselImg .Caption2 {
-  padding: 0.5em;
+.CarouselImg .Caption0,
+.Caption1 {
+  background: rgba(243, 243, 244, 0.5);
+  font-family: sans !important;
+  color: #000000;
+  text-shadow: 4px 4px 2px rgba(210, 201, 201, 0.6);
+  padding: 0.1em;
+  top: -4em;
   margin: 2em;
-  top: -5em;
-  background: rgba(241, 241, 243, 0.745);
-  color: rgb(0, 0, 8);
-  font-weight: 300;
 }
 
 .CarouselImg .Caption0 {
@@ -33,6 +31,13 @@ p {
 .CarouselImg .Caption1 {
   width: 60%;
 }
+
+.CarouselImg .Caption2 {
+  /* padding: 0.5em; */
+  background: rgba(243, 243, 244, 0.5);
+  color: #000000;
+}
+
 .CarouselImg .Caption0,
 .Caption1 {
   position: relative;
@@ -61,10 +66,11 @@ p {
 .Brand {
   text-shadow: 1px 1px 3px rgba(129, 129, 136, 0.5);
   line-height: 1.2;
-  color: #1e0e0e;
+  color: #000000;
   font-family: "Schibsted Grotesk", serif;
   font-size: 2em;
 }
+
 .CarouselImg .Caption-AnimationHero0 {
   filter: blur(50px);
   right: -100em;
@@ -93,17 +99,63 @@ p {
   font-size: 1.3em;
   animation: showTextBrand 0.5s 0.5s linear 1 forwards;
 }
-.ColHeroHome .CarouselImg {
-  background-color: #d8101d;
-  width: 100%;
-  margin: auto;
+
+.ImgBannerHome {
+  object-fit: cover;
+  width: 40%;
+  left: 60%;
+  position: relative;
 }
-.ImgTeams {
+.BannerHome1 {
+  text-align: center;
+}
+.ImgBannerHome1 {
   object-fit: cover;
   width: 100%;
-  height: 88vh;
+  height: 29em;
+}
+.CaptionHomeText0,
+.CaptionHomeText1,
+.CaptionHomeText2 {
+  color: #000000;
+  font-family: sans;
+}
+.CaptionHomeText0 {
+  transform: skew(-20deg);
+  padding: 2px;
+}
+.CaptionHomeText1 {
+  transform: skew(-20deg);
+}
+.CaptionHomeText2 {
+  font-size: 1.2em;
+  transform: skew(-20deg);
+}
+.CaptionHome0 {
+  transform: skew(20deg);
+  top: -7em;
+  width: 50%;
+  left: -5em;
+  position: relative;
+  background: rgba(243, 243, 244, 0.5);
 }
 
+.CaptionHome1 {
+  transform: skew(20deg);
+  background: rgba(243, 243, 244, 0.5);
+  top: -5em;
+  width: 70%;
+  position: relative;
+  left: -2em;
+}
+.CaptionHome2 {
+  text-align: end;
+  width: 91.5%;
+  left: -13em;
+  position: relative;
+  transform: skew(20deg);
+  background: rgba(243, 243, 244, 0.5);
+}
 @keyframes showCaptionAnimations {
   to {
     transform: skew(20deg);
@@ -141,50 +193,98 @@ p {
   .SectionBrand .DescBrand {
     font-size: 1.2em;
   }
+
+  .CarouselImg {
+    overflow: hidden;
+    height: auto; /* Menggunakan height auto untuk menyesuaikan dengan konten */
+  }
+
   .CarouselImg .Caption0 {
     width: 55%;
-    top: 0;
-    margin: 1em;
+    top: -6em;
+    left: -4em;
+    /* margin: 1em; */
+    padding: 4px;
   }
+
   .CarouselImg .Caption1 {
-    margin: 1em;
-    top: 0;
-    width: 100%;
+    /* margin: 1em; */
+    top: -13em;
+    width: 80%;
+    left: -4em;
+    font-size: 70%;
+    padding: 2px;
+    margin: auto;
   }
+
   .CarouselImg .Caption2 {
-    margin: 1em;
-    top: 0;
+    top: -0.5em;
     width: 120%;
     left: -5em;
   }
 
   .CarouselImg .CaptionText0 {
-    font-size: 70%;
-  }
-
-  .CarouselImg .Caption1 {
-    font-size: 70%;
-    padding: 5px;
-    margin: auto;
+    font-size: 85%;
   }
 
   .CarouselImg .CaptionText2 {
-    font-size: 75%;
-    width: 100%;
+    font-size: 80%;
   }
+
   .SectionHeroHome {
     width: auto;
   }
+
   .SectionHeroHome .Brand span {
     font-size: 100%;
   }
-  .SectionCarousel .Caption1 {
-    all: unset;
-    background: #d8101d;
-  }
-  .ImgTeams {
+
+  .ImgBannerHome {
     object-fit: cover;
-    height: 60vw;
+    left: 0;
+    width: 100%; /* Menggunakan width 100% untuk menyesuaikan dengan layar */
+    height: auto; /* Menggunakan height auto untuk menyesuaikan dengan konten */
+  }
+
+  .ImgBannerHome1 {
+    object-fit: cover;
+    height: auto; /* Menggunakan height auto untuk menyesuaikan dengan konten */
+  }
+
+  .CaptionHomeText0 {
+    font-size: 85%;
+  }
+
+  .CaptionHomeText1 {
+    font-size: 90%;
+  }
+
+  .CaptionHomeText2 {
+    font-size: 80%;
+  }
+
+  .CaptionHome0 {
+    background: rgba(243, 243, 244, 0.5);
     width: 100%;
+    padding: 2px;
+    left: -3em;
+    position: relative;
+    border-radius: 1px;
+    top: -8em;
+
+    /* Menghilangkan left untuk menyesuaikan dengan layar */
+  }
+
+  .CaptionHome1 {
+    background: rgba(243, 243, 244, 0.5);
+    top: -6em;
+    position: relative;
+    padding: 2px;
+    width: 110%;
+  }
+
+  .CaptionHome2 {
+    width: 120%;
+    left: -7em;
   }
 }

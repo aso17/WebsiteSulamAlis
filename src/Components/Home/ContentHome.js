@@ -5,10 +5,11 @@ import { Row, Col, Image } from "react-bootstrap";
 import "../StyleComponents/StyleHome.css";
 
 import {
+  ImgHomeHapusTato,
+  ImgHomeSulamBibir,
+  ImgHomeSulamEyeliner,
+  ImgHomeRemoveSulamAlis,
   ImgSulamAlis1,
-  ImagesSulamEleyenier,
-  ImagesSulamBibir1,
-  ImagesLaser0,
 } from "../../assets/images";
 
 const ContentHome = () => {
@@ -65,12 +66,44 @@ const ContentHome = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
           >
+            <h4>Hapus Sulam Alis</h4>
+          </motion.div>
+          <p>
+            Teknik Penghapusan Tinta Pigmen Tidak Sesuai Warna pada Kulit dengan
+            Alat & Bahan Khusus di Epidermis
+          </p>
+        </Col>
+        <Col className="ColServiceDescHome">
+          <motion.div
+            variants={FramerMotion("up", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            <Image
+              className="ImgSulamAlis1Home"
+              src={ImgHomeRemoveSulamAlis}
+              alt="imgSulamAlis"
+            />
+          </motion.div>
+        </Col>
+      </Row>
+
+      <Row className="SectionServiceHome">
+        <Col md={6} className="ColServiceDescHome">
+          <motion.div
+            variants={FramerMotion("right", 0.1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
+          >
             <h4> Sulam Eyeliner</h4>
           </motion.div>
           <p>
-            Teknik mempertegas garis eyeliner, sesuai dengan permintaan, sulam
-            eyeliner bermanfaat agar mata pasien selalu kelihatan segar,
-            bersinar, dan memberikan efek mata kelihatan lebih besar.
+            Teknik Sulam Eyeliner Dapat Mempertegas Garis Eyeliner Sesuai
+            Permintaan, Membuat Mata Pasien Terlihat Segar, Bersinar, Dan Lebih
+            Besar. Dengan Sulam Eyeliner, Pasien Dapat Memiliki Tampilan Mata
+            Yang Lebih Indah Dan Percaya Diri Setiap Hari.
           </p>
         </Col>
         <Col md={6} className="ColServiceDescHome">
@@ -82,7 +115,7 @@ const ContentHome = () => {
           >
             <Image
               className="ImgSulamEyelinerHome"
-              src={ImagesSulamEleyenier}
+              src={ImgHomeSulamEyeliner}
               alt="ImgSulamEyeliner"
             />
           </motion.div>
@@ -117,7 +150,7 @@ const ContentHome = () => {
           >
             <Image
               className="ImgSulamBibirHome"
-              src={ImagesSulamBibir1}
+              src={ImgHomeSulamBibir}
               alt="ImgSulamBibir"
             />
           </motion.div>
@@ -132,13 +165,13 @@ const ContentHome = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
           >
-            <h4>Laser Removal</h4>
+            <h4>Hapus Tato</h4>
           </motion.div>
           <p>
-            Meremajakan kulit wajah (mengencangkan, mengecilkan pori atau
-            mengurangi garis kerutan halus), mengatasi jerawat meradang,
-            menghilangkan flek/melasma, menghilangkan tato, atau mengatasi tanda
-            lahir. Laser menghilangkan lapisan kulit mati menggunakan sinar.
+            Hapus Tato Yang Tidak Diinginkan Dengan Teknologi Laser Terkini!
+            Dapatkan Kulit Yang Bersih Dan Bebas Tato Dengan Prosedur Hapus Tato
+            Yang Aman. Tato Tidak Lagi Menjadi Masalah Dengan Layanan Hapus Tato
+            Yang Profesional.
           </p>
         </Col>
         <Col md={6} className="ColServiceDescHome">
@@ -150,7 +183,7 @@ const ContentHome = () => {
           >
             <Image
               className="ImgLaserRemovalHome"
-              src={ImagesLaser0}
+              src={ImgHomeHapusTato}
               alt="ImgLaserRemoval"
             />
           </motion.div>
