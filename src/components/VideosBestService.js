@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-// import VideoArtisGaby from "../assets/videos/VideoArtisGaby.mp4";
-// import Poster from "../assets/videos/PosterVideoGaby.webp";
 import "./StyleComponents/StyleComponentVideoBestService.css";
 class VideosBestService extends Component {
   render() {
@@ -10,10 +8,10 @@ class VideosBestService extends Component {
           controls={true}
           src="https://www.youtube.com/embed/bVPMidBjq5k?si=VbvBNoXB4QWuaHbN"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="no-referrer"
+          allowFullScreen
         ></iframe>
       </div>
     );

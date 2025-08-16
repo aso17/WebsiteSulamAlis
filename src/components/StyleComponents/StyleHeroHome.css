@@ -1,290 +1,114 @@
-p {
-  font-family: "poppins", sans-serif;
-}
-.SectionBrand {
-  background-color: rgb(242 242 242 /1);
-  font-family: sans;
-  padding: 5px;
-  border-radius: 10px;
+.SectionHeroHome {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
 }
 
-.SectionHeroHome .Brand span {
-  color: #d51229;
-  font-family: "Schibsted Grotesk", serif;
+.BannerWrapper {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
-.CarouselImg .Caption0,
-.Caption1 {
-  background: rgba(243, 243, 244, 0.5);
-  font-family: sans !important;
-  color: #000000;
-  text-shadow: 4px 4px 2px rgba(210, 201, 201, 0.6);
-  padding: 0.1em;
-  top: -4em;
-  margin: 2em;
+/* Bagian teks */
+.CaptionContainer {
+  flex: 1;
+  padding: 1rem;
 }
 
-.CarouselImg .Caption0 {
-  width: 35%;
-  left: -2em;
-}
-.CarouselImg .Caption1 {
-  width: 60%;
-}
-
-.CarouselImg .Caption2 {
-  /* padding: 0.5em; */
-  background: rgba(243, 243, 244, 0.5);
-  color: #000000;
+.CaptionTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 1rem;
+  line-height: 1.3;
 }
 
-.CarouselImg .Caption0,
-.Caption1 {
-  position: relative;
-  transform: skew(20deg);
-}
-.CarouselImg .CaptionText0,
-.CaptionText1 {
-  transform: skew(-20deg);
-}
-.CarouselImg .Caption2 {
-  text-align: end;
-  width: 91.5%;
-  left: -13em;
-  position: relative;
-  transform: skew(20deg);
-}
-.CarouselImg .CaptionText2 {
-  margin: auto;
-  transform: skew(-20deg);
-  font-size: 1.2em;
-}
-
-.SectionBrand {
-  margin: 1em;
-}
-.Brand {
-  text-shadow: 1px 1px 3px rgba(129, 129, 136, 0.5);
-  line-height: 1.2;
-  color: #000000;
-  font-family: "Schibsted Grotesk", serif;
-  font-size: 2em;
-}
-
-.CarouselImg .Caption-AnimationHero0 {
-  filter: blur(50px);
-  right: -100em;
-  opacity: 0;
+.CaptionSubtitle {
   font-size: 1.5rem;
-  animation: showCaptionAnimations 0.5s 0.5s linear 1 forwards;
-}
-.CarouselImg .Caption-AnimationHero1 {
-  filter: blur(50px);
-  right: -100em;
-  opacity: 0;
-  font-size: 1.5rem;
-  animation: showCaptionAnimations1 0.5s 1s linear 1 forwards;
-}
-.CarouselImg .Caption-AnimationHero2 {
-  filter: blur(50px);
-  bottom: -100em;
-  opacity: 0;
-  font-size: 1.5rem;
-  animation: showCaptionAnimations2 0.5s 1.3s linear 1 forwards;
-}
-.SectionBrand .DescBrand {
-  transform: translateY(50px);
-  filter: blur(50px);
-  opacity: 0;
-  font-size: 1.3em;
-  animation: showTextBrand 0.5s 0.5s linear 1 forwards;
+  color: #555;
+  margin-bottom: 1rem;
 }
 
+.CaptionText {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Tombol CTA versi merah */
+.BtnCTA {
+  background-color: #C1272D;
+  /* merah utama */
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #C1272D;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(193, 39, 45, 0.4);
+}
+
+.BtnCTA:hover {
+  background-color: #8B1A20;
+  /* merah gelap saat hover */
+  box-shadow: 0 6px 20px rgba(139, 26, 32, 0.6);
+  color: #fff;
+  border-color: #8B1A20;
+}
+
+/* Gambar */
 .ImgBannerHome {
+  flex: 1;
+  max-height: 500px;
   object-fit: cover;
   width: 40%;
-  left: 60%;
-  position: relative;
-}
-.BannerHome1 {
-  text-align: center;
-}
-.ImgBannerHome1 {
-  object-fit: cover;
-  width: 100%;
-  height: 29em;
-}
-.CaptionHomeText0,
-.CaptionHomeText1,
-.CaptionHomeText2 {
-  color: #000000;
-  font-family: sans;
-}
-.CaptionHomeText0 {
-  transform: skew(-20deg);
-  padding: 2px;
-}
-.CaptionHomeText1 {
-  transform: skew(-20deg);
-}
-.CaptionHomeText2 {
-  font-size: 1.2em;
-  transform: skew(-20deg);
-}
-.CaptionHome0 {
-  transform: skew(20deg);
-  top: -7em;
-  width: 50%;
-  left: -5em;
-  position: relative;
-  background: rgba(243, 243, 244, 0.5);
+  border-radius: 12px;
 }
 
-.CaptionHome1 {
-  transform: skew(20deg);
-  background: rgba(243, 243, 244, 0.5);
-  top: -5em;
-  width: 70%;
-  position: relative;
-  left: -2em;
-}
-.CaptionHome2 {
-  text-align: end;
-  width: 91.5%;
-  left: -13em;
-  position: relative;
-  transform: skew(20deg);
-  background: rgba(243, 243, 244, 0.5);
-}
-@keyframes showCaptionAnimations {
-  to {
-    transform: skew(20deg);
-    filter: blur(0);
-    right: 0;
-    opacity: 1;
-  }
-}
-@keyframes showCaptionAnimations1 {
-  to {
-    transform: skew(20deg);
-    filter: blur(0);
-    right: 0;
-    opacity: 1;
-  }
-}
-@keyframes showCaptionAnimations2 {
-  to {
-    transform: skew(20deg);
-    filter: blur(0);
-    bottom: 0;
-    opacity: 1;
-  }
-}
-@keyframes showTextBrand {
-  to {
-    transform: translateY(0);
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
-/* mode mobile */
-@media (max-width: 750px) {
-  .SectionBrand .DescBrand {
-    font-size: 1.2em;
+/* Responsive untuk mobile */
+@media screen and (max-width: 768px) {
+  .BannerWrapper {
+    flex-direction: column;
+    padding: 1rem;
   }
 
-  .CarouselImg {
-    overflow: hidden;
-    height: auto; /* Menggunakan height auto untuk menyesuaikan dengan konten */
+  .CaptionTitle {
+    font-size: 1.8rem;
+    /* ukuran teks lebih kecil di mobile */
   }
 
-  .CarouselImg .Caption0 {
-    width: 55%;
-    top: -6em;
-    left: -4em;
-    /* margin: 1em; */
-    padding: 4px;
+  .CaptionSubtitle {
+    font-size: 1.1rem;
   }
 
-  .CarouselImg .Caption1 {
-    /* margin: 1em; */
-    top: -13em;
-    width: 80%;
-    left: -4em;
-    font-size: 70%;
-    padding: 2px;
-    margin: auto;
+  .CaptionText {
+    font-size: 1rem;
   }
 
-  .CarouselImg .Caption2 {
-    top: -0.5em;
-    width: 120%;
-    left: -5em;
-  }
-
-  .CarouselImg .CaptionText0 {
-    font-size: 85%;
-  }
-
-  .CarouselImg .CaptionText2 {
-    font-size: 80%;
-  }
-
-  .SectionHeroHome {
-    width: auto;
-  }
-
-  .SectionHeroHome .Brand span {
-    font-size: 100%;
+  .BtnCTA {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.95rem;
   }
 
   .ImgBannerHome {
-    object-fit: cover;
-    left: 0;
-    width: 100%; /* Menggunakan width 100% untuk menyesuaikan dengan layar */
-    height: auto; /* Menggunakan height auto untuk menyesuaikan dengan konten */
-  }
-
-  .ImgBannerHome1 {
-    object-fit: cover;
-    height: auto; /* Menggunakan height auto untuk menyesuaikan dengan konten */
-  }
-
-  .CaptionHomeText0 {
-    font-size: 85%;
-  }
-
-  .CaptionHomeText1 {
-    font-size: 90%;
-  }
-
-  .CaptionHomeText2 {
-    font-size: 80%;
-  }
-
-  .CaptionHome0 {
-    background: rgba(243, 243, 244, 0.5);
     width: 100%;
-    padding: 2px;
-    left: -3em;
-    position: relative;
-    border-radius: 1px;
-    top: -8em;
-
-    /* Menghilangkan left untuk menyesuaikan dengan layar */
-  }
-
-  .CaptionHome1 {
-    background: rgba(243, 243, 244, 0.5);
-    top: -6em;
-    position: relative;
-    padding: 2px;
-    width: 110%;
-  }
-
-  .CaptionHome2 {
-    width: 120%;
-    left: -7em;
+    /* height: 260px; */
+    /* ukuran gambar sama di mobile */
+    max-height: none;
+    object-fit: cover;
+    /* agar gambar proporsional */
+    border-radius: 1rem;
   }
 }

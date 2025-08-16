@@ -1,102 +1,105 @@
-import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import { Row, Col, Image } from "react-bootstrap";
-import { motion } from "framer-motion";
-import FramerMotion from "../FramerMotion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ImgBannerHome1, ImgBannerHome2 } from "../../assets/images";
 import "../StyleComponents/StyleHeroHome.css";
+
+const banners = [
+  {
+    id: 1,
+    img: ImgBannerHome1,
+    alt: "Sulam Alis Profesional Jakarta",
+    title: "PASTIKAN ANDA",
+    subtitle: "Mendapatkan Layanan Terbaik Kami",
+    text: "Fasilitas Modern & Tren Terkini",
+  },
+  {
+    id: 2,
+    img: ImgBannerHome2,
+    alt: "Perawatan Sulam Alis Natural",
+    title: "TINGKATKAN PENAMPILAN ANDA",
+    subtitle: "Dengan Sulam Alis Profesional",
+    text: "Hasil Alami, Fasilitas Modern & Teknik Terbaru",
+  },
+];
+
+const easing = [0.6, -0.05, 0.01, 0.99]; // easing smooth
+
 const BannerHome = () => {
   const [index, setIndex] = useState(0);
-  if (index === 1) {
-    let elemnetCaption = document.querySelectorAll("#CaptionHomeid");
-    elemnetCaption.forEach((e, i) => {
-      e.classList.add(`Caption-AnimationHero${i}`);
-    });
-  }
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIndex((prev) => (prev + 1) % banners.length);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, [index]);
+
+  const currentBanner = banners[index];
+
   return (
     <div className="SectionHeroHome">
-      <Carousel
-        className="CarouselImg"
-        activeIndex={index}
-        onSelect={handleSelect}
-        fade
-        interval={7000}
-        data-bs-theme="dark"
-      >
-        <Carousel.Item>
-          <Image
-            src={ImgBannerHome1}
-            layout="responsive"
-            alt="BannerHome"
+      <div className="BannerWrapper">
+        <div className="CaptionContainer">
+          <motion.h2
+            className="CaptionTitle"
+            key={`title-${currentBanner.id}`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 1, ease: easing }}
+          >
+            {currentBanner.title}
+          </motion.h2>
+
+          <motion.h3
+            className="CaptionSubtitle"
+            key={`subtitle-${currentBanner.id}`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 1.2, ease: easing, delay: 0.3 }}
+          >
+            {currentBanner.subtitle}
+          </motion.h3>
+
+          <motion.p
+            className="CaptionText"
+            key={`text-${currentBanner.id}`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 1.4, ease: easing, delay: 0.6 }}
+          >
+            {currentBanner.text}
+          </motion.p>
+
+          <motion.a
+            href="#contact"
+            className="BtnCTA"
+            key={`btn-${currentBanner.id}`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 1.6, ease: easing, delay: 0.9 }}
+          >
+            Hubungi Sekarang
+          </motion.a>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentBanner.id}
+            src={currentBanner.img}
+            alt={currentBanner.alt}
             className="ImgBannerHome"
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 1.5, ease: easing }}
           />
-
-          <Carousel.Caption>
-            <div className="Caption0 Caption-AnimationHero0" id="Captionid">
-              <h2 className="CaptionText0">ENSURE THAT YOU</h2>
-            </div>
-            <div className="Caption1 Caption-AnimationHero1" id="Captionid">
-              <h2 className="CaptionText1">Experience Our Best Service</h2>
-            </div>
-
-            <div className="Caption2 Caption-AnimationHero2" id="Captionid">
-              <p className="CaptionText2">
-                Modern Facilities & Up-to-date Trends
-              </p>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-        <Carousel.Item className="BannerHome1">
-          <Image
-            src={ImgBannerHome2}
-            layout="responsive"
-            alt="BannerHome"
-            className="ImgBannerHome1"
-          />
-
-          <Carousel.Caption>
-            <div className="CaptionHome0" id="CaptionHomeid">
-              <h2 className="CaptionHomeText0">ENHANCE YOUR APPEARANCE</h2>
-            </div>
-            <div className="CaptionHome1" id="CaptionHomeid">
-              <h2 className="CaptionHomeText1">
-                With Professional Eyebrow Embroidery
-              </h2>
-            </div>
-
-            <div className="CaptionHome2" id="CaptionHomeid">
-              <p className="CaptionHomeText2">
-                Modern Facilities & Up-to-date Trends
-              </p>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-
-      <Row className="SectionBrand">
-        <Col md={12} className="ColSectionBrand">
-          <h2 className="Brand">
-            Rosidi Sulam Alis & <span>Academy</span>
-          </h2>
-          <div className="DescBrand">
-            <motion.div
-              variants={FramerMotion("up", 0.1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.7 }}
-            >
-              <p>
-                Terpercaya Menjadi Langganan Sulam Para Artis dan Selebriti
-                Ibukota dan Sekitarnya.
-              </p>
-            </motion.div>
-          </div>
-        </Col>
-      </Row>
+        </AnimatePresence>
+      </div>
     </div>
   );
 };

@@ -1,85 +1,328 @@
-html body {
+/* Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  font-size: 1.1em;
+body {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 70px;
+  /* Hindari konten tertutup navbar */
 }
 
-.BrandLogo {
-  width: 12.5em;
-}
-.NavigationBar {
-  padding-left: 1rem;
-  padding-right: 1rem;
+/* Navbar */
+.navbar {
   width: 100%;
-  background-color: rgb(242 242 242 /1);
+  position: fixed;
+  /* tetap di atas */
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 1000;
 }
 
-.menu {
-  font-family: sans !important;
-  font-size: 1.4em;
-  margin: 0.5em;
-  color: #000000;
-}
-.DropdownSpan {
-  color: #000000;
-  font-family: sans !important;
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-@media (max-width: 750px) {
-  .navbar-collapse {
-    background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
-    text-align: justify;
-  }
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.8rem;
+}
 
-  .navbar a {
-    text-align: center;
-    padding: 2px;
-    transform: translateY(50px);
-    filter: blur(50px);
-    opacity: 0;
-    animation: showNavbarLink 0.5s 0.1s linear 1 forwards;
-  }
-  @keyframes showNavbarLink {
-    to {
-      transform: translateY(0);
-      filter: blur(0);
-      opacity: 1;
-    }
-  }
+.logo-rs {
+  position: relative;
+  width: 35px;
+  height: 55px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logo-r,
+.logo-s {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-r {
+  background: linear-gradient(to bottom right, #ff0000, #8b0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -1px -1px 0 red, 2px 2px 0 #301717;
+  z-index: 1;
+}
+
+.logo-s {
+  background: linear-gradient(to bottom, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -1px -1px 0 #fff, 1px 1px 0 red;
+  z-index: 2;
+}
+
+.logo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #d12b33;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #d12b33, #0a06d8);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  user-select: none;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+/* Default dropdown hidden */
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #fff;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  display: none;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease forwards;
+  z-index: 1000;
+}
+
+/* Dropdown visible saat .open di React (mobile toggle) */
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+/* Dropdown muncul saat hover di desktop */
+@media (min-width: 993px) {
   .dropdown-menu {
-    background-image: #fff;
-    border: none;
-  }
-  .dropdown-menu a {
-    font-size: 1.3em;
-
-    margin: auto;
+    position: absolute;
+    /* pastikan posisinya tetap absolute */
   }
 
-  .DropdownSpan {
-    /* border: 1px solid; */
-    font-size: 1.1em;
-  }
-  * {
-    font-size: 1.4vh;
-  }
-  table {
-    font-size: 1.5em;
-  }
-  .BrandLogo {
-    width: 14.5em;
+  .dropdown.open .dropdown-menu {
+    display: none;
+    /* matikan toggle klik di desktop */
   }
 
-  h2 {
-    font-size: 2em;
+  .dropdown:hover .dropdown-menu {
+    display: flex !important;
+    animation: fadeIn 0.3s ease forwards;
   }
-  h3 {
-    font-size: 1.5em;
+}
+
+/* Dropdown item style */
+.dropdown-item {
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(135deg, #ffedf2, #fff6e5);
+  color: #da1313;
+}
+
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #222;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.bar:nth-child(1) {
+  top: 0;
+}
+
+.bar:nth-child(2) {
+  top: 9px;
+}
+
+.bar:nth-child(3) {
+  bottom: 0;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive: Mobile */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 0.8rem 2rem;
   }
-  h4 {
-    font-size: 1.2;
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    padding: 0 2rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    padding: 2rem;
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Dropdown menu inside mobile nav */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 1rem;
+    display: none;
+    /* default hidden */
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 576px) {
+  .navbar-container {
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
+  }
+
+  .nav-menu {
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .dropdown-item {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-text {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -8,17 +8,20 @@ import "./StyleComponents/StyleBestServices.css";
 const BestServices = () => {
   return (
     <div className="SectionBestServices">
+      {/* Overlay hitam transparan */}
+      <div className="overlay"></div>
+
       <motion.div
-        variants={FramerMotion("right", 0.1)}
+        variants={FramerMotion("up", 0.3)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
+        className="TitleBestService"
       >
-        <div className="TitleBestService">
-          <h2 className="TitleBestServiceText">Best Service</h2>
-          <p>Customer Satisfaction is Our Top Priority</p>
-        </div>
+        <h2 className="TitleBestServiceText">Layanan Terbaik</h2>
+        <p>Kepuasan pelanggan adalah prioritas utama kami</p>
       </motion.div>
+
       <Row className="RowBestServices">
         <Col md={12}>
           <VideosBestService />

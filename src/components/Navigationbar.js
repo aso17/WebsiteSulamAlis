@@ -1,66 +1,75 @@
-import React from "react";
-import { Navbar, Nav, NavDropdown, Image } from "react-bootstrap";
-import BrandLogo from "../assets/images/logo.png";
-import "./StyleComponents/StyleNavigationBar.css";
 
-const Navigationbar = () => {
+import React, { useState } from 'react';
+import './StyleComponents/StyleNavigationBar.css';
+
+const NavigationBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
-    <div className="NavigationBar">
-      <Navbar expand="lg" className="" data-bs-theme="">
-        <Image className="BrandLogo" src={BrandLogo} alt="logo" />
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto text-primary">
-            <Nav.Link className="menu" href={"/"}>
-              Home
-            </Nav.Link>
-            <Nav.Link className="menu" href={"/aboutme"}>
-              About
-            </Nav.Link>
-            <NavDropdown
-              className="menu"
-              title={<span className="DropdownSpan">Services</span>}
-              id="basic-nav-dropdown"
-            >
-              <NavDropdown.Item className="menuDropdown" href={"/sulam-alis"}>
-                Sulam Alis
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                className="menuDropdown"
-                href={"/remove-sulamalis"}
-              >
-                Hapus Sulam Alis
-              </NavDropdown.Item>
-              <NavDropdown.Item className="menuDropdown" href={"/sulam-bibir"}>
-                Sulam Bibir
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                className="menuDropdown"
-                href={"/sulam-eyeliner"}
-              >
-                Sulam Eyeliner
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                className="menuDropdown"
-                href={"/laser-removal"}
-              >
-                Hapus Tato
-              </NavDropdown.Item>
-            </NavDropdown>
-            {/* <Nav.Link className="menu" href={"/academy"}>
-              ACADEMY
-            </Nav.Link> */}
-            <Nav.Link className="menu" href={"/galery"}>
-              Galery
-            </Nav.Link>
-            <Nav.Link className="menu" href={"/contact"}>
-              Contact
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+    <nav className="navbar">
+      <div className="navbar-container">
+
+        {/* Logo */}
+
+        <a href="/" className="logo-container">
+          <div className="logo-rs">
+            <span className="logo-r">R</span>
+            <span className="logo-s">S</span>
+          </div>
+          <div className="logo-text">ROSIDI SULAM ALIS & ACADEMY</div>
+        </a>
+
+
+
+        {/* Hamburger Button */}
+        <button
+          className={`menu-toggle ${isMenuOpen ? 'open' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+
+        {/* Navigation Menu */}
+        <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+          <a href="/" className="nav-link">Home</a>
+          <a href="/aboutme" className="nav-link">About</a>
+
+          {/* Dropdown */}
+          <div
+            className={`dropdown ${isDropdownOpen ? 'open' : ''}`}
+            onClick={toggleDropdown}
+          >
+            <span className="nav-link dropdown-toggle">
+              Services
+              <i className="fas fa-chevron-down dropdown-icon"></i>
+            </span>
+            <div className="dropdown-menu">
+              <a href="/sulam-alis" className="dropdown-item">Sulam Alis</a>
+              <a href="/remove-sulamalis" className="dropdown-item">Hapus Sulam Alis</a>
+              <a href="/sulam-bibir" className="dropdown-item">Sulam Bibir</a>
+              <a href="/sulam-eyeliner" className="dropdown-item">Sulam Eyeliner</a>
+              <a href="/laser-removal" className="dropdown-item">Hapus Tato</a>
+            </div>
+          </div>
+
+          <a href="/galery" className="nav-link">Gallery</a>
+          <a href="/contact" className="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
   );
 };
 
-export default Navigationbar;
+export default NavigationBar;
