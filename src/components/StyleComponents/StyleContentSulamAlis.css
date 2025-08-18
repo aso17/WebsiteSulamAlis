@@ -1,7 +1,9 @@
 .ContentSulamAlis {
   padding-top: 3em;
   padding: 1em;
+  background-image: linear-gradient(hsl(206, 30%, 95%), #fff);
 }
+
 .ContentSulamAlis h4 {
   text-align: center;
   font-family: "Schibsted Grotesk", serif;
@@ -9,6 +11,7 @@
   margin: auto;
   width: 100%;
 }
+
 .ContentSulamAlis .DescContentSulamAlis {
   padding: 0.2em;
   width: 100%;
@@ -16,9 +19,11 @@
   text-align: center;
   padding-bottom: 1em;
 }
+
 .RowDescContentSulamAlis {
   width: fit-content;
 }
+
 .ColDescContentSulamAlis {
   background-color: #fff;
   width: 50%;
@@ -28,6 +33,7 @@
   text-align: justify;
   margin-top: 1em;
 }
+
 .RowDescContentSulamAlis .ColDescContentSulamAlis .ProcedureSulamAlis {
   width: 9em;
   padding: 7px;
@@ -36,12 +42,14 @@
   color: #fff;
   font-weight: 300;
 }
+
 .RowImagesSulamAlis .ImgSulamAlis1Content0 {
   width: 100%;
   height: 32em;
   margin-top: 1em;
   object-fit: cover;
 }
+
 .RowImagesSulamAlis .ImgSulamAlis1Content1,
 .ImgSulamAlis1Content2 {
   width: 100%;
@@ -56,6 +64,7 @@
   padding: 1em;
   font-size: 1.5em;
 }
+
 .RowModelSulamAlis .Model0,
 .Model1,
 .Model2,
@@ -70,15 +79,18 @@
     width: 100%;
     height: 19em;
   }
+
   .RowImagesSulamAlis .ImgSulamAlis1Content1,
   .ImgSulamAlis1Content2 {
     object-fit: cover;
     width: 100%;
     height: 9em;
   }
+
   .ColDescContentSulamAlis {
     width: 100%;
   }
+
   .RowImagesSulamAlis .ColImagesSulamAlis {
     width: 50%;
   }
@@ -91,9 +103,11 @@
     width: 70%;
     font-size: 1.5em;
   }
+
   .ContentSulamAlis .DescContentSulamAlis {
     width: 99%;
   }
+
   .RowModelSulamAlis .Model0,
   .Model1,
   .Model2,
@@ -103,6 +117,7 @@
     object-fit: cover;
     margin-top: 10px;
   }
+
   .ColDescContentSulamAlis .ProcedureSulamAlis {
     font-size: 1.3em;
   }

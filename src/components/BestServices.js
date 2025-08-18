@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import FramerMotion from "./FramerMotion";
 import VideosBestService from "./VideosBestService";
+import GaleryBestService from "./GaleryBestService";
 import "./StyleComponents/StyleBestServices.css";
 
 const BestServices = () => {
@@ -27,6 +28,9 @@ const BestServices = () => {
           <VideosBestService />
         </Col>
       </Row>
+      <div className="slider-wrapper">
+        <GaleryBestService />
+      </div>
     </div>
   );
 };

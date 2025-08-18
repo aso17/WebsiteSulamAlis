@@ -4,32 +4,38 @@
   text-align: center;
   padding: 1em;
 }
+
 .SectionContact .TitleContact {
   color: #030101;
   text-align: center;
   font-style: normal;
   margin: auto;
 }
+
 .SectionContact h2 {
   font-family: "Schibsted Grotesk", serif;
 }
+
 .RowContact {
   margin: 1em;
   background-image: linear-gradient(rgb(240, 244, 247), #fff);
 }
+
 .ColContact {
   box-shadow: 3px 3px 3px 4px rgba(209, 198, 198, 0.4);
-  height: 50vh;
+  height: 60vh;
   padding: 3em;
-  width: 26em;
+  width: 23em;
   background-color: #fff;
   margin: auto;
   text-align: start;
 }
+
 .ColContact .LinkMediaSosial a {
   text-decoration: none;
   color: #030101;
 }
+
 .imgIconContact {
   width: 30px;
   margin: 3px;
@@ -40,11 +46,13 @@
     width: 72%;
     margin-bottom: 0em;
   }
+
   .ColContact {
     height: 30%;
     width: 100%;
     margin-top: 2em;
   }
+
   .imgIconContact {
     width: 20px;
   }

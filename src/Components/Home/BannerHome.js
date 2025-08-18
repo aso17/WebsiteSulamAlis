@@ -22,7 +22,7 @@ const banners = [
   },
 ];
 
-const easing = [0.6, -0.05, 0.01, 0.99]; // easing smooth
+const easing = [0.6, -0.05, 0.01, 0.99];
 
 const BannerHome = () => {
   const [index, setIndex] = useState(0);
@@ -31,7 +31,6 @@ const BannerHome = () => {
     const timer = setTimeout(() => {
       setIndex((prev) => (prev + 1) % banners.length);
     }, 10000);
-
     return () => clearTimeout(timer);
   }, [index]);
 
@@ -75,7 +74,7 @@ const BannerHome = () => {
           </motion.p>
 
           <motion.a
-            href="#contact"
+            href="https://wa.me/6281279564211?text=%20Halo?%20Admin%20Rosidi%20Sulam%20Alis"
             className="BtnCTA"
             key={`btn-${currentBanner.id}`}
             initial={{ opacity: 0, y: 50 }}
@@ -87,18 +86,35 @@ const BannerHome = () => {
           </motion.a>
         </div>
 
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentBanner.id}
+        {/* Gambar statis untuk index pertama agar LCP cepat */}
+        {index === 0 ? (
+          <img
             src={currentBanner.img}
             alt={currentBanner.alt}
             className="ImgBannerHome"
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 1.5, ease: easing }}
+            loading="eager"
+            decoding="async"
+            width="1200"
+            height="600"
+            style={{ width: "100%", height: "auto" }}
           />
-        </AnimatePresence>
+        ) : (
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentBanner.id}
+              src={currentBanner.img}
+              alt={currentBanner.alt}
+              className="ImgBannerHome"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              width="1200"
+              height="600"
+              style={{ width: "100%", height: "auto" }}
+            />
+          </AnimatePresence>
+        )}
       </div>
     </div>
   );

@@ -1,0 +1,73 @@
+.HeroBanner {
+    padding: 4em 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeroBannerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.HeroBannerText {
+    flex: 1;
+    min-width: 320px;
+}
+
+.TitleBannerGlobal {
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+    padding: 0;
+}
+
+/* Bagian gambar dengan ukuran seragam */
+.HeroBannerImage {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    /* bikin proporsi seragam */
+    max-width: 600px;
+    /* batas maksimum supaya tidak terlalu lebar */
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeroBannerImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* gambar memenuhi kotak tapi tetap proporsional */
+    border-radius: 12px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .HeroBannerContent {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .HeroBannerText {
+        margin-top: 2em;
+    }
+
+    .HeroBannerImage {
+        max-width: 90%;
+        /* biar tidak full layar di mobile */
+        aspect-ratio: 16 / 9;
+    }
+}

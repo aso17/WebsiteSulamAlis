@@ -1,13 +1,60 @@
 .HeroAboutMe {
-  background-image: url("../../assets/images/AboutMe/Teams1.webp");
-  height: 45em;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
+  /* background: #fff; */
+  padding: 4em 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 750px) {
-  .HeroAboutMe {
-    height: 20em;
+.HeroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3em;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.HeroText {
+  flex: 1;
+  min-width: 320px;
+}
+
+.TitleBannerAboutme {
+  /* Override style TitleBanner khusus untuk AboutMe */
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  padding: 0;
+}
+
+.HeroImage {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.HeroImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .HeroContent {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .HeroText {
+    margin-top: 2em;
+  }
+
+  .HeroImage img {
+    max-width: 90%;
   }
 }
