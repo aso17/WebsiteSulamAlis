@@ -1,195 +1,119 @@
 import React from "react";
 import { motion } from "framer-motion";
 import FramerMotion from "../FramerMotion";
-import { Row, Col, Image } from "react-bootstrap";
-import "../StyleComponents/StyleHome.css";
+import ResponsiveImage from "../../assets/images/ResponsiveImage";
 
-import {
-  ImgHomeHapusTato,
-  ImgHomeSulamBibir,
-  ImgHomeSulamEyeliner,
-  ImgHomeRemoveSulamAlis,
-  ImgSulamAlis1,
-} from "../../assets/images";
+const services = [
+  {
+    title: "Sulam Alis",
+    description:
+      "Teknik mendepositkan tinta pigmen warna ke dalam kulit menggunakan alat bahan khusus di atas permukaan kulit (epidermis).",
+    baseName: "ImagesSulamAlis1",
+    folder: "../../assets/images/OptimizeImage/",
+    alt: "Sulam Alis Natural dan Profesional",
+    width: 600,
+    height: 400,
+  },
+  {
+    title: "Hapus Sulam Alis",
+    description:
+      "Teknik penghapusan tinta pigmen yang tidak sesuai warna pada kulit dengan alat & bahan khusus di lapisan epidermis.",
+    baseName: "ImgHomeRemoveSulamAlis",
+    folder: "../../assets/images/OptimizeImage/",
+    alt: "Proses Hapus Sulam Alis Aman",
+    width: 600,
+    height: 400,
+  },
+  {
+    title: "Sulam Eyeliner",
+    description:
+      "Sulam eyeliner mempertegas garis mata agar terlihat segar, bersinar, dan lebih besar. Membuat tampilan mata indah & percaya diri setiap hari.",
+    baseName: "ImgHomeSulamEyeliner",
+    folder: "../../assets/images/OptimizeImage/",
+    alt: "Sulam Eyeliner Natural",
+    width: 600,
+    height: 400,
+  },
+  {
+    title: "Sulam Bibir",
+    description:
+      "Teknik mendepositkan pigmen warna di lapisan kulit luar agar bibir tampak cerah natural. Bermanfaat untuk membentuk, mempercantik warna, dan memberi kesan bibir lebih penuh, simetris, serta awet muda.",
+    baseName: "ImgHomeSulamBibir",
+    folder: "../../assets/images/OptimizeImage/",
+    alt: "Sulam Bibir Natural dan Simetris",
+    width: 600,
+    height: 400,
+  },
+  {
+    title: "Hapus Tato",
+    description:
+      "Hapus tato yang tidak diinginkan dengan teknologi laser terkini. Dapatkan kulit bersih & bebas tato dengan prosedur yang aman & profesional.",
+    baseName: "ImgHomeHapusTato",
+    folder: "../../assets/images/OptimizeImage/",
+    alt: "Hapus Tato dengan Laser Aman",
+    width: 600,
+    height: 400,
+  },
+];
 
 const ContentHome = () => {
   return (
-    <div className="SectionHome">
+    <section className="SectionHome px-6 md:px-20 py-16 bg-gray-50">
+      {/* Judul Layanan */}
       <motion.div
-        variants={FramerMotion("right", 0.1)}
+        variants={FramerMotion("up", 0.1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
+        className="mb-16 text-center"
       >
-        <div className="TitleLayanan">
-          <h2>Layanan Kami</h2>
-          <p>Teams Yang Profesional & Dukungan Alat Serta Bahan Khusus </p>
-        </div>
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+          Layanan Kami
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Tim profesional kami dengan dukungan alat modern & bahan khusus siap
+          memberikan layanan terbaik untuk Anda.
+        </p>
       </motion.div>
 
-      <Row className="SectionServiceHome">
-        <Col md={6} className="ColServiceDescHome">
+      {/* Daftar Layanan */}
+      <div className="space-y-16">
+        {services.map((service, index) => (
           <motion.div
-            variants={FramerMotion("right", 0.1)}
+            key={service.title}
+            variants={FramerMotion(index % 2 === 0 ? "up" : "down", 0.1)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
+            viewport={{ once: false, amount: 0.4 }}
+            className={`flex flex-col md:flex-row gap-8 items-center bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 p-6 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
+              }`}
           >
-            <h4>Sulam Alis</h4>
-          </motion.div>
-          <p>
-            Teknik mendepositkan tinta pigmen warna ke dalam kulit menggunakan
-            alat bahan khusus di atas permukaan kulit (epidermis).
-          </p>
-        </Col>
-        <Col className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("up", 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <Image
-              className="ImgSulamAlis1Home"
-              src={ImgSulamAlis1}
-              alt="imgSulamAlis"
-            />
-          </motion.div>
-        </Col>
-      </Row>
+            {/* Teks */}
+            <div className="md:w-1/2">
+              <h4 className="text-2xl font-bold text-gray-900 mb-4">
+                {service.title}
+              </h4>
+              <p className="text-gray-600 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
 
-      <Row className="SectionServiceHome">
-        <Col md={6} className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("right", 0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <h4>Hapus Sulam Alis</h4>
+            {/* Gambar */}
+            <div className="md:w-1/2">
+              <ResponsiveImage
+                baseName={service.baseName}
+                alt={service.alt}
+                width={service.width}
+                height={service.height}
+                folder={service.folder}
+                priority={false}
+                className="rounded-xl shadow-md transform hover:scale-105 transition duration-500"
+              />
+            </div>
           </motion.div>
-          <p>
-            Teknik Penghapusan Tinta Pigmen Tidak Sesuai Warna pada Kulit dengan
-            Alat & Bahan Khusus di Epidermis
-          </p>
-        </Col>
-        <Col className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("up", 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <Image
-              className="ImgSulamAlis1Home"
-              src={ImgHomeRemoveSulamAlis}
-              alt="imgSulamAlis"
-            />
-          </motion.div>
-        </Col>
-      </Row>
-
-      <Row className="SectionServiceHome">
-        <Col md={6} className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("right", 0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <h4> Sulam Eyeliner</h4>
-          </motion.div>
-          <p>
-            Teknik Sulam Eyeliner Dapat Mempertegas Garis Eyeliner Sesuai
-            Permintaan, Membuat Mata Pasien Terlihat Segar, Bersinar, Dan Lebih
-            Besar. Dengan Sulam Eyeliner, Pasien Dapat Memiliki Tampilan Mata
-            Yang Lebih Indah Dan Percaya Diri Setiap Hari.
-          </p>
-        </Col>
-        <Col md={6} className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("up", 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <Image
-              className="ImgSulamEyelinerHome"
-              src={ImgHomeSulamEyeliner}
-              alt="ImgSulamEyeliner"
-            />
-          </motion.div>
-        </Col>
-      </Row>
-
-      <Row className="SectionServiceHome">
-        <Col md={6} className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("right", 0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <h4>Sulam Bibir</h4>
-          </motion.div>
-
-          <p>
-            Teknik mendepositkan pigmen warna ke lapisan kulit luar (epidermis)
-            menggunakan alat bahan khusus sehingga hasilnya terkesan cerah
-            natural. Tindakan sulam bibir bermanfaat untuk merubah bentuk dan
-            warna bibir pasien dan memberikan kesan bibir lebih penuh lebih awet
-            muda, dan lebih simestris.
-          </p>
-        </Col>
-        <Col md={6} className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("up", 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <Image
-              className="ImgSulamBibirHome"
-              src={ImgHomeSulamBibir}
-              alt="ImgSulamBibir"
-            />
-          </motion.div>
-        </Col>
-      </Row>
-
-      <Row className="SectionServiceHome">
-        <Col md={6} className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("right", 0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <h4>Hapus Tato</h4>
-          </motion.div>
-          <p>
-            Hapus Tato Yang Tidak Diinginkan Dengan Teknologi Laser Terkini!
-            Dapatkan Kulit Yang Bersih Dan Bebas Tato Dengan Prosedur Hapus Tato
-            Yang Aman. Tato Tidak Lagi Menjadi Masalah Dengan Layanan Hapus Tato
-            Yang Profesional.
-          </p>
-        </Col>
-        <Col md={6} className="ColServiceDescHome">
-          <motion.div
-            variants={FramerMotion("up", 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <Image
-              className="ImgLaserRemovalHome"
-              src={ImgHomeHapusTato}
-              alt="ImgLaserRemoval"
-            />
-          </motion.div>
-        </Col>
-      </Row>
-    </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

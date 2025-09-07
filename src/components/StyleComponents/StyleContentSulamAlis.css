@@ -43,15 +43,15 @@
   font-weight: 300;
 }
 
-.RowImagesSulamAlis .ImgSulamAlis1Content0 {
+.RowImagesSulamAlis .ImagesSulamAlis1Content0 {
   width: 100%;
   height: 32em;
   margin-top: 1em;
   object-fit: cover;
 }
 
-.RowImagesSulamAlis .ImgSulamAlis1Content1,
-.ImgSulamAlis1Content2 {
+.RowImagesSulamAlis .ImagesSulamAlis1Content1,
+.ImagesSulamAlis1Content2 {
   width: 100%;
   height: 15.5em;
   object-fit: cover;
@@ -75,13 +75,13 @@
 }
 
 @media (max-width: 750px) {
-  .RowImagesSulamAlis .ImgSulamAlis1Content0 {
+  .RowImagesSulamAlis .ImagesSulamAlis1Content0 {
     width: 100%;
     height: 19em;
   }
 
-  .RowImagesSulamAlis .ImgSulamAlis1Content1,
-  .ImgSulamAlis1Content2 {
+  .RowImagesSulamAlis .ImagesSulamAlis1Content1,
+  .ImagesSulamAlis1Content2 {
     object-fit: cover;
     width: 100%;
     height: 9em;

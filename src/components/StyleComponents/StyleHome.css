@@ -51,7 +51,7 @@
 }
 
 /* Gambar Layanan */
-.ImgSulamAlis1Home,
+.ImagesSulamAlis1Home,
 .ImgSulamEyelinerHome,
 .ImgSulamBibirHome,
 .ImgLaserRemovalHome {
@@ -62,7 +62,7 @@
   transition: transform 0.3s ease;
 }
 
-.ImgSulamAlis1Home:hover,
+.ImagesSulamAlis1Home:hover,
 .ImgSulamEyelinerHome:hover,
 .ImgSulamBibirHome:hover,
 .ImgLaserRemovalHome:hover {
@@ -85,7 +85,7 @@
     width: 20px;
   }
 
-  .ImgSulamAlis1Home,
+  .ImagesSulamAlis1Home,
   .ImgSulamEyelinerHome,
   .ImgSulamBibirHome,
   .ImgLaserRemovalHome {

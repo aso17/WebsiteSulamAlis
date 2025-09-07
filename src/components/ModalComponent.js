@@ -1,45 +1,64 @@
-import { Modal, Image } from "react-bootstrap";
-import "../Components/StyleComponents/StyleModalComponent.css";
-import ProcedureSulamAlis from "../assets/images/Services/ProcedureSulamAlis.webp";
-import ProcedureSulamBibir from "../assets/images/Services/ProcedureSulamBibir.webp";
-import ProcedureSulamEyeliner from "../assets/images/Services/ProcedureSulamEyeliner.webp";
-const ModalComponent = (props) => {
-  let modalHeading;
-  let modalParagraf;
+// import "../Components/StyleComponents/StyleModalComponent.css"; // ✅ CSS lama dibiarkan dikomentari
 
-  switch (props.id) {
+import { motion } from "framer-motion";
+import ResponsiveImage from "../assets/images/ResponsiveImage"; // ✅ Responsive image component
+
+const ModalComponent = ({ id, show, onHide }) => {
+  let modalHeading;
+  let imageName;
+
+  switch (id) {
     case `1`:
-      // code block
       modalHeading = `Procedure Sulam Alis`;
-      modalParagraf = ProcedureSulamAlis;
+      imageName = "ProcedureSulamAlis";
       break;
     case `2`:
-      // code block
       modalHeading = `Procedure Sulam Bibir`;
-      modalParagraf = ProcedureSulamBibir;
+      imageName = "ProcedureSulamBibir";
       break;
     default:
-      // code block
       modalHeading = `Procedure Sulam Eyeliner`;
-      modalParagraf = ProcedureSulamEyeliner;
+      imageName = "ProcedureSulamEyeliner";
   }
 
+  if (!show) return null;
+
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton className="ModalHeader">
-        <Modal.Title id="contained-modal-title-vcenter">
-          {modalHeading}
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Image className="ImagesModal" src={modalParagraf} alt="paragraf" />
-      </Modal.Body>
-    </Modal>
+    <div className="fixed inset-0 flex items-center justify-center z-50">
+      {/* Background overlay */}
+      <div
+        className="absolute inset-0 bg-black bg-opacity-50"
+        onClick={onHide}
+      />
+
+      {/* Modal content */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        className="relative bg-white rounded-2xl shadow-lg w-full max-w-2xl z-10 overflow-hidden"
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b">
+          <h2 className="text-lg font-semibold">{modalHeading}</h2>
+          <button
+            onClick={onHide}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Body */}
+        <div className="p-4 flex justify-center">
+          <ResponsiveImage
+            baseName={imageName}
+            alt={modalHeading}
+            className="rounded-md max-h-[70vh] object-contain"
+          />
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

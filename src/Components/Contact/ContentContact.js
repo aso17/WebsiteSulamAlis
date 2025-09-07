@@ -1,102 +1,38 @@
-import React from "react";
-import { Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import FramerMotion from "../FramerMotion";
-import "../../Components/StyleComponents/StyleComponentContact.css";
 
 const ContentContact = () => {
-  let today;
-  let objToday = new Date(),
-    weekday = new Array(
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ),
-    dayOfWeek = weekday[objToday.getDay()],
-    domEnder = (function () {
-      var a = objToday;
-      if (/1/.test(parseInt((a + "").charAt(0)))) return "";
-      a = parseInt((a + "").charAt(1));
-      return 1 === a ? "st" : 2 === a ? "nd" : 3 === a ? "rd" : "";
-    })(),
-    dayOfMonth =
-      today + (objToday.getDate() < 10)
-        ? "0" + objToday.getDate() + domEnder
-        : objToday.getDate() + domEnder,
-    months = new Array(
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ),
-    curMonth = months[objToday.getMonth()],
-    curYear = objToday.getFullYear(),
-    curHour =
-      objToday.getHours() > 12
-        ? objToday.getHours() - 12
-        : objToday.getHours() < 10
-        ? "0" + objToday.getHours()
-        : objToday.getHours(),
-    curMinute =
-      objToday.getMinutes() < 10
-        ? "0" + objToday.getMinutes()
-        : objToday.getMinutes(),
-    curSeconds =
-      objToday.getSeconds() < 10
-        ? "0" + objToday.getSeconds()
-        : objToday.getSeconds(),
-    curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
-  today =
-    curHour +
-    ":" +
-    curMinute +
-    "." +
-    curSeconds +
-    curMeridiem +
-    " " +
-    dayOfWeek +
-    " " +
-    dayOfMonth +
-    " of " +
-    curMonth +
-    ", " +
-    curYear;
-
   return (
-    <div className="ContentContact">
-      <Card className="text-center">
-        <Card.Body>
-          <Card.Title>Bisa Melakukan Reservasi Terlebih Dahulu</Card.Title>
-          <motion.div
-            variants={FramerMotion("up", 0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <Card.Text>
-              Untuk Informasi Harga & Informasi Lebih Lanjut Bisa langsung Click
-              Tombol Di bawah
-            </Card.Text>
-          </motion.div>
+    <div className="flex justify-center items-center py-12 px-4">
+      <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl text-center p-8">
+        {/* Judul */}
+        <h2 className="text-3xl font-extrabold text-gray-800 mb-4">
+          Reservasi & Konsultasi
+        </h2>
 
-          <Button className="BtnCta" variant="secondary">
-            Hubungi Kami
-          </Button>
-        </Card.Body>
-        {/* <Card.Footer className="text-muted">{today}</Card.Footer> */}
-      </Card>
+        {/* Animasi paragraf */}
+        <motion.div
+          variants={FramerMotion("up", 0.1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.7 }}
+        >
+          <p className="text-gray-600 mb-6 leading-relaxed">
+            Untuk informasi layanan, ketersediaan jadwal, atau konsultasi 
+            langsung dengan tim kami, silakan hubungi melalui WhatsApp dengan klik tombol di bawah.
+          </p>
+        </motion.div>
+
+        {/* Tombol CTA */}
+        <a
+          href="https://wa.me/6281279564211?text=Halo%20Admin%20Rosidi%20Sulam%20Alis%2C%20saya%20ingin%20reservasi."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg shadow-lg font-semibold hover:scale-105 transition transform"
+        >
+          Chat via WhatsApp
+        </a>
+      </div>
     </div>
   );
 };

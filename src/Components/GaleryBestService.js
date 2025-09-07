@@ -1,70 +1,75 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
+import ResponsiveImage from "../assets/images/ResponsiveImage";
 import "./StyleComponents/SliderImages.css";
 
-import {
-  ImgSulamAlis2,
-  ImgSulamAlis3,
-  ImgSulamAlis4,
-  Model0,
-  Model1,
-  Model2,
-  Model3,
-} from "../assets/images";
-
 const images = [
-  ImgSulamAlis2,
-  ImgSulamAlis3,
-  ImgSulamAlis4,
-  Model0,
-  Model1,
-  Model2,
-  Model3,
+  { baseName: "ImagesSulamAlis2", alt: "Sulam Alis Natural" },
+  { baseName: "ImagesSulamAlis3", alt: "Hasil Sulam Alis Modern" },
+  { baseName: "ImagesSulamAlis4", alt: "Proses Sulam Alis" },
+  { baseName: "Model0", alt: "Model 1 Sulam Alis" },
+  { baseName: "Model1", alt: "Model 2 Sulam Alis" },
+  { baseName: "Model2", alt: "Model 3 Sulam Alis" },
+  { baseName: "Model3", alt: "Model 4 Sulam Alis" },
 ];
 
 const SliderImage = () => {
   const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimation();
+  const trackRef = useRef(null);
+  const [duration, setDuration] = useState(30); // default awal
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (trackRef.current) {
+      const trackWidth = trackRef.current.scrollWidth; // total track (dua kali gambar)
+      const distanceToTravel = trackWidth / 2; // kita geser setengah track saja (loop)
+      const isMobile = window.innerWidth < 768;
+      const baseSpeed = isMobile ? 1000 / 30 : 1000 / 20; // px per detik
+      const newDuration = distanceToTravel / baseSpeed;
+      setDuration(newDuration);
+    }
+  }, []);
+
+  useLayoutEffect(() => {
     if (!isPaused) {
       controls.start({
-        x: "-100%", // geser ke kiri hingga -100%
+        x: `-${trackRef.current?.scrollWidth / 2 || 0}px`,
         transition: {
-          duration: 30, // durasi animasi
-          ease: "linear", // animasi linear untuk smooth gerak terus
+          duration: duration,
+          ease: "linear",
           repeat: Infinity,
-          repeatType: "loop", // loop tanpa jeda
         },
       });
     } else {
-      controls.stop(); // pause animasi
+      controls.stop();
     }
-  }, [isPaused, controls]);
-
-  const handleTogglePause = () => {
-    setIsPaused((prev) => !prev);
-  };
+  }, [isPaused, duration, controls]);
 
   return (
-    <div className="slider-wrapper" onClick={handleTogglePause}>
+    <div
+      className="slider-wrapper"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="fade-left" />
       <motion.div
         className="slider-track"
         animate={controls}
-        initial={{ x: 0 }} // mulai langsung di posisi 0 (terlihat)
+        initial={{ x: 0 }}
+        ref={trackRef}
       >
-        {/* Gandakan images supaya loop terlihat mulus */}
-        {[...images, ...images].map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`image-${index}`}
-            className="slider-image"
-            draggable={false}
-          />
+        {[...images, ...images].map((img, index) => (
+          <div key={`${img.baseName}-${index}`} className="slider-image-wrapper">
+            <ResponsiveImage
+              baseName={img.baseName}
+              alt={img.alt}
+              className="slider-image"
+              draggable={false}
+            />
+          </div>
         ))}
       </motion.div>
+      <div className="fade-right" />
     </div>
   );
 };

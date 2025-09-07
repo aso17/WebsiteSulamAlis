@@ -3,6 +3,7 @@
   text-align: center;
   padding: 4em;
 }
+
 .Service h2 {
   /* margin: 1em; */
   text-shadow: 1px 1px 3px rgba(119, 119, 209, 0.5);
@@ -12,9 +13,11 @@
   width: 6em;
   margin: auto;
 }
+
 .Service h2 span {
   color: rgb(169, 99, 235);
 }
+
 .SectionService {
   /* border: 1px solid; */
   margin-top: 3em;
@@ -28,25 +31,30 @@
   /* border-radius: 2em; */
   /* padding: 10px; */
 }
+
 .Service h4 {
   color: rgb(169, 99, 235);
   text-align: start;
   font-weight: bold;
   font-style: italic;
 }
+
 .Service p {
   color: #238adf;
   text-align: start;
   font-size: 1.2em;
   letter-spacing: 1px;
 }
-.ImgSulamAlis1 {
+
+.ImagesSulamAlis1 {
   border-radius: 0.5rem;
   width: 39em;
 }
+
 .SectionExampleSulamAlis {
   padding-top: 2rem;
 }
+
 .ImgExampleSulamAlis {
   width: 25em;
   height: 20em;
@@ -63,9 +71,11 @@
   width: 39em;
   border-radius: 0.5rem;
 }
+
 .SectionExampleEyeliner {
   padding-top: 2rem;
 }
+
 .ImgExampleSulamEyeliner {
   width: 25em;
   height: 20em;
@@ -82,9 +92,11 @@
   width: 39em;
   border-radius: 0.5rem;
 }
+
 .SectionExampleSulamBibir {
   padding-top: 2rem;
 }
+
 .ImgExampleSulamBibir {
   width: 25em;
   height: 20em;
@@ -92,6 +104,7 @@
   object-fit: cover;
   margin-top: 5em;
 }
+
 .SectionLaserRemoval {
   margin-top: 5em;
 }
@@ -100,9 +113,11 @@
   width: 39em;
   border-radius: 0.5rem;
 }
+
 .SectionExampleLaserRemoval {
   padding-top: 2rem;
 }
+
 .ImgExampleLaserRemoval {
   width: 25em;
   height: 20em;
@@ -124,12 +139,14 @@
   border-radius: 4px;
   color: #fff !important;
 }
+
 /* Style mobile */
 
 @media (max-width: 750px) {
-  .ImgSulamAlis1 {
+  .ImagesSulamAlis1 {
     width: 100%;
   }
+
   .ImgExampleSulamAlis,
   .ImgSulamEyeliner,
   .ImgExampleSulamEyeliner,

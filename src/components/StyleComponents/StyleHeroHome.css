@@ -9,18 +9,21 @@
 .BannerWrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  /* spacing seimbang */
   max-width: 1200px;
   width: 100%;
-  gap: 2rem;
+  gap: 3rem;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
   background-color: #fff;
 }
 
-/* Bagian teks */
 .CaptionContainer {
   flex: 1;
+  max-width: 550px;
+  /* batasi lebar teks */
   padding: 1rem;
 }
 
@@ -45,52 +48,83 @@
   line-height: 1.6;
 }
 
-/* Tombol CTA versi merah */
+/* Tombol CTA Gradient Pink-Ungu */
 .BtnCTA {
-  background-color: #C1272D;
-  /* merah utama */
+  background: linear-gradient(90deg, #ff4e95, #8a2be2);
+  /* pink ke ungu */
   color: #fff;
   padding: 0.9rem 2rem;
-  border-radius: 30px;
+  border-radius: 50px;
+  /* lebih bulat */
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  border: 2px solid #C1272D;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  box-shadow: 0 4px 15px rgba(193, 39, 45, 0.4);
+  border: none;
+  /* lebih clean */
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
+/* Hover effect */
 .BtnCTA:hover {
-  background-color: #8B1A20;
-  /* merah gelap saat hover */
-  box-shadow: 0 6px 20px rgba(139, 26, 32, 0.6);
-  color: #fff;
-  border-color: #8B1A20;
+  background: linear-gradient(90deg, #8a2be2, #ff4e95);
+  /* reverse */
+  box-shadow: 0 6px 18px rgba(138, 43, 226, 0.5);
+  transform: translateY(-3px);
+  /* efek naik */
 }
 
-/* Gambar */
-.ImgBannerHome {
+/* Klik/aktif */
+.BtnCTA:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 10px rgba(138, 43, 226, 0.4);
+}
+
+
+
+/* Image */
+.ImageWrapper {
   flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ImgBannerHome {
+  width: 100%;
   max-height: 500px;
   object-fit: cover;
-  width: 40%;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
-/* Responsive untuk mobile */
+/* Responsive */
 @media screen and (max-width: 768px) {
   .BannerWrapper {
     flex-direction: column;
+    gap: 2rem;
     padding: 1rem;
+  }
+
+  .CaptionContainer {
+    max-width: 100%;
+  }
+
+  .ImgBannerHome {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
   }
 
   .CaptionTitle {
     font-size: 1.8rem;
-    /* ukuran teks lebih kecil di mobile */
   }
 
   .CaptionSubtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .CaptionText {
@@ -100,15 +134,5 @@
   .BtnCTA {
     padding: 0.75rem 1.6rem;
     font-size: 0.95rem;
-  }
-
-  .ImgBannerHome {
-    width: 100%;
-    /* height: 260px; */
-    /* ukuran gambar sama di mobile */
-    max-height: none;
-    object-fit: cover;
-    /* agar gambar proporsional */
-    border-radius: 1rem;
   }
 }

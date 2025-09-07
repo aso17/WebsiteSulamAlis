@@ -1,96 +1,104 @@
-import React from "react";
-import { Row, Col, Image, Badge } from "react-bootstrap";
+import React, { useState } from "react";
 import ModalComponent from "../../ModalComponent";
 import { motion } from "framer-motion";
 import FramerMotion from "../../FramerMotion";
-import "../../StyleComponents/StyleContentSulamEyeliner.css";
-import {
-  ImagesBeforeSulamEyeliner,
-  ImagesSulamEleyener1,
-} from "../../../assets/images";
+import ResponsiveImage from "../../../assets/images/ResponsiveImage"; // ✅ gunakan image dinamis
 
 const ContentSulamEyeliner = () => {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   return (
-    <div className="ContentSulamEyeliner">
+    <div className="w-full px-6 py-10">
+      {/* Heading */}
       <motion.div
         variants={FramerMotion("up", 0.1)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.7 }}
+        className="text-center mb-8"
       >
-        <h4>Membuat Bentuk Mata Menjadi Sempurna</h4>
-        <p>
-          Combination Sulam Eyeliner Sulam Alis membuat lebih terlihat soft &
-          natural.
+        <h4 className="text-2xl font-bold text-gray-800">
+          Membuat Bentuk Mata Menjadi Sempurna
+        </h4>
+        <p className="text-gray-600">
+          Combination Sulam Eyeliner & Sulam Alis membuat lebih terlihat soft
+          &amp; natural.
         </p>
       </motion.div>
-      <Row className="RowDescSulamEyeliner">
-        <Col md={6} className="ColDescSulamEyeliner">
-          <p>
+
+      {/* Content Row */}
+      <div className="grid md:grid-cols-2 gap-8 items-center">
+        {/* Left Side */}
+        <div>
+          <p className="mb-4 text-gray-700">
             Tindakan mempertegas garis eyeliner bagian atas dan bawah. Sulam
             eyeliner bermanfaat agar mata terlihat selalu segar, bersinar, dan
             memberikan efek percaya diri sepanjang hari.
           </p>
+
           <motion.div
             variants={FramerMotion("right", 0.1)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.7 }}
           >
-            <Badge
-              bg="secondary"
-              className="ProcedureSulamEyeliner"
+            <button
               onClick={() => setModalShow(true)}
+              className="px-5 py-2 rounded-lg shadow text-white text-sm 
+                bg-gradient-to-r from-pink-500 via-red-400 to-pink-600 
+                hover:opacity-90 transition"
             >
               Lihat Procedure
-            </Badge>
+            </button>
           </motion.div>
+
           <ModalComponent
             show={modalShow}
             id={`3`}
             onHide={() => setModalShow(false)}
           />
-        </Col>
-        <Col md={6} className="ColImgSulamEyeliner">
-          <div className="RowImgSulamEyeliner">
-            <Image
-              className="ImagesSulamEyeliner"
-              src={ImagesBeforeSulamEyeliner}
-              alt="imgSulamEyeliner"
-            />
+        </div>
 
-            <Image
-              className="ImagesSulamEyeliner"
-              src={ImagesSulamEleyener1}
-              alt="imgSulamEyeliner"
+        {/* Right Side */}
+        <div>
+          {/* Images Row */}
+          <div className="flex gap-4 mb-4">
+            <ResponsiveImage
+              baseName="ImagesBeforeSulamEyeliner"
+              alt="Before Sulam Eyeliner"
+              className="w-1/2 rounded-lg shadow object-cover"
+            />
+            <ResponsiveImage
+              baseName="ImagesSulamEyeliner1"
+              alt="After Sulam Eyeliner"
+              className="w-1/2 rounded-lg shadow object-cover"
             />
           </div>
-          <div className="RowCaptionSulamEyeliner">
-            <div className="CaptionSulamEyeliner">
-              <motion.div
-                variants={FramerMotion("right", 0.1)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.7 }}
-              >
-                <p>Before</p>
-              </motion.div>
-            </div>
-            <div className="CaptionSulamEyeliner">
-              <motion.div
-                variants={FramerMotion("right", 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.7 }}
-              >
-                <p>After</p>
-              </motion.div>
-            </div>
+
+          {/* Captions */}
+          <div className="flex justify-between text-center text-gray-600">
+            <motion.div
+              variants={FramerMotion("right", 0.1)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.7 }}
+              className="w-1/2"
+            >
+              <p className="font-semibold">Before</p>
+            </motion.div>
+
+            <motion.div
+              variants={FramerMotion("right", 0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.7 }}
+              className="w-1/2"
+            >
+              <p className="font-semibold">After</p>
+            </motion.div>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   );
 };

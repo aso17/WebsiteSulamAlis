@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-import "./StyleComponents/StyleTitleBanner.css";
 
 const konfigurasiJudul = {
   HeroAboutMe: {
@@ -10,66 +8,67 @@ const konfigurasiJudul = {
   },
   Galeri: {
     judul: "GALERI",
-    deskripsi: "Menampilkan Artis dan Model Indonesia",
+    deskripsi: "Koleksi karya terbaik dan hasil perawatan eksklusif.",
   },
   Kontak: {
     judul: "KONTAK",
-    deskripsi: "Dapatkan Konsultasi Gratis",
+    deskripsi: "Hubungi kami untuk konsultasi dan reservasi layanan.",
   },
   SulamAlis: {
     judul: "SULAM ALIS",
-    deskripsi: "Pilihan Terbaik untuk Kebutuhan Anda",
+    deskripsi: "Alis indah, natural, dan presisi sesuai karakter wajah Anda.",
+  },
+  HapusSulamAlis: {
+    judul: "HAPUS SULAM ALIS",
+    deskripsi:
+      "Penghapusan sulam alis dengan teknik modern, minim rasa sakit, dan hasil yang alami.",
   },
   SulamBibir: {
     judul: "SULAM BIBIR",
-    deskripsi: "Bibir Sesuai Warna yang Anda Inginkan",
+    deskripsi: "Warna bibir segar dan tahan lama untuk penampilan elegan.",
   },
   SulamEyeliner: {
     judul: "SULAM EYELINER",
-    deskripsi: "Mata Tampak Lebih Indah dan Natural",
+    deskripsi: "Tampilan mata lebih tegas dan mempesona setiap saat.",
   },
   LaserRemoval: {
     judul: "LASER REMOVAL",
-    deskripsi: "Perawatan Kulit dengan Teknologi Canggih",
+    deskripsi: "Teknologi modern untuk perawatan kulit yang aman dan efektif.",
   },
 };
 
 const easing = [0.6, -0.05, 0.01, 0.99];
 
-const TitleBanner = ({ tipe }) => {
+const TitleBanner = ({ tipe, className = "" }) => {
   const { judul, deskripsi } = konfigurasiJudul[tipe] || konfigurasiJudul.LaserRemoval;
 
   return (
-    <div className="TitleBannerWrapper">
-      <motion.div
-        className="TitleBanner"
-        initial={{ opacity: 0, y: 50 }}
+    <div className={`space-y-6 text-center md:text-left ${className}`}>
+      {/* Judul */}
+      <motion.h2
+        className="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block"
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: easing }}
       >
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: easing }}
-        >
-          {judul}
-        </motion.h2>
-      </motion.div>
+        {judul}
+        <motion.div
+          className="absolute left-0 bottom-[-8px] h-[3px] bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 1.2, ease: easing, delay: 0.3 }}
+        />
+      </motion.h2>
 
-      <motion.div
-        className="TitleBannerDesc"
-        initial={{ opacity: 0, y: 50 }}
+      {/* Deskripsi */}
+      <motion.p
+        className="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl"
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.4, ease: easing, delay: 0.3 }}
+        transition={{ duration: 1.4, ease: easing, delay: 0.5 }}
       >
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.6, ease: easing, delay: 0.5 }}
-        >
-          {deskripsi}
-        </motion.p>
-      </motion.div>
+        {deskripsi}
+      </motion.p>
     </div>
   );
 };

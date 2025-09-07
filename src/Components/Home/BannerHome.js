@@ -1,12 +1,14 @@
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ImgBannerHome1, ImgBannerHome2 } from "../../assets/images";
+import ResponsiveImage from "../../assets/images/ResponsiveImage";
 import "../StyleComponents/StyleHeroHome.css";
 
 const banners = [
   {
     id: 1,
-    img: ImgBannerHome1,
+    baseName: "ImgBannerHome1",
+    folder: "../../assets/images/OptimizeImage", // folder tempat gambar optimize kamu
     alt: "Sulam Alis Profesional Jakarta",
     title: "PASTIKAN ANDA",
     subtitle: "Mendapatkan Layanan Terbaik Kami",
@@ -14,7 +16,8 @@ const banners = [
   },
   {
     id: 2,
-    img: ImgBannerHome2,
+    baseName: "ImgBannerHome",
+    folder: "../../assets/images/OptimizeImage",
     alt: "Perawatan Sulam Alis Natural",
     title: "TINGKATKAN PENAMPILAN ANDA",
     subtitle: "Dengan Sulam Alis Profesional",
@@ -30,7 +33,7 @@ const BannerHome = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIndex((prev) => (prev + 1) % banners.length);
-    }, 10000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, [index]);
 
@@ -39,6 +42,7 @@ const BannerHome = () => {
   return (
     <div className="SectionHeroHome">
       <div className="BannerWrapper">
+        {/* Caption */}
         <div className="CaptionContainer">
           <motion.h2
             className="CaptionTitle"
@@ -86,35 +90,28 @@ const BannerHome = () => {
           </motion.a>
         </div>
 
-        {/* Gambar statis untuk index pertama agar LCP cepat */}
-        {index === 0 ? (
-          <img
-            src={currentBanner.img}
-            alt={currentBanner.alt}
-            className="ImgBannerHome"
-            loading="eager"
-            decoding="async"
-            width="1200"
-            height="600"
-            style={{ width: "100%", height: "auto" }}
-          />
-        ) : (
+        {/* Gambar */}
+        <div className="ImageWrapper">
           <AnimatePresence mode="wait">
-            <motion.img
+            <motion.div
               key={currentBanner.id}
-              src={currentBanner.img}
-              alt={currentBanner.alt}
-              className="ImgBannerHome"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
-              width="1200"
-              height="600"
-              style={{ width: "100%", height: "auto" }}
-            />
+            >
+              <ResponsiveImage
+                baseName={currentBanner.baseName}
+                alt={currentBanner.alt}
+                width={1200}
+                height={600}
+                folder={currentBanner.folder}
+                priority={index === 0} // Prioritas untuk banner pertama
+                className="ImgBannerHome"
+              />
+            </motion.div>
           </AnimatePresence>
-        )}
+        </div>
       </div>
     </div>
   );

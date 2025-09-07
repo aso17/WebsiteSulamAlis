@@ -1,5 +1,6 @@
 import TitleBanner from "../../TitleBanner";
 import HotlineBanner from "../../HotlineBanner";
+import ResponsiveImage from "../../../assets/images/ResponsiveImage";
 import "../../StyleComponents/BannerStyleGlobal.css";
 
 const BannerSulamAlis = () => {
@@ -13,9 +14,10 @@ const BannerSulamAlis = () => {
 
         {/* Gambar kanan */}
         <div className="HeroBannerImage">
-          <img
-            src={require("../../../assets/images/Services/BannerSulamAlis.webp")}
+          <ResponsiveImage
+            baseName="BannerSulamAlis"
             alt="Sulam Alis - Rosidi Sulam Alis"
+            className="w-full h-auto rounded-xl shadow-lg"
           />
           <HotlineBanner />
         </div>
