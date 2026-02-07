@@ -1,3 +1,28 @@
+/* 1. @import harus berada di paling atas sebelum @tailwind */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    /* Menggunakan warna 'primary' dari config Anda */
+    @apply bg-white text-primary antialiased;
+    /* Font default menggunakan Inter (sans) */
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Memastikan transisi warna global halus */
+  * {
+    @apply transition-colors duration-200;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Paksa container untuk memiliki padding horizontal default agar tidak 'mepet' di browser manapun */
+  .container {
+    @apply px-6 md:px-12 lg:px-20;
+  }
+}
