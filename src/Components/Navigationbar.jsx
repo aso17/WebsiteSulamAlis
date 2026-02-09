@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import Logo from "./Logo";
 
 const NavigationBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +13,14 @@ const NavigationBar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isMenuOpen]);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -35,26 +42,39 @@ const NavigationBar = () => {
     { name: "Hapus Tato", href: "/layanan-laser-removal" },
   ];
 
-  // Logic Warna: Putih diganti ke text-accent (Gold)
-  const dynamicText = isScrolled ? "text-primary" : "text-accent";
-  const dynamicBorder = isScrolled ? "border-primary/10" : "border-accent/40";
+  const navBackground =
+    isMenuOpen || isScrolled
+      ? "bg-white shadow-md py-3 md:py-4"
+      : "bg-transparent py-5 md:py-7";
+
+  const iconColor = isMenuOpen
+    ? "text-primary"
+    : isScrolled
+      ? "text-primary"
+      : "text-accent";
+
   const dynamicGhostText = isScrolled ? "text-primary/80" : "text-accent";
 
   return (
     <nav
-      className={`fixed w-full z-[100] transition-all duration-500 ease-in-out ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm py-3 md:py-4"
-          : "bg-transparent py-5 md:py-7"
-      }`}
+      className={`fixed w-full z-[9999] transition-all duration-500 ease-in-out ${navBackground}`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center">
-        {/* LOGO SECTION */}
-        <a href="/" className="flex items-center gap-2 md:gap-4 group">
-          <Logo isScrolled={isScrolled} />
+      <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center relative z-[10000]">
+        {/* LOGO SECTION MENGGUNAKAN IMG */}
+        <a href="/" className="flex items-center group">
           <div
-            className={`flex flex-col border-l ${dynamicBorder} pl-2 md:pl-4 transition-colors duration-500`}
-          ></div>
+            className={`p-1 bg-white rounded-lg shadow-sm transition-all duration-500 ${
+              isScrolled || isMenuOpen ? "scale-90" : "scale-100"
+            }`}
+          >
+            <img
+              src="/logo.webp"
+              alt="Rosidi Sulam Alis Logo"
+              className={`transition-all duration-500 object-contain ${
+                isScrolled || isMenuOpen ? "h-10 md:h-12" : "h-14 md:h-16"
+              }`}
+            />
+          </div>
         </a>
 
         {/* DESKTOP MENU */}
@@ -69,7 +89,7 @@ const NavigationBar = () => {
             </a>
           ))}
 
-          {/* Dropdown Services */}
+          {/* Dropdown Services Desktop */}
           <div className="relative group">
             <button
               className={`flex items-center gap-1.5 text-[12px] uppercase tracking-widest font-bold ${dynamicGhostText} group-hover:text-accent transition-all duration-500`}
@@ -99,65 +119,52 @@ const NavigationBar = () => {
             </a>
           ))}
 
-          {/* Button tetap gold sesuai config */}
-          <button className="bg-gradient-to-r from-accent via-accent to-accent-hover text-white px-7 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-lg shadow-accent/20">
+          <button className="bg-gradient-to-r from-accent via-accent to-accent-hover text-white px-7 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-accent/20 hover:brightness-110 transition-all">
             Book Now
           </button>
         </div>
-
         {/* MOBILE TOGGLE BUTTON */}
         <button
-          className={`lg:hidden p-1 ${dynamicText} z-[110] transition-colors duration-500`}
+          className={`lg:hidden p-2 transition-all duration-300 relative z-[10001] ${iconColor}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? (
-            <X size={26} className="text-primary" />
-          ) : (
-            <Menu size={26} />
-          )}
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* MOBILE MENU OVERLAY */}
       <div
-        className={`lg:hidden fixed inset-0 bg-white transition-all duration-500 ease-in-out ${
+        className={`lg:hidden fixed inset-0 bg-white transition-all duration-500 ease-in-out z-[9998] ${
           isMenuOpen
-            ? "opacity-100 visible"
-            : "opacity-0 invisible pointer-events-none"
+            ? "translate-y-0 opacity-100 visible"
+            : "-translate-y-full opacity-0 invisible"
         }`}
       >
-        <div className="flex flex-col h-full pt-28 px-10 gap-5 overflow-y-auto">
+        <div className="flex flex-col h-full pt-28 px-10 gap-5 overflow-y-auto bg-white">
           {navLinks.slice(0, 2).map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={closeMenu}
-              className="text-[11px] font-bold text-primary border-b border-surface pb-4 uppercase tracking-widest"
+              className="text-[13px] font-bold text-primary border-b border-surface pb-4 uppercase tracking-widest"
             >
               {link.name}
             </a>
           ))}
 
-          {/* Mobile Services */}
           <div className="border-b border-surface pb-4">
             <button
               onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-              className="flex items-center justify-between w-full text-[11px] font-bold text-primary uppercase tracking-widest"
+              className="flex items-center justify-between w-full text-[13px] font-bold text-primary uppercase tracking-widest"
             >
               Services
               <ChevronDown
-                size={16}
-                className={`transition-transform duration-300 ${
-                  isMobileServicesOpen ? "rotate-180 text-accent" : ""
-                }`}
+                size={18}
+                className={`transition-transform duration-300 ${isMobileServicesOpen ? "rotate-180 text-accent" : ""}`}
               />
             </button>
             <div
-              className={`grid transition-all duration-300 ease-in-out ${
-                isMobileServicesOpen
-                  ? "grid-rows-[1fr] opacity-100 mt-4"
-                  : "grid-rows-[0fr] opacity-0"
-              }`}
+              className={`grid transition-all duration-300 ${isMobileServicesOpen ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"}`}
             >
               <div className="overflow-hidden flex flex-col gap-4 pl-4 border-l border-accent/20">
                 {services.map((item) => (
@@ -165,7 +172,7 @@ const NavigationBar = () => {
                     key={item.name}
                     href={item.href}
                     onClick={closeMenu}
-                    className="text-[12px] text-primary/60 font-medium py-1 hover:text-accent"
+                    className="text-[12px] text-primary/60 font-medium py-1"
                   >
                     {item.name}
                   </a>
@@ -179,7 +186,7 @@ const NavigationBar = () => {
               key={link.name}
               href={link.href}
               onClick={closeMenu}
-              className="text-[11px] font-bold text-primary border-b border-surface pb-4 uppercase tracking-widest"
+              className="text-[13px] font-bold text-primary border-b border-surface pb-4 uppercase tracking-widest"
             >
               {link.name}
             </a>
@@ -187,12 +194,12 @@ const NavigationBar = () => {
 
           <button
             onClick={closeMenu}
-            className="mt-6 bg-gradient-to-r from-accent via-accent to-accent-hover text-white py-4 rounded-xl font-bold text-[10px] uppercase tracking-[0.2em] shadow-[0_10px_20px_rgba(197,163,88,0.2)] active:scale-95 transition-all"
+            className="mt-6 bg-accent text-white py-4 rounded-xl font-bold text-[11px] uppercase tracking-[0.2em] shadow-lg shadow-accent/20 active:scale-95 transition-all"
           >
             Book Appointment
           </button>
 
-          <p className="text-center text-[8px] text-primary/40 uppercase tracking-[0.3em] mt-auto pb-10">
+          <p className="text-center text-[9px] text-primary/40 uppercase tracking-[0.3em] mt-auto pb-10">
             © {new Date().getFullYear()} Sulam Alis Rosidi
           </p>
         </div>
