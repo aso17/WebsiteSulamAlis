@@ -29,7 +29,8 @@ const FooterContact = () => {
       color: "#E1306C",
       icon: iconinstagram,
       url: "https://www.instagram.com/rosidisulamalisjakarta",
-      usePhoto: true, // Gunakan foto profil owner
+      usePhoto: true,
+      hasVerify: true, // Tambahkan flag verify
     },
     {
       name: "Facebook",
@@ -37,7 +38,8 @@ const FooterContact = () => {
       color: "#1877F2",
       icon: iconfacebook,
       url: "https://www.facebook.com/rosidisulamalisjakarta",
-      usePhoto: true, // Gunakan foto profil owner
+      usePhoto: true,
+      hasVerify: true, // Tambahkan flag verify
     },
     {
       name: "TikTok",
@@ -45,7 +47,8 @@ const FooterContact = () => {
       color: "#000000",
       icon: icontiktok,
       url: "https://www.tiktok.com/@rosidisulamalisjakarta",
-      usePhoto: true, // Gunakan foto profil owner
+      usePhoto: true,
+      hasVerify: true, // Tambahkan flag verify
     },
     {
       name: "YouTube",
@@ -53,7 +56,8 @@ const FooterContact = () => {
       color: "#FF0000",
       icon: iconYoutube,
       url: "https://youtu.be/6x8iVx0UsIw",
-      usePhoto: false, // Sesuai permintaan: YouTube pakai icon brand saja
+      usePhoto: false,
+      hasVerify: false, // Set false untuk YouTube
     },
   ];
 
@@ -156,7 +160,6 @@ const FooterContact = () => {
                             width={100}
                             height={100}
                             folder="../../assets/images/OptimizeImage/"
-                            // object-top memastikan kepala owner tidak terpotong
                             className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
                           />
                         ) : (
@@ -167,7 +170,6 @@ const FooterContact = () => {
                           />
                         )}
                       </div>
-                      {/* Logo brand kecil di pojok foto (hanya muncul jika pakai foto) */}
                       {social.usePhoto && (
                         <div className="absolute -bottom-1 -right-1 bg-white p-1 rounded-full shadow-sm border border-slate-50">
                           <img
@@ -189,10 +191,13 @@ const FooterContact = () => {
                         <span className="text-xs text-primary/70 font-medium">
                           {social.handle}
                         </span>
-                        <BadgeCheck
-                          size={14}
-                          className="text-[#0095F6] fill-[#0095F6] stroke-white"
-                        />
+                        {/* HANYA MUNCUL JIKA hasVerify TRUE */}
+                        {social.hasVerify && (
+                          <BadgeCheck
+                            size={14}
+                            className="text-[#0095F6] fill-[#0095F6] stroke-white"
+                          />
+                        )}
                       </div>
                     </div>
                   </div>

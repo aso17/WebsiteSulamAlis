@@ -6,7 +6,6 @@ const FooterComponent = () => {
   return (
     <>
       {/* Mini Bottom Footer */}
-      {/* Menghilangkan border-t jika section di atasnya sudah punya border agar tidak dobel */}
       <footer className="bg-surface text-primary/40 py-10 px-6 border-t border-primary/5 text-center relative z-10">
         <div className="flex flex-col items-center justify-center gap-3">
           {/* Logo atau Nama Brand */}
@@ -21,13 +20,28 @@ const FooterComponent = () => {
           <p className="text-[9px] md:text-[10px] tracking-[0.2em] uppercase opacity-50 font-light">
             Professional Semi-Permanent Makeup • Jakarta, Indonesia
           </p>
+
+          {/* SUPPORT BY - ASO17 */}
+          <div className="mt-4 pt-4 border-t border-primary/5 w-full max-w-[200px]">
+            <p className="text-[8px] md:text-[9px] tracking-[0.3em] uppercase opacity-40 font-medium">
+              Developed by{" "}
+              <a
+                href="https://aso17.github.io/myportfolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary/80 font-bold hover:text-accent transition-colors duration-300"
+              >
+                ASO17
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
 
       {/* Floating WhatsApp Button */}
       <motion.a
         href="https://wa.me/6281279564211?text=Halo%20Admin%20Rosidi%20Sulam%20Alis"
-        className="fixed bottom-6 right-6 z-[99] group" // Naikkan z-index agar selalu di atas
+        className="fixed bottom-6 right-6 z-[99] group"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat WhatsApp"

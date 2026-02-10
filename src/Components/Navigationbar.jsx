@@ -60,7 +60,6 @@ const NavigationBar = () => {
       className={`fixed w-full z-[9999] transition-all duration-500 ease-in-out ${navBackground}`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex justify-between items-center relative z-[10000]">
-        {/* LOGO SECTION MENGGUNAKAN IMG */}
         <a href="/" className="flex items-center group">
           <div
             className={`p-1 bg-white rounded-lg shadow-sm transition-all duration-500 ${

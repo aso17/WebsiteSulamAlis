@@ -40,6 +40,16 @@ const banners = [
     subtitle: "Hasil Presisi Standar Dunia",
     text: "Sentuhan profesional yang memberikan efek wajah lebih segar dan proporsional sepanjang hari.",
   },
+  // BANNER TAMBAHAN (ID: 5)
+  {
+    id: 5,
+    baseName: "ImgBannerHome5",
+    folder: "../../assets/images/OptimizeImage",
+    alt: "Teknologi Kecantikan Modern",
+    title: "MODERN TECHNOLOGY",
+    subtitle: "Peralatan Canggih & Steril",
+    text: "Kami menggunakan peralatan mutakhir dan tinta organik premium untuk keamanan dan kenyamanan Anda.",
+  },
 ];
 
 const easing = [0.6, -0.05, 0.01, 0.99];
@@ -164,23 +174,17 @@ const BannerHome = () => {
       </div>
 
       {/* SLIDE INDICATOR */}
-
       <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
         {banners.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}
             className={`
-        relative transition-all duration-500 rounded-full 
-        ${
-          index === i
-            ? "w-8 md:w-10 h-2 bg-accent"
-            : "w-2 h-2 bg-white/40 hover:bg-white/60"
-        }
-      `}
+              relative transition-all duration-500 rounded-full 
+              ${index === i ? "w-8 md:w-10 h-2 bg-accent" : "w-2 h-2 bg-white/40 hover:bg-white/60"}
+            `}
             aria-label={`Go to slide ${i + 1}`}
           >
-            {/* Efek Glow untuk titik aktif agar lebih premium */}
             {index === i && (
               <motion.div
                 layoutId="activeGlow"

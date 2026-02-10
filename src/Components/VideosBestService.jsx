@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, Users } from "lucide-react"; // Tambah icon Users
+import { Play, Users } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
@@ -45,7 +45,6 @@ const VideoCard = ({ videoId, title, subscribers }) => {
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
-            {/* Label Subscriber - Tampilan Profesional */}
             <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
               <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
               <div className="flex items-center gap-1.5 text-white">
@@ -90,8 +89,9 @@ const VideosBestService = () => {
       subscribers: "212 rb",
     },
     {
-      id: "nqwlbmWsUd0",
-      title: "Sulam Alis Viral - Hasil Natural & Rapi",
+      // UPDATE: Video kedua diganti sesuai permintaan
+      id: "GBE8yrl1Dhc",
+      title: "Transformasi Sulam Alis & Bibir Natural",
       subscribers: "212 rb",
     },
   ];
